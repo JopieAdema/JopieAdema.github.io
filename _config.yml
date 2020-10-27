@@ -20,7 +20,7 @@ navbar-links:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Teaching:
-  CV: "CV"
+  CV: "/data/CVJAHAdema__scientific.pdf"
   Author's home: "JopieAdema.github.io"
 
 # --- Logo --- #
