@@ -21,7 +21,7 @@ navbar-links:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Teaching:
-  CV: "/data/CVJAHAdema__scientific.pdf"
+  CV: "/docs/CVJAHAdema__scientific.pdf"
 
 
 # --- Logo --- #
