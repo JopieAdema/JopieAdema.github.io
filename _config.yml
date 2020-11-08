@@ -17,9 +17,9 @@ navbar-links:
   About Me: "aboutme"
   
   Research:
-    - Overview: 
-    - Beautiful Jekyll: "/docs/ThesisEconomicsBsc.pdf"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+    - Current: 
+    - Student theses: "/docs/ThesisEconomicsBsc.pdf"
+    - Published: "https://www.markdowntutorial.com/"
   Teaching:
   CV: "/docs/CVJAHAdema__scientific.pdf"
 
