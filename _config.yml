@@ -18,7 +18,7 @@ navbar-links:
   
   Research:
     - Overview: 
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Beautiful Jekyll: "/docs/ThesisEconomicsBsc.pdf"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Teaching:
   CV: "/docs/CVJAHAdema__scientific.pdf"
