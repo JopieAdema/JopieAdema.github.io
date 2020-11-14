@@ -21,7 +21,7 @@ navbar-links:
     - Student theses: "thesis"
     - Published: "published"
   Teaching:
-  CV: "/assets/img/CVJAHAdema__scientific.PDF"
+  CV: "/assets/img/CVJAHAdema__scientific.pdf"
 
 
 # --- Logo --- #
