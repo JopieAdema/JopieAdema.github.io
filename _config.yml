@@ -21,7 +21,7 @@ navbar-links:
     - Student theses: "thesis"
     - Published: "https://www.markdowntutorial.com/"
   Teaching:
-  CV: "/docs/CVJAHAdema__scientific.pdf"
+  CV: "/docs/CVJAHAdema__scientific.PDF"
 
 
 # --- Logo --- #
