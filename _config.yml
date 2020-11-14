@@ -17,11 +17,11 @@ navbar-links:
   About Me: "aboutme"
   
   Research:
-    - Current: 
+    - Current: "currentresearch"
     - Student theses: "thesis"
-    - Published: "https://www.markdowntutorial.com/"
+    - Published: "published"
   Teaching:
-  CV: "/docs/CVJAHAdema__scientific.PDF"
+  CV: "/assets/img/CVJAHAdema__scientific.PDF"
 
 
 # --- Logo --- #
