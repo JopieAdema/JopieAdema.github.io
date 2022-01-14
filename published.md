@@ -3,8 +3,11 @@
 
 
 **Peer-reviewed work**
+ - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
 
 **Working papers**
+ - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate.  Economics Letters, 110172.  [*ifo Working Paper No. 365*](https://www.ifo.de/en/publikationen/2021/working-paper/mobile-internet-access-and-desire-emigrate)
+
 
 **Reports**
 
