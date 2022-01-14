@@ -19,7 +19,7 @@ navbar-links:
   Research:
     - Current and Publishes: "published"
     - Student theses: "thesis"
-  Teaching:
+ #   Teaching:
   CV: "/assets/img/CVJAHAdema__scientific.pdf"
 
 
