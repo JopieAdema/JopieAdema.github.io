@@ -16,13 +16,18 @@ I recently published my first paper. Together with Till Nikolka, Panu Poutvaara 
 {: .box-note}
 **Note:** This is a notification box.
 
-Here's a useless table:
 
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
 
+
+---------------------------------------
+     &nbsp;        Stated     Model 2   
+                    risk
+----------------- ---------- ---------- 
+ **Follow-up**   −0.389**\   6.561**\
+                   (0.151)   (2.616)
+
+  **R-squared**     0.79      0.69
+
+      **N**          606       606     
+---------------------------------------
 
