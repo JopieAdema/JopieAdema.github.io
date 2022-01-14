@@ -17,7 +17,7 @@ navbar-links:
   About Me: "aboutme"
   
   Research:
-    - Current and Publishes: "published"
+    - Current: "published"
     - Student theses: "thesis"
  #   Teaching:
   CV: "/assets/img/CVJAHAdema__scientific.pdf"
