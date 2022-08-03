@@ -16,7 +16,7 @@ author: J. Adema
 navbar-links:
   About Me: "aboutme"
   
-  Research:
+  Research: "published"
     - Current: "published"
     - Student theses: "thesis"
  #   Teaching:
@@ -91,7 +91,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "economics,phd,resarch,migration"
+keywords: "economics,phd,research,migration,media,"
 
 # --- Colours / background image --- #
 
