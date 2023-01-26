@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mobile Internet and Mobile People
-subtitle: Working paper
+subtitle: How the worldwide rollout of 3G internet boosted the desire and plans to emigrate
 gh-repo: JopieAdema/JopieAdema.github.io
 gh-badge: []
 tags: [paper,migration,internet access]
