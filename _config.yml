@@ -9,7 +9,7 @@
 title: Joop Adema
 
 # Your name to show in the footer
-author: J. Adema
+author: Joop Adema
 
 # --- List of links in the navigation bar --- #
 
@@ -81,10 +81,10 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "Joop Adema"
+url-pretty: "JopieAdema@github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 50
+excerpt_length: 40
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
