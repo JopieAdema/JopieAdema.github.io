@@ -1,7 +1,7 @@
 ---
 layout: page
 title: First paper!
-subtitle: Risk Preferences changes during a pandemic.
+subtitle: How Risk Preferences change during a pandemic.
 gh-repo: JopieAdema/JopieAdema.github.io
 gh-badge: []
 tags: [paper,risk preferences,microeconomics,survey]
