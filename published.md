@@ -18,6 +18,8 @@
 
 **Reports (public)**
 
+  - Adema, J., Albrecht, C., Giesing, Y., Panchenko, T., and Poutvaara, P., 2022. [*People With a Migration Background and Refugees in Bavaria and Their Importance for the Bavarian Labor Market.*](https://www.ifo.de/en/publications/2022/monograph-authorship/people-migration-background-and-refugees-bavaria-and-their). On request of the faction of the Green party in the Bavarian Parliament.
+
  - Adema, J., Guha, M., 2022  [*Following the Online Trail of Ukrainian
 Refugees through Google Trends.*](https://www.cesifo.org/DocDL/CESifo-Forum-2022-4-adema-guha-ukr%20refugees-google-july.pdf). CESifo Forum, 23(04), pp. 62-66.
 
@@ -30,7 +32,6 @@ Refugees through Google Trends.*](https://www.cesifo.org/DocDL/CESifo-Forum-2022
  - Adema, J., Hainz, C. and Rhode, C., 2019. [*Deposit Insurance: System Design and Implementation Across Countries.*](https://www.ifo.de/DocDL/dice-report-2019-1-adema-hainz-rhode-april.pdf) ifo DICE Report, 17(1), pp. 42-51.
 
  **Policy reports**
- - __Immigration in the Bavarian economy__ by order of the Green faction in the Bavarian parliament.
 
  - Poutvaara, P., T. Nikolka, T. Stitteneder, J. Adema (2020a), International Migration and Language Learning, Study of the ifo Institute on Behalf of the World Bank.
  
