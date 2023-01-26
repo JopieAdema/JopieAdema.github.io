@@ -8,13 +8,13 @@ My name is Joop Adema. I am a PhD student at the MGSE program and working at the
 - Do migrants use specific smartphone applications or internet fora to integrate into their destination countries?
 - Do specific technologies lower migration costs and generate aspirations to emigrate?
 
-- Media Economics:
-How does the media affect migration decisions? Do people update their migration plans based on the migration experiences of others?
-How does the media portray migrants and how does this affect attitudes towards against immigrants and paths of integration?
+-- Media Economics:
+- How does the media affect migration decisions? Do people update their migration plans based on the migration experiences of others?
+- How does the media portray migrants and how does this affect attitudes towards against immigrants and paths of integration?
 
-- Technological change: 
-How does robotization affect labor markets? Why is there a strong backlash against robotization and immigration in some places, but not in others?
-How does technological change affect the welfare impacts of immigration? 
+-- Technological change: 
+- How does robotization affect labor markets? Why is there a strong backlash against robotization and immigration in some places, but not in others?
+- How does technological change affect the welfare impacts of immigration? 
 
-- Economics of Irregular and Refugee Migration:
-How do refugees and irregular migrants decide on targets countries, coordinate how do they share information in a low-information environment of distrust?
+-- Economics of Irregular and Refugee Migration:
+- How do refugees and irregular migrants decide on targets countries, coordinate how do they share information in a low-information environment of distrust?
