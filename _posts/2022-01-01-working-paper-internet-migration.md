@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How does mobile internet transform
+title: Mobile Internet and Mobile People
 subtitle: Working paper
 gh-repo: JopieAdema/JopieAdema.github.io
 gh-badge: []
