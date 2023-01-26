@@ -3,11 +3,15 @@
 
 
 **Work in progress**
- - Immigrant Narratives -- with Kai Gehring, Charlotte Robert and Panu Poutvaara (draft available upon request)
+ - Repatriating Migration Experiences
+ - Ukrainian Refugees' Return Intentions --  with Cevat Giray Askoy, Yvonne Giesing and Panu Poutvaara
+ - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Robotization on the Korean labour market -- with Jae Hyun Choo and Nourhan Hashish (draft available upon request)
 
 **Working papers**
- - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate.  Economics Letters, 110172.  [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
+ - Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
+
+ - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
 
 **Peer-reviewed work**
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
