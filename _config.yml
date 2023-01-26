@@ -17,6 +17,8 @@ navbar-links:
   About Me: "aboutme"
   
   Research: "published"
+  Talks: "talks"
+
  #   - Current: "published"
  #   - Student theses: "thesis"
  #   Teaching:
