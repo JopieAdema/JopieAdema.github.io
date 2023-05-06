@@ -1,6 +1,18 @@
 ---
 ---
 
+**Working papers**
+ - Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
+
+
+
+ - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
+ - 
+
+
+<span style="font-family:Papyrus; font-size:1em;">
+ We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.
+</span>
 
 **Work in progress**
  - Repatriating Migration Experiences
@@ -10,10 +22,6 @@
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Robotization on the Korean labour market -- with Jae Hyun Choo and Nourhan Hashish (draft available upon request)
 
-**Working papers**
- - Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
-
- - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
 
 **Peer-reviewed work**
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
