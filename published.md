@@ -4,7 +4,9 @@
 
 **Work in progress**
  - Repatriating Migration Experiences
- - Ukrainian Refugees' Return Intentions --  with Cevat Giray Askoy, Yvonne Giesing and Panu Poutvaara
+ - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
+ - Ukrainians' Rally 'round the Flag --  with Cevat Giray Aksoy and Panu Poutvaara
+ - Ukrainian Refugees' Return Intentions --  with Cevat Giray Aksoy, Yvonne Giesing and Panu Poutvaara
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Robotization on the Korean labour market -- with Jae Hyun Choo and Nourhan Hashish (draft available upon request)
 
@@ -17,6 +19,10 @@
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
 
 **Reports (public)**
+
+  - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*Wiederaufbauplan: Wie gelingt der Neuanfang in der Ukraine?*](https://www.ifo.de/en/publications/2023/article-journal/wiederaufbauplan-wie-gelingt-der-neuanfang-der-ukraine). ifo Schnelldienst, 76(4), pp. 03-28.
+
+  - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*The Role of the Diaspora for the Recovery of Ukraine.*](https://www.cesifo.org/en/publications/2023/article-journal/role-diaspora-recovery-ukraine). EconPol Forum 24 (2), pp. 41-45.
 
   - Adema, J., Albrecht, C., Giesing, Y., Panchenko, T., and Poutvaara, P., 2022. [*People With a Migration Background and Refugees in Bavaria and Their Importance for the Bavarian Labor Market.*](https://www.ifo.de/en/publications/2022/monograph-authorship/people-migration-background-and-refugees-bavaria-and-their). On request of the faction of the Green party in the Bavarian Parliament.
 
