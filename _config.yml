@@ -84,7 +84,7 @@ share-links-active:
 url-pretty: "JopieAdema@github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 40
+excerpt_length: 100
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
@@ -99,11 +99,12 @@ keywords: "economics,phd,research,migration,media,"
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#99d6ff"
+navbar-col: "#078930"
+#99d6ff
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
-text-col: "#404040"
+text-col: "#t"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#EAEAEA"
