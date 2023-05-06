@@ -22,7 +22,7 @@ navbar-links:
  #   - Current: "published"
  #   - Student theses: "thesis"
  #   Teaching:
-  CV: "/assets/img/CVJAHAdema__scientific_.pdf"
+  Download my CV: "/assets/img/CVJAHAdema__scientific_.pdf"
 
 
 # --- Logo --- #
@@ -99,9 +99,10 @@ keywords: "economics,phd,research,migration,media,"
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#078930"
+navbar-col: "#018F59"
 #99d6ff
-navbar-text-col: "#404040"
+# "#078930"
+navbar-text-col: "#000000"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#t"
