@@ -1,7 +1,6 @@
 ---
 ---
-My name is Joop Adema. I am a PhD student at the MGSE program and working at the ifo Institute in Munich. Before starting my PhD I studied Physics and Economics at the University of Groningen, Netherlands and at the Technical University Munich. I research the economics of migration, and more specifically how the media and new technologies matter for international migration, but am also interested in the adjacent fields of labor economics and international trade. In my research, I make use of a wide set of econometric and data science tools, such as Natural Language Processing. A few highlights of what I have studied or would like to study:
-
+My name is Joop Adema. I am a PhD student at the LMU and working at the ifo Institute in Munich. I research the economics of migration, and more specifically how the media and new technologies matter for international migration, but am also interested in political economy, labor economics and international trade. In my research, I make use of a wide set of econometric and data science tools, such as NLP. A few highlights of what I have studied or would like to study:
 
 -- Modern technologies: 
 - How do mobile technologies change migration decisions, such as the general access to the internet or the use of specific technologies? 
@@ -17,4 +16,4 @@ My name is Joop Adema. I am a PhD student at the MGSE program and working at the
 - How does technological change affect the welfare impacts of immigration? 
 
 -- Economics of Irregular and Refugee Migration:
-- How do refugees and irregular migrants decide on targets countries, coordinate how do they share information in a low-information environment of distrust?
+- How do refugees and irregular migrants decide on targets countries, coordinate how do they share information in a low-information environment?
