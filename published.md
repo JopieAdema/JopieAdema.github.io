@@ -35,6 +35,7 @@ When I encounter published studies that have important flaws, I try to bring thi
   - [*ERROR*](https://error.reviews/)
   <p></p>
 **Reports (public)**
+  - Giesing, Y., Poutvaara, P., Albrecht, C., Adema, J., Echipue, A., Stitteneder, T., 2023. *Fachkräfteeinwanderung in Deutschland und Bayern?* 
   - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*Wiederaufbauplan: Wie gelingt der Neuanfang in der Ukraine?*](https://www.ifo.de/en/publications/2023/article-journal/wiederaufbauplan-wie-gelingt-der-neuanfang-der-ukraine). ifo Schnelldienst, 76(4), pp. 03-28.
   - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*The Role of the Diaspora for the Recovery of Ukraine.*](https://www.cesifo.org/en/publications/2023/article-journal/role-diaspora-recovery-ukraine). EconPol Forum 24 (2), pp. 41-45.
   - Adema, J., Albrecht, C., Giesing, Y., Panchenko, T., and Poutvaara, P., 2022. [*People With a Migration Background and Refugees in Bavaria and Their Importance for the Bavarian Labor Market.*](https://www.ifo.de/en/publications/2022/monograph-authorship/people-migration-background-and-refugees-bavaria-and-their). On request of the faction of the Green party in the Bavarian Parliament.
