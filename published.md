@@ -2,7 +2,6 @@
 ---
 <p></p>
 **Working papers**
-
  -  Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
      - <font size="2">What is the causal effect of conflict on refugees’ return and integration? To answer this question, we launched a panel survey of Ukrainian refugees across Europe in June 2022 and combined it with geocoded conflict data. Most refugees plan to return, and initial return intentions strongly predict actual return. Those who initially plan to settle outside Ukraine integrate faster. Increased conflict intensity in the home municipality discourages return there, but not to Ukraine as a whole. It also has no effect on the likelihood of working. Liberation of the home district increases return, while increased pessimism about the outcome of the war reduces return intentions.</font>
 
@@ -13,23 +12,23 @@
     - <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
 <p></p>
 **Work in progress**
- - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
- - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Robotization on the Korean labour market -- with Jae Hyun Choo and Nourhan Hashish (draft available upon request)
+ - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
+ - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
 <p></p>
 **Peer-reviewed publications**
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
     -  <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 <p></p>
 **Replication**
-When I encounter published studies that have important flaws, I try to bring this to the attention.
-  - A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest.  (with Adriaan ter Braak)
-[*Blogpost by Sjamadriaan*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) (In Dutch)
-  - A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. (with Olle Folke and Johanna Rickne)
-  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) 
-[*Franfurter Allgemeine Zeitung*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html) (In German)
 <p></p>
+Whenever I encounter published studies that have important flaws, I try to bring this to the attention.
+  - Cold Showers and work absence
+    -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest. [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) (with Adriaan ter Braak)
+  - Criminalization of purchasing sex and rape in Sweden
+     -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) (with Olle Folke and Johanna Rickne)
+ <p></p>
 **Participation in replication projects**
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
   - [*R2E*]([https://nickch-k.github.io/ManyEconomists/](https://www.rwi-essen.de/en/research-advice/departments/climate-change-and-development/research-group/research-projects/project/robustness-and-replicability-in-economics-r2e-277))
