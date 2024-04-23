@@ -21,13 +21,18 @@
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
     -  <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 <p></p>
+**Other publications**
+ - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)    [*BNR Nieuwsradio*]()
+
+    -  <font size="2">An argument in favor of royal houses is that they are important in economics diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
+<p></p>
 **Replication**
 <p></p>
 Whenever I encounter published studies that have important flaws, I try to bring this to the attention.
-  - Cold Showers and work absence
-    -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest. [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) (with Adriaan ter Braak)
-  - Criminalization of purchasing sex and rape in Sweden
-     -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/assets/img/replication.zip) (with Olle Folke and Johanna Rickne)
+  - Cold Showers and work absence  (with Adriaan ter Braak)
+    -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest. [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) 
+  - Criminalization of purchasing sex and rape in Sweden  (with Olle Folke and Johanna Rickne)
+     -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/assets/img/replication.zip) 
  <p></p>
 **Participation in replication projects**
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
