@@ -1,6 +1,12 @@
 ---
 ---
 <style>
+
+margin-bottom: 1rem;
+details > summary {
+margin-top: 0;
+}
+
 details > summary {
   padding: 0px 0px;
   width: 15em;
@@ -40,7 +46,7 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 </details>    
 <p></p>
 
-**Work in progress**
+**Works in progress**
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
  - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
