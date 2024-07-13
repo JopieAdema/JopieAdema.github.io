@@ -32,33 +32,6 @@
  - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)    [*BNR Nieuwsradio*]
     -  <font size="2">An argument in defense of royal houses is that they are important in economics diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
 <p></p>
-**Replication**
-<p></p>
-Whenever I encounter important published studies that have crucial flaws, I try to bring this to the attention.
-  - Cold Showers and work absence  (with Adriaan ter Braak)  [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) 
-    -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest.
-  - Criminalization of purchasing sex and rape in Sweden  (with Olle Folke and Johanna Rickne) [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/assets/img/replication.zip) 
-     -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. 
- <p></p>
-**Participation in replication projects**
-  - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
-  - [*R2E*]([https://nickch-k.github.io/ManyEconomists/](https://www.rwi-essen.de/en/research-advice/departments/climate-change-and-development/research-group/research-projects/project/robustness-and-replicability-in-economics-r2e-277))
-  - [*ERROR*](https://error.reviews/)
-  <p></p>
-**Reports (public)**
-  - Giesing, Y., Poutvaara, P., Albrecht, C., Adema, J., Echipue, A., Stitteneder, T., 2023. *Fachkräfteeinwanderung in Deutschland und Bayern?* 
-  - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*Wiederaufbauplan: Wie gelingt der Neuanfang in der Ukraine?*](https://www.ifo.de/en/publications/2023/article-journal/wiederaufbauplan-wie-gelingt-der-neuanfang-der-ukraine). ifo Schnelldienst, 76(4), pp. 03-28.
-  - Adema, J., Giesing, Y., Panchenko, T., and Poutvaara, P., 2023. [*The Role of the Diaspora for the Recovery of Ukraine.*](https://www.cesifo.org/en/publications/2023/article-journal/role-diaspora-recovery-ukraine). EconPol Forum 24 (2), pp. 41-45.
-  - Adema, J., Albrecht, C., Giesing, Y., Panchenko, T., and Poutvaara, P., 2022. [*People With a Migration Background and Refugees in Bavaria and Their Importance for the Bavarian Labor Market.*](https://www.ifo.de/en/publications/2022/monograph-authorship/people-migration-background-and-refugees-bavaria-and-their). On request of the faction of the Green party in the Bavarian Parliament.
- - Adema, J., Guha, M., 2022  [*Following the Online Trail of Ukrainian
-Refugees through Google Trends.*](https://www.cesifo.org/DocDL/CESifo-Forum-2022-4-adema-guha-ukr%20refugees-google-july.pdf). CESifo Forum, 23(04), pp. 62-66.
- - EBRD, 2021. [*System Upgrade: Delivering the Digital Dividend.*](https://www.ebrd.com/transition-report) (Chapter 3)
- - Adema, J., Giesing, Y., Gorochovskij, J. and Stitteneder, T., 2019. [*Innovation–Global Trends and Regulation*](https://www.ifo.de/en/publikationen/2020/article-journal/innovation-global-trends-and-regulation), ifo DICE Report, 17(4), pp. 45-54.
- - Adema, J., Giesing, Y., Schönauer, A. and Stitteneder, T., 2019. [*Minimum wages across countries.*](https://www.ifo.de/DocDL/dice-report-2018-4-adema-giesing-schoenauer-stitteneder-january.pdf) ifo DICE Report, 16(4), pp. 55-63.
- - Adema, J., Hainz, C. and Rhode, C., 2019. [*Deposit Insurance: System Design and Implementation Across Countries.*](https://www.ifo.de/DocDL/dice-report-2019-1-adema-hainz-rhode-april.pdf) ifo DICE Report, 17(1), pp. 42-51.
-<p></p>
- - Poutvaara, P., T. Nikolka, T. Stitteneder, J. Adema (2020a), International Migration and Language Learning, Study of the ifo Institute on Behalf of the World Bank.
- - Poutvaara, P., T. Nikolka, T. Stitteneder, J. Adema (2020b), Investments in Internationally Applicable and Country-specific Education, Language Learning and Migration Intentions, Study of the ifo Institute on Behalf of the World Bank.
 
  
 
