@@ -17,12 +17,12 @@ navbar-links:
   About Me: "aboutme"
   
   Research: "published"
+  Replication: "replication"
   Talks: "talks"
-
  #   - Current: "published"
  #   - Student theses: "thesis"
  #   Teaching:
-  Download my CV: "/assets/img/CVJAHAdema.pdf"
+  CV: "/assets/img/CVJAHAdema.pdf"
 
 
 # --- Logo --- #
