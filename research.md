@@ -2,17 +2,17 @@
 ---
 <style>
 details {
-margin-top: -10px;
+margin-top: 0;
 margin-bottom: 10px;
 }
 details > summary {
-margin-top: 0px;
+margin-top: 0;
 }
 summary {
-margin-top: 0px;
+margin-top: 0;
 }
 details > p {
-margin-top: 0px;
+margin-top: 0;
 }
 </style>
 
