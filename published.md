@@ -13,7 +13,6 @@
 <p></p>
 **Work in progress**
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
- - Robotization on the Korean labour market -- with Jae Hyun Choo and Nourhan Hashish (draft available upon request)
  - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
  - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
 <p></p>
@@ -27,7 +26,7 @@
 <p></p>
 **Replication**
 <p></p>
-Whenever I encounter published studies that have important flaws, I try to bring this to the attention.
+Whenever I encounter important published studies that have crucial flaws, I try to bring this to the attention.
   - Cold Showers and work absence  (with Adriaan ter Braak)  [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) 
     -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest.
   - Criminalization of purchasing sex and rape in Sweden  (with Olle Folke and Johanna Rickne) [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/assets/img/replication.zip) 
