@@ -15,7 +15,7 @@ author: Joop Adema
 
 navbar-links:
   #About Me: "aboutme"
-  Research: "published"
+  Research: "research"
   Replication: "replication"
   Talks: "talks"
  #   - Current: "published"
