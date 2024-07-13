@@ -15,9 +15,9 @@ details > summary {
   list-style: none;
 }
 details > p {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0 0;
   background-color: #ddd;
-  padding: 2px 6px;
+  padding: 0 0;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
