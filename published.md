@@ -21,9 +21,12 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <summary>Abstract</summary>
 {% highlight ruby %}
 <font size="2">Immigration is one of the most divisive political issues in many countries today. Competing narratives, circulated via the media, are crucial in shaping how immigrants’ role in society is perceived. We propose a new method combining advanced natural language processing tools with dictionaries to identify sentences containing one or more of seven immigrant narrative themes and assign a sentiment to each of these. Our narrative dataset covers 107,428 newspaper articles from 70 German newspapers over the 2000 to 2019 period. Using 16 human coders to evaluate our method, we find that it clearly outperforms simple word-matching methods and sentiment dictionaries. Empirically, culture narratives are more common than economy-related narratives. Narratives related to work and entrepreneurship are particularly positive, while foreign religion and welfare narratives tend to be negative. We use three distinct events to show how different types of shocks influence narratives, decomposing sentiment shifts into theme-composition and within-theme changes.</font>
- 
 {% endhighlight %}
- 
+</details>    
+
+
+Aap <details> <summary>Abstract</summary>
+<font size="2">woop.</font>
 </details>    
 
 
