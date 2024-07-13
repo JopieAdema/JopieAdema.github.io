@@ -13,6 +13,6 @@ Whenever I encounter important published studies that have crucial flaws, I try 
 <p></p>
 I also participate in several replication projects, which aim to contribute to a more replicable and better social science:
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
-  - [*R2E*](https://www.rwi-essen.de/en/research-advice/departments/climate-change-and-development/research-group/research-projects/project/robustness-and-replicability-in-economics-r2e-277)
+  - [*R2E*](https://www.rwi-essen.de/en/rwi/team/person/projects/detail/robustness-and-replicability-in-economics-r2e-277)
   - [*ERROR*](https://error.reviews/)
   <p></p>
