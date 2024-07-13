@@ -12,7 +12,6 @@ details > summary {
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
-  list-style: none;
 }
 details > p {
   border-radius: 0 0 0 0;
