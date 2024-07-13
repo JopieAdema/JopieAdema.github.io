@@ -3,7 +3,7 @@
 <style>
 details {
 margin-top: -30px;
-margin-bottom: 10px;
+margin-bottom: -15px;
 }
 details > summary {
 margin-top: 0;
