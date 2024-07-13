@@ -10,6 +10,8 @@ Whenever I encounter important published studies that have crucial flaws, I try 
      -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. 
  <p></p>
 **Participation in replication projects**
+<p></p>
+I also participate in several replication projects, which aim to contribute to a more replicable and thus better social science:
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
   - [*R2E*]([https://nickch-k.github.io/ManyEconomists/](https://www.rwi-essen.de/en/research-advice/departments/climate-change-and-development/research-group/research-projects/project/robustness-and-replicability-in-economics-r2e-277))
   - [*ERROR*](https://error.reviews/)
