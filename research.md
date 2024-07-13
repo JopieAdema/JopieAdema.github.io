@@ -3,7 +3,7 @@
 <style>
 details > summary {
   padding: 0px 0px;
-  width: 2em;
+  width: 15em;
   border: none;
   margin: 0px;
   cursor: pointer;
