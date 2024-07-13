@@ -14,8 +14,7 @@ author: Joop Adema
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
-  
+  #About Me: "aboutme"
   Research: "published"
   Replication: "replication"
   Talks: "talks"
@@ -23,7 +22,6 @@ navbar-links:
  #   - Student theses: "thesis"
  #   Teaching:
   CV: "/assets/img/CVJAHAdema.pdf"
-
 
 # --- Logo --- #
 
