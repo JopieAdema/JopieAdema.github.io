@@ -8,11 +8,12 @@
 </details>
 
 
- - Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
+ - Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives) <details><summary>Abstract</summary>
      - <font size="2">Immigration is one of the most divisive political issues in many countries today. Competing narratives, circulated via the media, are crucial in shaping how immigrants’ role in society is perceived. We propose a new method combining advanced natural language processing tools with dictionaries to identify sentences containing one or more of seven immigrant narrative themes and assign a sentiment to each of these. Our narrative dataset covers 107,428 newspaper articles from 70 German newspapers over the 2000 to 2019 period. Using 16 human coders to evaluate our method, we find that it clearly outperforms simple word-matching methods and sentiment dictionaries. Empirically, culture narratives are more common than economy-related narratives. Narratives related to work and entrepreneurship are particularly positive, while foreign religion and welfare narratives tend to be negative. We use three distinct events to show how different types of shocks influence narratives, decomposing sentiment shifts into theme-composition and within-theme changes.</font>
-
-- Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
+</details>
+- Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate) <details><summary>Abstract</summary>
     - <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
+ </details>
 <p></p>
 
 
