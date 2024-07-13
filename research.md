@@ -5,23 +5,8 @@ details {
 margin-top: 0;
 margin-bottom: 0;
 }
-
-details > summary {
-  padding: 0px 0px;
-  width: 15em;
-  border: none;
-  margin: 0px;
-  cursor: pointer;
-}
-details > p {
-  border-radius: 0px 0px 0px 0px;
-  background-color: #ddd;
-  padding: 0px 0px;
-  margin: 0px;
-  box-shadow: 3px 3px 4px black;
-}
 </style>
-<p></p>
+
 **Working papers**
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
@@ -45,7 +30,7 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 </details>    
 <p></p>
 
-**Work in progress**
+**Works in progress**
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
  - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
