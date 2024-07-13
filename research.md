@@ -1,9 +1,6 @@
 ---
 ---
-<p></p>
-**Working papers**
 <style>
-
 details > summary {
   padding: 0px 0px;
   width: 2em;
@@ -20,6 +17,8 @@ details > p {
 }
 </style>
 <p></p>
+**Working papers**
+
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
 <summary>Abstract</summary>
