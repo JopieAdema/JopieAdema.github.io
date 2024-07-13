@@ -35,7 +35,7 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
     -  <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 <p></p>
 **Other publications**
- - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)    [*BNR Nieuwsradio*]
+ - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)
     -  <font size="2">An argument in defense of royal houses is that they are important in economics diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
 <p></p>
 
