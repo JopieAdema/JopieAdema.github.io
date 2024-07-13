@@ -5,8 +5,7 @@
 
 <p></p>
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
-<font size="0"></font>
-<details> 
+<details>  <font size="0"></font>
 <summary>Abstract</summary>
 <font size="2">What is the causal effect of conflict on refugees’ return and integration? To answer this question, we launched a panel survey of Ukrainian refugees across Europe in June 2022 and combined it with geocoded conflict data. Most refugees plan to return, and initial return intentions strongly predict actual return. Those who initially plan to settle outside Ukraine integrate faster. Increased conflict intensity in the home municipality discourages return there, but not to Ukraine as a whole. It also has no effect on the likelihood of working. Liberation of the home district increases return, while increased pessimism about the outcome of the war reduces return intentions.</font>
 </details>
