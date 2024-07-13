@@ -11,6 +11,20 @@
 - Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://voxeu.org/article/mobile-internet-access-and-desire-emigrate)
     - <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
 <p></p>
+
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section. 
+
+You can add an image or a code block, too.
+
+
+</details>
+
 **Work in progress**
  - Low-cost Language Learning: a Boost to Move? --  (draft available upon request)
  - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
