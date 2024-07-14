@@ -37,7 +37,8 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <p></p>
 
 **Works in progress**
- - Low-cost Language Learning: a Boost to Move? (draft available upon request)
+ - Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (draft available upon request)
+ - A Welfare Assessment of Migration in the Presence of Technological Change -- with Panu Poutvaara
  - Between Compassion and Contempt: Home Country Events on Hosts' Attitudes -- with Padmaja Kadambi
  - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
 <p></p>
