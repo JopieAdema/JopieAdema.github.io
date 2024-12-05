@@ -18,13 +18,15 @@ margin-top: 0;
 
 **Single-authored paper **
 
- Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (draft available upon request)
- [*Paper*](https://jopieadema.github.io/JMP.pdf)
- <details name="reqs">  
+Low-cost Language Learning: a Boost to Move? Evidence from Duolingo
+[*Paper*](https://jopieadema.github.io/JMP.pdf)
+<details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used Duolingo platform. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved language skills among the general population. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of relevant language courses before migration boosts the proportion of migrants arriving with basic language skills and those securing jobs upon arrival in the European Union. Post-arrival access to relevant language courses further enhances migrants' employment outcomes, further highlighting that access to host-specific skills improves migrant outcomes.</font>
 </details>
 <p></p>
+
+**Working papers **
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
