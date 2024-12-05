@@ -16,7 +16,7 @@ margin-top: 0;
 }
 </style>
 
-**Single-authored paper **
+**Single-authored paper**
 
 Low-cost Language Learning: a Boost to Move? Evidence from Duolingo
 [*Paper*](https://jopieadema.github.io/JMP.pdf)
@@ -26,7 +26,7 @@ Low-cost Language Learning: a Boost to Move? Evidence from Duolingo
 </details>
 <p></p>
 
-**Working papers **
+**Working papers**
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
