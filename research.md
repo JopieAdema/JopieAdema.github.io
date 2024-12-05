@@ -47,6 +47,7 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <p></p>
 
 **Works in progress**
+ - Return Prospects and the Integration of Refugee Families: Insights from Ukraine -- with Yvonne Giesing and Panu Poutvaara
  - A Welfare Assessment of Migration in the Presence of Technological Change and Trade-- with Panu Poutvaara
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes -- with Padmaja Kadambi
  - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
