@@ -1,6 +1,5 @@
 ---
 full-width: true
----
 <style>
 details {
 margin-top: -30px;
@@ -16,6 +15,7 @@ details > p {
 margin-top: 0;
 }
 </style>
+---
 
 **Single-authored paper**
 
