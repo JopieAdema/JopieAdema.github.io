@@ -11,8 +11,9 @@ Whenever I encounter important published studies that have crucial flaws, I try 
  <p></p>
 **Participation in replication projects**
 <p></p>
-I also participate in several replication projects, which aim to contribute to a more replicable and better social science:
-  - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
+I also participate in several replication projects and many analyst studies, which aim to contribute to a more replicable and better social science:
   - [*R2E*](https://www.rwi-essen.de/en/rwi/team/person/projects/detail/robustness-and-replicability-in-economics-r2e-277)
   - [*ERROR*](https://error.reviews/)
+  - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
+  - [*Elasticity Open Science*](https://www.elasticity-open-science.com/)
   <p></p>
