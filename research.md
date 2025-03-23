@@ -1,5 +1,4 @@
 ---
-full-width: true
 ---
 <style>
 details {
@@ -28,13 +27,14 @@ Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
 <p></p>
 
 **Working papers**
- - Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare (Revision requested at PNAS)
+
+Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare. (Revision requested at PNAS)
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
 </details>
 
-Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
+Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration. [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">What is the causal effect of conflict on refugees’ return and integration? To answer this question, we launched a panel survey of Ukrainian refugees across Europe in June 2022 and combined it with geocoded conflict data. Most refugees plan to return, and initial return intentions strongly predict actual return. Those who initially plan to settle outside Ukraine integrate faster. Increased conflict intensity in the home municipality discourages return there, but not to Ukraine as a whole. It also has no effect on the likelihood of working. Liberation of the home district increases return, while increased pessimism about the outcome of the war reduces return intentions.</font>
@@ -58,10 +58,10 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <p></p>
 
 **Works in progress**
- - What Drives Refugees' Return After Conflict? Evidence From a Conjoint Experiment Among Ukrainian Refugees -- with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
- - Stuck with Boys -- with Yvonne Giesing and Panu Poutvaara
- - A Welfare Assessment of Migration in the Presence of Technological Change and Trade-- with Panu Poutvaara
- - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes -- with Padmaja Kadambi
+ - What Drives Refugees' Return After Conflict? Evidence From a Conjoint Experiment Among Ukrainian Refugees. -- with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
+ - Stuck with Boys. -- with Yvonne Giesing and Panu Poutvaara
+ - A Welfare Assessment of Migration in the Presence of Technological Change and Trade. -- with Panu Poutvaara
+ - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
 <p></p>
 
 **Other publications**
