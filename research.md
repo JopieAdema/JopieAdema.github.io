@@ -27,6 +27,11 @@ Low-cost Language Learning: a Boost to Move? Evidence from Duolingo
 <p></p>
 
 **Working papers**
+Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare (Revision requested at PNAS)
+<details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
+</details>
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
@@ -46,20 +51,25 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 </details>    
 <p></p>
 
-**Works in progress**
- - Return Prospects and the Integration of Refugee Families: Insights from Ukraine -- with Yvonne Giesing and Panu Poutvaara
- - A Welfare Assessment of Migration in the Presence of Technological Change and Trade-- with Panu Poutvaara
- - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes -- with Padmaja Kadambi
- - What drives refugees’ destination choice? Evidence from a conjoint experiment among Ukrainian refugees --  with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
-<p></p>
 **Peer-reviewed publications**
  - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
     -  <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 <p></p>
+
+**Works in progress**
+ - What Drives Refugees' Return After Conflict? Evidence From a Conjoint Experiment Among Ukrainian Refugees -- with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
+ - Stuck with Boys -- with Yvonne Giesing and Panu Poutvaara
+ - A Welfare Assessment of Migration in the Presence of Technological Change and Trade-- with Panu Poutvaara
+ - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes -- with Padmaja Kadambi
+<p></p>
+
 **Other publications**
  - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)
     -  <font size="2">An argument in defense of royal houses is that they are important in economics diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
+ - Adema, J. and J-V. Alipour (2025), Steigert Migration die Kriminalität? Ein datenbasierter Blick. (in German)  [*ifo Schnelldienst*](https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick) [*ARTE Journal March 14, 2025 (German)*](https://www.arte.tv/de/videos/122484-053-A/arte-journal-14-03-2025/) [*Tagesschau (German)*](https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html) [*Zeit (German)*](https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland)
+ - Adema, J. and P. Poutvaara, M. Schlepper, T. Taghiyev, T. Wochner (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German)  [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit (German)*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR (German)*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung (Austrian)*](https://www.krone.at/3732541)
 <p></p>
+
 
  
 
