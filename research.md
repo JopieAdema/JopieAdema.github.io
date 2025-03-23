@@ -1,4 +1,5 @@
 ---
+full-width: true
 ---
 <style>
 details {
