@@ -19,7 +19,7 @@ margin-top: 0;
 
 **Single-authored paper**
 
-Low-cost Language Learning: a Boost to Move? Evidence from Duolingo
+Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
 [*Paper*](https://jopieadema.github.io/JMP.pdf)
 <details name="reqs">  
 <summary>Abstract</summary>
