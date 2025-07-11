@@ -18,4 +18,5 @@ I also participate in several replication projects and many analyst studies, whi
   - [*ERROR*](https://error.reviews/)
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
   - [*Elasticity Open Science*](https://www.elasticity-open-science.com/)
+  - [*Many Daughters*](https://www.manydaughters.com/)
   <p></p>
