@@ -5,6 +5,7 @@
  - KTH online Ukraine workshop Aug 22
  - NOeG Krems Sep 23-24
  - Economics and Politics of Irregular Migration (Hamburg) Oct 9-10
+   
 **Past conference and seminar talks**
  . 2025: CESifo Labor Area Conference; CESifo Venice Summer Institute
  - 2024: ASSA; EPCS; Leiden workshop; CESifo Labor Area Conference; EEA
