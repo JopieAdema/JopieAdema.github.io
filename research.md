@@ -18,13 +18,15 @@ margin-top: 0;
 
 
 **Peer-reviewed publications**
- - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)  <details name="reqs">  <summary>Abstract</summary>
+ - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377) <br />
+<details name="reqs">  
+<summary>Abstract</summary>
 <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 </details>
 <p></p>
 <p></p>
 
- - Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122)
+ - Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122) <br />
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
