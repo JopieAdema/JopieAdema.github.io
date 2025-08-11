@@ -18,9 +18,7 @@ margin-top: 0;
 
 
 **Peer-reviewed publications**
- - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
- <details name="reqs">  
-<summary>Abstract</summary>
+ - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)  <details name="reqs">  <summary>Abstract</summary>
 <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 </details>
 <p></p>
