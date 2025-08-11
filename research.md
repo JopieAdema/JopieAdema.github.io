@@ -16,7 +16,24 @@ margin-top: 0;
 }
 </style>
 
-**Single-authored paper**
+
+**Peer-reviewed publications**
+ - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
+ <details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
+</details>
+<p></p>
+<p></p>
+
+ - Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122)
+<details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
+</details>
+<p></p>
+
+**Working papers**
 
 Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
 [*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf)
@@ -24,21 +41,13 @@ Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
 <summary>Abstract</summary>
 <font size="2">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used platform Duolingo. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved the number of languages spoken per capita in the EU by 0.07. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of a relevant language courses upon migration boosts the share of migrants arriving with at least basic language skills with 6 percentage points and increases the probability of employment by 3 percentage points, without strongly changing the selection of migrants. Introduction of a relevant language course after arrival further enhances migrants' employment outcomes, suggesting that the availability of low-cost language learning boosts both pre- and post-arrival language learning.</font>
 </details>
-<p></p>
-
-**Working papers**
-
-Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare. (R&R at PNAS)
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
-</details>
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration. [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">What is the causal effect of conflict on refugees’ return and integration? To answer this question, we launched a panel survey of Ukrainian refugees across Europe in June 2022 and combined it with geocoded conflict data. Most refugees plan to return, and initial return intentions strongly predict actual return. Those who initially plan to settle outside Ukraine integrate faster. Increased conflict intensity in the home municipality discourages return there, but not to Ukraine as a whole. It also has no effect on the likelihood of working. Liberation of the home district increases return, while increased pessimism about the outcome of the war reduces return intentions.</font>
 </details>
+
 Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
 <details name="reqs">
 <summary>Abstract</summary>
@@ -50,11 +59,6 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <summary>Abstract</summary>
 <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
 </details>    
-<p></p>
-
-**Peer-reviewed publications**
- - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377)
-    -  <font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
 <p></p>
 
 **Works in progress**
