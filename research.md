@@ -36,7 +36,7 @@ margin-top: 0;
 **Working papers**
 
 Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
-[*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf)
+[*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf) [*ZEIT*](https://www.zeit.de/wissen/2025-09/integration-gefluechtete-sprachkurse-apps-migration) [*SPIEGEL*](https://www.spiegel.de/wirtschaft/unternehmen/migration-und-schulen-kritik-an-veralteten-integrationskursen-fuer-gefluechtete-a-1e7ffbdc-9116-496e-9071-c132207e2820) [*EconPol*](https://www.ifo.de/DocDL/econpol-forum-3-2025-adema-duolingo.pdf) [*EconPol Forum*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte?utm_source=chatgpt.com)
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used platform Duolingo. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved the number of languages spoken per capita in the EU by 0.07. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of a relevant language courses upon migration boosts the share of migrants arriving with at least basic language skills with 6 percentage points and increases the probability of employment by 3 percentage points, without strongly changing the selection of migrants. Introduction of a relevant language course after arrival further enhances migrants' employment outcomes, suggesting that the availability of low-cost language learning boosts both pre- and post-arrival language learning.</font>
@@ -72,6 +72,14 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
     -  <font size="2">An argument in defense of royal houses is that they are important in economics diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
  - Adema, J. and J-V. Alipour (2025), Steigert Migration die Kriminalität? Ein datenbasierter Blick. (in German)  [*ifo Schnelldienst*](https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick) [*ARTE Journal March 14, 2025 (German)*](https://www.arte.tv/de/videos/122484-053-A/arte-journal-14-03-2025/) [*Tagesschau (German)*](https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html) [*Zeit (German)*](https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland)
  - Adema, J. and P. Poutvaara, M. Schlepper, T. Taghiyev, T. Wochner (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German)  [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit (German)*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR (German)*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung (Austrian)*](https://www.krone.at/3732541)
+<p></p>
+
+ - Adema, J. , Chargaziya, L., Giesing, Y., Günther, A., Heil, P., Jacob, M., Potrafke, N., Poutvaara, P., & Weinand, M. (2025) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte)
+<p></p>
+
+
+**Media (other)**
+ - On the differences between the migration debate in Germany and Netherlands (in Dutch)  [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-nicht/48674863-b3e4-003b-3d35-67255e12b338)
 <p></p>
 
 
