@@ -51,12 +51,14 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <p></p>
 
 **Works in progress**
+
  - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with Yvonne Giesing and Panu Poutvaara
  - Expected Refugees and Far-Right Voting: Electoral Effects of Asylum Seeker Dispersal 
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
 <p></p>
 
 **Peer-reviewed publications**
+
 Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377) <br />
 <details name="reqs">  
 <summary>Abstract</summary>
