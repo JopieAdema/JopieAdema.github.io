@@ -59,11 +59,17 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <summary>Abstract</summary>
 <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
 </details>    
+
+Adema, J., L. Chargaziia, Y. Giesing, S. Necker, P. Poutvaara (2025), What Drives Refugees' Return After Conflict?. [*CESifo Working Paper No. 12118*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict).
+<details name="reqs"> 
+<summary>Abstract</summary>
+<font size="2">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%..</font>
+</details>    
 <p></p>
 
 **Works in progress**
- - What Drives Refugees' Return After Conflict? Evidence From a Conjoint Experiment Among Ukrainian Refugees. -- with Lasha Chargaziia, Yvonne Giesing and Panu Poutvaara
- - Stuck with Boys. -- with Yvonne Giesing and Panu Poutvaara
+ - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with Yvonne Giesing and Panu Poutvaara
+ - Expected Refugees and Far-Right Voting: Electoral Effects of Asylum Seeker Dispersal 
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
 <p></p>
 
