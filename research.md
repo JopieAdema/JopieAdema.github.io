@@ -16,31 +16,20 @@ margin-top: 0;
 }
 </style>
 
-
-**Peer-reviewed publications**
- - Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377) <br />
-<details name="reqs">  
-<summary> </summary>
-<font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
-</details>
-<p></p>
-<p></p>
-
- - Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122) <br />
-<details name="reqs">  
-<summary> </summary>
-<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
-</details>
-<p></p>
-
 **Working papers**
 
-Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2024)
+Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2025)
 [*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf) [*ZEIT*](https://www.zeit.de/wissen/2025-09/integration-gefluechtete-sprachkurse-apps-migration) [*SPIEGEL*](https://www.spiegel.de/wirtschaft/unternehmen/migration-und-schulen-kritik-an-veralteten-integrationskursen-fuer-gefluechtete-a-1e7ffbdc-9116-496e-9071-c132207e2820) [*EconPol*](https://www.ifo.de/DocDL/econpol-forum-3-2025-adema-duolingo.pdf) [*CESifo Young affiliate Award 2025*] [*NOeG Young Economist Award 2025*]
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used platform Duolingo. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved the number of languages spoken per capita in the EU by 0.07. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of a relevant language courses upon migration boosts the share of migrants arriving with at least basic language skills with 6 percentage points and increases the probability of employment by 3 percentage points, without strongly changing the selection of migrants. Introduction of a relevant language course after arrival further enhances migrants' employment outcomes, suggesting that the availability of low-cost language learning boosts both pre- and post-arrival language learning.</font>
 </details>
+
+Adema, J., L. Chargaziia, Y. Giesing, S. Necker, P. Poutvaara (2025), What Drives Refugees' Return After Conflict?. [*CESifo Working Paper No. 12118*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict).
+<details name="reqs"> 
+<summary>Abstract</summary>
+<font size="2">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%..</font>
+</details>    
 
 Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration. [*CESifo Working Paper No. 10877*](https://www.cesifo.org/de/publikationen/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
 <details name="reqs">  
@@ -59,18 +48,27 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 <summary>Abstract</summary>
 <font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
 </details>    
-
-Adema, J., L. Chargaziia, Y. Giesing, S. Necker, P. Poutvaara (2025), What Drives Refugees' Return After Conflict?. [*CESifo Working Paper No. 12118*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict).
-<details name="reqs"> 
-<summary>Abstract</summary>
-<font size="2">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%..</font>
-</details>    
 <p></p>
 
 **Works in progress**
  - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with Yvonne Giesing and Panu Poutvaara
  - Expected Refugees and Far-Right Voting: Electoral Effects of Asylum Seeker Dispersal 
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
+<p></p>
+
+**Peer-reviewed publications**
+Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377) <br />
+<details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
+</details>
+<p></p>
+
+Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122) <br />
+<details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
+</details>
 <p></p>
 
 **Other publications**
@@ -80,7 +78,6 @@ Adema, J., L. Chargaziia, Y. Giesing, S. Necker, P. Poutvaara (2025), What Drive
  - Adema, J. and P. Poutvaara, M. Schlepper, T. Taghiyev, T. Wochner (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German)  [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit (German)*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR (German)*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung (Austrian)*](https://www.krone.at/3732541)
  - Adema, J. , Chargaziya, L., Giesing, Y., Günther, A., Heil, P., Jacob, M., Potrafke, N., Poutvaara, P., & Weinand, M. (2025) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte)
 <p></p>
-
 
 **Media (other)**
  - On the differences between the migration debate in Germany and Netherlands (in Dutch)  [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-nicht/48674863-b3e4-003b-3d35-67255e12b338)
