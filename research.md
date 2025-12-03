@@ -18,6 +18,27 @@ margin-top: 0;
 
 **Working papers**
 
+
+Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)
+[*Paper*](https://jopieadema.github.io/papers/Adema_Dispersal_Act.pdf) 
+<details name="reqs">  
+<summary>Abstract</summary>
+<font size="2">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum
+migration. Prior work shows that exposure to transit routes and regional inflows tends to raise
+far-right support, whereas direct local contact with asylum seekers can dampen it. Yet much
+of the sharp rise in far-right voting around major refugee waves remains unexplained by actual
+inflows. I study a Dutch policy reform, the Dispersal Act, which obligated municipalities to host
+asylum seekers and thereby generated a sudden, plausibly exogenous increase in expected future
+local inflows. Comparing changes in far-right vote shares between not-yet and already hosting
+municipalities before the actual arrival of asylum seekers allows me to isolate the electoral effect
+of heightened expectations of future hosting. I find that affected municipalities experienced a
+substantial increase in far-right support following the Act’s passage. The effect operates on
+both the extensive margin (whether municipalities expect to host) and the intensive margin
+(how many they expect to host): a one-percentage-point increase in allocated asylum-seeker
+share raises far-right vote shares by about 1.2 percentage points.</font>
+</details>
+
+
 Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2025)
 [*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf) [*ZEIT*](https://www.zeit.de/wissen/2025-09/integration-gefluechtete-sprachkurse-apps-migration) [*SPIEGEL*](https://www.spiegel.de/wirtschaft/unternehmen/migration-und-schulen-kritik-an-veralteten-integrationskursen-fuer-gefluechtete-a-1e7ffbdc-9116-496e-9071-c132207e2820) [*EconPol*](https://www.ifo.de/DocDL/econpol-forum-3-2025-adema-duolingo.pdf) [*CESifo Young affiliate Award 2025*] [*NOeG Young Economist Award 2025*]
 <details name="reqs">  
