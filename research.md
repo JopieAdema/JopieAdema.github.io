@@ -18,9 +18,8 @@ margin-top: 0;
 
 **Working papers**
 
-
 Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)
-[*Paper*](https://jopieadema.github.io/papers/Adema_Dispersal_Act.pdf) 
+[*Paper*](https://jopieadema.github.io/papers/Adema_Dispersal_Act.pdf) [*RF Berlin Discussion Paper No. 150/25*](https://www.rfberlin.com/network-paper/expected-asylum-seekers-and-far-right-voting-effects-of-a-dispersal-act/) [*CESifo Working Paper No. 12312*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/expected-asylum-seekers-and-far-right-voting-effects-dispersal-act)
 <details name="reqs">  
 <summary>Abstract</summary>
 <font size="2">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum
