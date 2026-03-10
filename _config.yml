@@ -21,7 +21,7 @@ navbar-links:
  #   - Current: "published"
  #   - Student theses: "thesis"
  #   Teaching:
-  CV: "/assets/img/CVJAHAdema.pdf"
+  CV: "/assets/docs/CVJAHAdema.pdf"
 
 # --- Logo --- #
 
@@ -217,14 +217,12 @@ defaults:
 
 # Exclude these files from production site
 exclude:
-  - CHANGELOG.md
   - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
-  - screenshot.png
-  - docs/
+  - archive/
 
 plugins:
   - jekyll-paginate
