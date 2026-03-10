@@ -104,7 +104,8 @@ Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine
 <p></p>
 
 **Media (other)**
- - On the differences between the migration debate in Germany and Netherlands (in Dutch)  [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-nicht/48674863-b3e4-003b-3d35-67255e12b338)
+ - On the differences between the migration debate in Germany and Netherlands (in Dutch)  [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-niet/48674863-b3e4-003b-3d35-67255e12b338)
+ - What next for Ukrainian refugees in Europe?  [*The European Correspondent*](https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe)
 <p></p>
 
 
