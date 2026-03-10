@@ -75,6 +75,7 @@ Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desir
 
  - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with Yvonne Giesing and Panu Poutvaara
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
+ - The Welfare Magnet Hypothesis: Revisited
 <p></p>
 
 **Peer-reviewed publications**
