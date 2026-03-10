@@ -1,4 +1,5 @@
 ---
+permalink: /research/
 ---
 <style>
 details {

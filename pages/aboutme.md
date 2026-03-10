@@ -1,4 +1,5 @@
 ---
+permalink: /aboutme/
 ---
 My name is Joop Adema. I am a PhD student at the LMU and working at the ifo Institute in Munich. I research the economics of migration, and more specifically how the media and new technologies matter for international migration, but am also interested in political economy, labor economics and international trade. In my research, I make use of a wide set of econometric and data science tools, such as NLP. A few highlights of what I have studied or would like to study:
 

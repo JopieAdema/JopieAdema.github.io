@@ -1,4 +1,5 @@
 ---
+permalink: /reports/
 ---
 
 **Reports (public)**

@@ -3,6 +3,7 @@ layout: page
 title: Theses
 subtitle:
 tags: [thesis, economics, physics]
+permalink: /thesis/
 ---
 
 My name is Joop Adema. I have written the following student theses:
