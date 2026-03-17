@@ -7,10 +7,10 @@ permalink: /replication/
 Whenever I encounter important published studies that have issues, I try to bring this to the attention.
   - Cold Showers and work absence  (with Adriaan ter Braak)  [*Blogpost by Sjamadriaan (Dutch)*](https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872) 
     -  <font size="2">  A study published in PLOS ONE finding that cold showers strongly decreases work absence has implausible descriptive statistics, uses an incorrect statistical model and has undeclared conflicts of interest.
-  - Criminalization of purchasing sex and rape in Sweden  (with Olle Folke and Johanna Rickne) [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/replication/replication_Ciacci.zip) 
+  - Criminalization of purchasing sex and rape in Sweden  (with Olle Folke and Johanna Rickne) [*Franfurter Allgemeine Zeitung (German)*](https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html)  [*Twitter thread*](https://twitter.com/johannarickne/status/1773002832632836549) [*Replication files*](https://jopieadema.github.io/replication/replication_Ciacci.zip)  [*Podcast (Allegedly Does Not Replicate, ep. 18)*](https://open.spotify.com/episode/4Eo0DFGixG5i4RYKdRvLb9)
      -  <font size="2"> A study published in JPOPE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity. 
-  - The Welfare Magnet Hypothesis: Evidence from anImmigrant Welfare Scheme in Denmark: Comment [*Comment*](https://jopieadema.github.io/replication/comment_AJK.pdf)  [*Replication files*](https://jopieadema.github.io/replication/replication_AJK.zip)  [*Bluesky thread*](https://bsky.app/profile/jopieboy.bsky.social/post/3lruvizr3yk2y) 
-     -  <font size="2"> A study published in AER Insights finding a large effect of welfare benefits on non-EU migration Denmark, which reports an ill-defined elasticity, conflates net migration with migrant residents turning 30 and disregards the origin country composition of migtation flows.
+  - The Welfare Magnet Hypothesis: Evidence from an Immigrant Welfare Scheme in Denmark: Comment [*Comment*](https://jopieadema.github.io/replication/comment_AJK.pdf)  [*Replication files*](https://jopieadema.github.io/replication/replication_AJK.zip)  [*Bluesky thread*](https://bsky.app/profile/jopieboy.bsky.social/post/3lruvizr3yk2y) 
+     -  <font size="2"> A study published in AER Insights finding a large effect of welfare benefits on non-EU migration Denmark, which reports an ill-defined elasticity, conflates net migration with migrant residents turning 30 and disregards the origin country composition of migration flows.
 <p></p>
 **Participation in replication projects**
 <p></p>
@@ -20,4 +20,5 @@ I also participate in several replication projects and many analyst studies, whi
   - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
   - [*Elasticity Open Science*](https://www.elasticity-open-science.com/)
   - [*Many Daughters*](https://www.manydaughters.com/)
+  - [*Allegedly Does Not Replicate (podcast)*](https://open.spotify.com/show/1gH9YRve1SpkH8OvaWI0i7)
   <p></p>
