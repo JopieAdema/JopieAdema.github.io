@@ -2,113 +2,209 @@
 permalink: /research/
 ---
 <style>
-details {
-margin-top: -30px;
-margin-bottom: -15px;
+details.paper {
+  margin-bottom: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fafafa;
+  overflow: hidden;
 }
-details > summary {
-margin-top: 0;
+details.paper > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  user-select: none;
 }
-summary {
-margin-top: 0;
+details.paper > summary::-webkit-details-marker { display: none; }
+details.paper > summary::before {
+  content: "▶";
+  font-size: 0.6rem;
+  color: #018F59;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-top: 0.35rem;
 }
-details > p {
-margin-top: 0;
+details.paper[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.paper[open] > summary {
+  border-bottom: 1px solid #e0e0e0;
+  background: #f2f2f2;
+}
+.paper-title {
+  font-weight: 600;
+  font-size: 0.975rem;
+  line-height: 1.4;
+}
+.paper-authors {
+  font-size: 0.825rem;
+  color: #666;
+  font-weight: 400;
+  margin-top: 0.15rem;
+}
+.paper-body {
+  padding: 0.85rem 1rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #444;
+}
+.paper-links {
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+}
+.paper-links a {
+  margin-right: 0.4rem;
+}
+.paper-abstract {
+  color: #444;
+}
+.section-head {
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 </style>
 
-**Working papers**
+<p class="section-head">Working papers</p>
 
-Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)
-[*Paper*](https://jopieadema.github.io/papers/Adema_Dispersal_Act.pdf) [*RF Berlin Discussion Paper No. 150/25*](https://www.rfberlin.com/network-paper/expected-asylum-seekers-and-far-right-voting-effects-of-a-dispersal-act/) [*CESifo Working Paper No. 12312*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/expected-asylum-seekers-and-far-right-voting-effects-dispersal-act)
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum
-migration. Prior work shows that exposure to transit routes and regional inflows tends to raise
-far-right support, whereas direct local contact with asylum seekers can dampen it. Yet much
-of the sharp rise in far-right voting around major refugee waves remains unexplained by actual
-inflows. I study a Dutch policy reform, the Dispersal Act, which obligated municipalities to host
-asylum seekers and thereby generated a sudden, plausibly exogenous increase in expected future
-local inflows. Comparing changes in far-right vote shares between not-yet and already hosting
-municipalities before the actual arrival of asylum seekers allows me to isolate the electoral effect
-of heightened expectations of future hosting. I find that affected municipalities experienced a
-substantial increase in far-right support following the Act’s passage. The effect operates on
-both the extensive margin (whether municipalities expect to host) and the intensive margin
-(how many they expect to host): a one-percentage-point increase in allocated asylum-seeker
-share raises far-right vote shares by about 1.2 percentage points.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
+<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">S. Necker</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a> &nbsp;&middot;&nbsp; <em>submitted</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict"><em>CESifo Working Paper No. 12118</em></a>]
+</div>
+<div class="paper-abstract">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%.</div>
+</div>
 </details>
 
-
-Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2025)
-[*Paper*](https://jopieadema.github.io/papers/pap_LowCostLL.pdf) [*ZEIT*](https://www.zeit.de/wissen/2025-09/integration-gefluechtete-sprachkurse-apps-migration) [*SPIEGEL*](https://www.spiegel.de/wirtschaft/unternehmen/migration-und-schulen-kritik-an-veralteten-integrationskursen-fuer-gefluechtete-a-1e7ffbdc-9116-496e-9071-c132207e2820) [*EconPol*](https://www.ifo.de/DocDL/econpol-forum-3-2025-adema-duolingo.pdf) [*CESifo Young affiliate Award 2025*] [*NOeG Young Economist Award 2025*]
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used platform Duolingo. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved the number of languages spoken per capita in the EU by 0.07. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of a relevant language course upon migration boosts the share of migrants arriving with at least basic language skills with 6 percentage points and increases the probability of employment by 3 percentage points, without strongly changing the selection of migrants. Introduction of a relevant language course after arrival further enhances migrants' employment outcomes, suggesting that the availability of low-cost language learning boosts both pre- and post-arrival language learning.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://jopieadema.github.io/papers/Adema_Dispersal_Act.pdf"><em>Paper</em></a>]
+[<a href="https://www.rfberlin.com/network-paper/expected-asylum-seekers-and-far-right-voting-effects-of-a-dispersal-act/"><em>RF Berlin Discussion Paper No. 150/25</em></a>]
+[<a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/expected-asylum-seekers-and-far-right-voting-effects-dispersal-act"><em>CESifo Working Paper No. 12312</em></a>]
+</div>
+<div class="paper-abstract">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum migration. Prior work shows that exposure to transit routes and regional inflows tends to raise far-right support, whereas direct local contact with asylum seekers can dampen it. Yet much of the sharp rise in far-right voting around major refugee waves remains unexplained by actual inflows. I study a Dutch policy reform, the Dispersal Act, which obligated municipalities to host asylum seekers and thereby generated a sudden, plausibly exogenous increase in expected future local inflows. Comparing changes in far-right vote shares between not-yet and already hosting municipalities before the actual arrival of asylum seekers allows me to isolate the electoral effect of heightened expectations of future hosting. I find that affected municipalities experienced a substantial increase in far-right support following the Act's passage. The effect operates on both the extensive margin (whether municipalities expect to host) and the intensive margin (how many they expect to host): a one-percentage-point increase in allocated asylum-seeker share raises far-right vote shares by about 1.2 percentage points.</div>
+</div>
 </details>
 
-Adema, J., L. Chargaziia, Y. Giesing, S. Necker, P. Poutvaara (2025), What Drives Refugees' Return After Conflict?. [*CESifo Working Paper No. 12118*](https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict).
-<details name="reqs"> 
-<summary>Abstract</summary>
-<font size="2">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%.</font>
-</details>    
-
-Adema, J., C.G. Aksoy, P. Poutvaara (2023), The Effect of Conflict on Ukrainian Refugees’ Return and Integration. [*CESifo Working Paper No. 10877*](https://www.cesifo.org/en/publications/2023/working-paper/effect-conflict-ukrainian-refugees-return-and-integration)
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">What is the causal effect of conflict on refugees’ return and integration? To answer this question, we launched a panel survey of Ukrainian refugees across Europe in June 2022 and combined it with geocoded conflict data. Most refugees plan to return, and initial return intentions strongly predict actual return. Those who initially plan to settle outside Ukraine integrate faster. Increased conflict intensity in the home municipality discourages return there, but not to Ukraine as a whole. It also has no effect on the likelihood of working. Liberation of the home district increases return, while increased pessimism about the outcome of the war reduces return intentions.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Low-cost Language Learning: a Boost to Move? Evidence from Duolingo (2025)</div>
+<div class="paper-authors"><em>CESifo Young Affiliate Award 2025 &middot; NOeG Young Economist Award 2025</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://jopieadema.github.io/papers/pap_LowCostLL.pdf"><em>Paper</em></a>]
+[<a href="https://www.zeit.de/wissen/2025-09/integration-gefluechtete-sprachkurse-apps-migration"><em>ZEIT</em></a>]
+[<a href="https://www.spiegel.de/wirtschaft/unternehmen/migration-und-schulen-kritik-an-veralteten-integrationskursen-fuer-gefluechtete-a-1e7ffbdc-9116-496e-9071-c132207e2820"><em>SPIEGEL</em></a>]
+[<a href="https://www.ifo.de/DocDL/econpol-forum-3-2025-adema-duolingo.pdf"><em>EconPol</em></a>]
+</div>
+<div class="paper-abstract">With the rise of the internet and smartphones, language-learning applications have become increasingly popular. Since foreign language skills enhance migrants' earning potential, the accessibility of such tools can have significant implications for international migration. This study examines the impact of low-cost language learning on (i) language acquisition, (ii) migration patterns, and (iii) migrants' language skills and integration, leveraging the staggered introduction of 84 language courses on the widely used platform Duolingo. Each course targets a directed language pair, giving rise to rich variation across country pairs over time. First, the analysis shows that course availability improved the number of languages spoken per capita in the EU by 0.07. Second, a course bridging two countries strongly increases migration intentions across that corridor. Evidence on actual migration flows to OECD countries paints a less clear picture: effects are smaller and insignificant. Third, the availability of a relevant language course upon migration boosts the share of migrants arriving with at least basic language skills with 6 percentage points and increases the probability of employment by 3 percentage points, without strongly changing the selection of migrants. Introduction of a relevant language course after arrival further enhances migrants' employment outcomes, suggesting that the availability of low-cost language learning boosts both pre- and post-arrival language learning.</div>
+</div>
 </details>
 
-Gehring, K., J. Adema, P. Poutvaara (2022), Immigrant Narratives. [*CESifo Working Paper No. 10026*](https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives)
-<details name="reqs">
-<summary>Abstract</summary>
-<font size="2">Immigration is one of the most divisive political issues in many countries today. Competing narratives, circulated via the media, are crucial in shaping how immigrants’ role in society is perceived. We propose a new method combining advanced natural language processing tools with dictionaries to identify sentences containing one or more of seven immigrant narrative themes and assign a sentiment to each of these. Our narrative dataset covers 107,428 newspaper articles from 70 German newspapers over the 2000 to 2019 period. Using 16 human coders to evaluate our method, we find that it clearly outperforms simple word-matching methods and sentiment dictionaries. Empirically, culture narratives are more common than economy-related narratives. Narratives related to work and entrepreneurship are particularly positive, while foreign religion and welfare narratives tend to be negative. We use three distinct events to show how different types of shocks influence narratives, decomposing sentiment shifts into theme-composition and within-theme changes.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Immigrant Narratives (2022)</div>
+<div class="paper-authors"><a href="https://www.kai-gehring.net/">Gehring, K.</a>, J. Adema, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.cesifo.org/en/publications/2022/working-paper/immigrant-narratives"><em>CESifo Working Paper No. 10026</em></a>]
+</div>
+<div class="paper-abstract">Immigration is one of the most divisive political issues in many countries today. Competing narratives, circulated via the media, are crucial in shaping how immigrants' role in society is perceived. We propose a new method combining advanced natural language processing tools with dictionaries to identify sentences containing one or more of seven immigrant narrative themes and assign a sentiment to each of these. Our narrative dataset covers 107,428 newspaper articles from 70 German newspapers over the 2000 to 2019 period. Using 16 human coders to evaluate our method, we find that it clearly outperforms simple word-matching methods and sentiment dictionaries. Empirically, culture narratives are more common than economy-related narratives. Narratives related to work and entrepreneurship are particularly positive, while foreign religion and welfare narratives tend to be negative. We use three distinct events to show how different types of shocks influence narratives, decomposing sentiment shifts into theme-composition and within-theme changes.</div>
+</div>
 </details>
 
-Adema, J., C.G. Aksoy, P. Poutvaara (2021), Mobile Internet Access and the Desire to Emigrate. [*EBRD Working Paper No. 264*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615) [*Vox EU Column*](https://cepr.org/voxeu/columns/mobile-internet-access-and-desire-emigrate-0)
-<details name="reqs"> 
-<summary>Abstract</summary>
-<font size="2">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</font>
-</details>    
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Mobile Internet Access and the Desire to Emigrate (2021)</div>
+<div class="paper-authors">Adema, J., <a href="https://cevatgirayaksoy.com/">C.G. Aksoy</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4017615"><em>EBRD Working Paper No. 264</em></a>]
+[<a href="https://cepr.org/voxeu/columns/mobile-internet-access-and-desire-emigrate-0"><em>VoxEU Column</em></a>]
+</div>
+<div class="paper-abstract">We analyze how mobile internet access affects desire and plans to emigrate. Our empirical analysis combines survey data on 617,402 individuals with data on worldwide 3G mobile internet rollout from 2008 to 2018. Exploiting temporal variation in 3G rollout from 2,120 subnational districts in 112 countries, we show that an increase in mobile internet access increases the desire and plans to emigrate. Using lightning incidence as an instrument provides additional evidence that the effects are causal. The effect on the desire to emigrate is particularly strong for those with secondary education. In line with our theory, an important mechanism appears to be that access to the mobile internet lowers the cost of acquiring information on potential destinations. In addition to this, increased internet access reduces perceived material well-being and trust in government. Municipal-level data from Spain shows that 3G rollout also increased actual emigration flows.</div>
+</div>
+</details>
+
 <p></p>
 
-**Works in progress**
+<p class="section-head">Works in progress</p>
 
- - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with Yvonne Giesing and Panu Poutvaara
+ - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>
  - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
  - The Welfare Magnet Hypothesis: Revisited
 <p></p>
 
-**Peer-reviewed publications**
+<p class="section-head">Peer-reviewed publications</p>
 
-Adema, J., Nikolka, T., Poutvaara, P., Sunde, U. (2021), On the stability of risk preferences: Measurement matters.   [*Economics Letters, 110172*](https://www.sciencedirect.com/science/article/pii/S0165176521004377) <br />
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Refugees from Ukraine value job opportunities over welfare (2025)</div>
+<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.pnas.org/doi/10.1073/pnas.2502420122"><em>PNAS, 122 (32)</em></a>]
+</div>
+<div class="paper-abstract">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees' destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</div>
+</div>
 </details>
-<p></p>
 
-Adema, J., L. Chargaziia, Y. Giesing, P. Poutvaara (2025), Refugees from Ukraine value job opportunities over welfare.  [*PNAS, 122 (32)*](https://www.pnas.org/doi/10.1073/pnas.2502420122) <br />
-<details name="reqs">  
-<summary>Abstract</summary>
-<font size="2">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees’ destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</font>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">On the stability of risk preferences: Measurement matters (2021)</div>
+<div class="paper-authors">Adema, J., Nikolka, T., <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, <a href="https://sites.google.com/view/uwesunde/home">Sunde, U.</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.sciencedirect.com/science/article/pii/S0165176521004377"><em>Economics Letters, 110172</em></a>]
+</div>
+<div class="paper-abstract">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</div>
+</div>
 </details>
+
 <p></p>
 
-**Other publications**
- - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch)  [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)
-    -  <font size="2">An argument in defense of royal houses is that they are important in economic diplomacy. I use the staggered trade missions of the Dutch diplomatic mission to the German federal states with the king and queen since 2013. In a triple/gravity staggered DiD framework I find that those trade missions did not increase exports nor imports.</font>
- - Adema, J. and J-V. Alipour (2025), Steigert Migration die Kriminalität? Ein datenbasierter Blick. (in German)  [*ifo Schnelldienst*](https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick) [*Tagesschau (German)*](https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html) [*Zeit (German)*](https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland) [*InfoMigrants*](https://www.infomigrants.net/en/post/68102/are-migrants-making-europe-less-safe)
+<p class="section-head">Other publications</p>
 
-   
- - Adema, J. and P. Poutvaara, M. Schlepper, T. Taghiyev, T. Wochner (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German)  [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit (German)*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR (German)*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung (Austrian)*](https://www.krone.at/3732541)
- - Adema, J. , Chargaziya, L., Giesing, Y., Günther, A., Heil, P., Jacob, M., Potrafke, N., Poutvaara, P., & Weinand, M. (2025) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte)
+ - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch) [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)
+ - Adema, J. and <a href="https://sites.google.com/view/jv-alipour/">J-V. Alipour</a> (2025), Steigert Migration die Kriminalität? Ein datenbasierter Blick. (in German) [*ifo Schnelldienst*](https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick) [*Tagesschau*](https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html) [*Zeit*](https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland) [*InfoMigrants*](https://www.infomigrants.net/en/post/68102/are-migrants-making-europe-less-safe)
+ - Adema, J. and <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a>, M. Schlepper, T. Taghiyev, <a href="https://sites.google.com/view/timo-wochner/start">T. Wochner</a> (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung*](https://www.krone.at/3732541)
+ - Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">Chargaziya, L.</a>, <a href="https://yvonnegiesing.wordpress.com/">Giesing, Y.</a>, Günther, A., Heil, P., Jacob, M., <a href="https://sites.google.com/view/niklas-potrafke">Potrafke, N.</a>, <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, & Weinand, M. (2025) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte)
 <p></p>
 
-**Media (other)**
- - On the differences between the migration debate in Germany and Netherlands (in Dutch)  [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-niet/48674863-b3e4-003b-3d35-67255e12b338)
- - What next for Ukrainian refugees in Europe?  [*The European Correspondent*](https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe)
+<p class="section-head">Media (other)</p>
+
+ - On the differences between the migration debate in Germany and Netherlands (in Dutch) [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-niet/48674863-b3e4-003b-3d35-67255e12b338)
+ - What next for Ukrainian refugees in Europe? [*The European Correspondent*](https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe)
 <p></p>
-
-
- 
-
