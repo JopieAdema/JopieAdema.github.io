@@ -35,6 +35,13 @@ details.paper[open] > summary {
   border-bottom: 1px solid #e0e0e0;
   background: #f2f2f2;
 }
+.paper-item {
+  margin-bottom: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fafafa;
+  padding: 0.75rem 1rem;
+}
 .paper-title {
   font-weight: 600;
   font-size: 0.975rem;
@@ -152,14 +159,21 @@ details.paper[open] > summary {
 </div>
 </details>
 
-<p></p>
-
 <p class="section-head">Works in progress</p>
 
- - Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families. -- with <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>
- - Between Compassion and Contempt: Home Country Events and Hosts' Attitudes. -- with Padmaja Kadambi
- - The Welfare Magnet Hypothesis: Revisited
-<p></p>
+<div class="paper-item">
+<div class="paper-title">Stuck with Boys: Return Prospects and Integration of Ukrainian Refugee Families</div>
+<div class="paper-authors">with <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
+</div>
+
+<div class="paper-item">
+<div class="paper-title">Between Compassion and Contempt: Home Country Events and Hosts' Attitudes</div>
+<div class="paper-authors">with Padmaja Kadambi</div>
+</div>
+
+<div class="paper-item">
+<div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
+</div>
 
 <p class="section-head">Peer-reviewed publications</p>
 
@@ -193,18 +207,78 @@ details.paper[open] > summary {
 </div>
 </details>
 
-<p></p>
-
 <p class="section-head">Other publications</p>
 
- - Adema, J. (2024), Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel. (in Dutch) [*ESB*](https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/)
- - Adema, J. and <a href="https://sites.google.com/view/jv-alipour/">J-V. Alipour</a> (2025), Steigert Migration die Kriminalität? Ein datenbasierter Blick. (in German) [*ifo Schnelldienst*](https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick) [*Tagesschau*](https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html) [*Zeit*](https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland) [*InfoMigrants*](https://www.infomigrants.net/en/post/68102/are-migrants-making-europe-less-safe)
- - Adema, J. and <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a>, M. Schlepper, T. Taghiyev, <a href="https://sites.google.com/view/timo-wochner/start">T. Wochner</a> (2024), Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres. (in German) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr) [*Zeit*](https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr) [*MDR*](https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html) [*Kronen Zeitung*](https://www.krone.at/3732541)
- - Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">Chargaziya, L.</a>, <a href="https://yvonnegiesing.wordpress.com/">Giesing, Y.</a>, Günther, A., Heil, P., Jacob, M., <a href="https://sites.google.com/view/niklas-potrafke">Potrafke, N.</a>, <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, & Weinand, M. (2025) [*ifo Forschungsbericht*](https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte)
-<p></p>
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel</div>
+<div class="paper-authors">Adema, J. (2024) &nbsp;&middot;&nbsp; <em>in Dutch</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/"><em>ESB</em></a>]
+</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Steigert Migration die Kriminalität? Ein datenbasierter Blick</div>
+<div class="paper-authors">Adema, J. and <a href="https://sites.google.com/view/jv-alipour/">J-V. Alipour</a> (2025) &nbsp;&middot;&nbsp; <em>in German</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.ifo.de/publikationen/2025/aufsatz-zeitschrift/steigert-migration-die-kriminalitaet-ein-datenbasierter-blick"><em>ifo Schnelldienst</em></a>]
+[<a href="https://www.tagesschau.de/inland/gesellschaft/kriminalitaet-migration-100.html"><em>Tagesschau</em></a>]
+[<a href="https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland"><em>Zeit</em></a>]
+[<a href="https://www.infomigrants.net/en/post/68102/are-migrants-making-europe-less-safe"><em>InfoMigrants</em></a>]
+</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres</div>
+<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a>, M. Schlepper, T. Taghiyev, <a href="https://sites.google.com/view/timo-wochner/start">T. Wochner</a> (2024) &nbsp;&middot;&nbsp; <em>in German</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.ifo.de/publikationen/2024/monographie-autorenschaft/wiedereinfuehrung-wehrpflicht-oder-soziales-pflichtjahr"><em>ifo Forschungsbericht</em></a>]
+[<a href="https://www.zeit.de/politik/deutschland/2025-03/armee-soldaten-gehalt-wehrpflicht-bundeswehr"><em>Zeit</em></a>]
+[<a href="https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html"><em>MDR</em></a>]
+[<a href="https://www.krone.at/3732541"><em>Kronen Zeitung</em></a>]
+</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Steuerbegünstigung für internationale Fachkräfte</div>
+<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">Chargaziya, L.</a>, <a href="https://yvonnegiesing.wordpress.com/">Giesing, Y.</a>, Günther, A., Heil, P., Jacob, M., <a href="https://sites.google.com/view/niklas-potrafke">Potrafke, N.</a>, <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, Weinand, M. (2025)</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte"><em>ifo Forschungsbericht</em></a>]
+</div>
+</div>
+</details>
 
 <p class="section-head">Media (other)</p>
 
- - On the differences between the migration debate in Germany and Netherlands (in Dutch) [*de Correspondent*](https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-niet/48674863-b3e4-003b-3d35-67255e12b338)
- - What next for Ukrainian refugees in Europe? [*The European Correspondent*](https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe)
-<p></p>
+<div class="paper-item">
+<div class="paper-title"><a href="https://decorrespondent.nl/16276/duitse-politici-begrijpen-maar-al-te-goed-zonder-migranten-schaffen-wir-das-niet/48674863-b3e4-003b-3d35-67255e12b338">On the differences between the migration debate in Germany and Netherlands</a></div>
+<div class="paper-authors"><em>de Correspondent</em> &nbsp;&middot;&nbsp; in Dutch</div>
+</div>
+
+<div class="paper-item">
+<div class="paper-title"><a href="https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe">What next for Ukrainian refugees in Europe?</a></div>
+<div class="paper-authors"><em>The European Correspondent</em></div>
+</div>
