@@ -175,6 +175,11 @@ details.paper[open] > summary {
 <div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
 </div>
 
+<div class="paper-item">
+<div class="paper-title">Non-Robustness in Log-Like Specifications [<a href="https://osf.io/preprints/metaarxiv/juda7_v1">OSF</a>]</div>
+<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
+</div>
+
 <p class="section-head">Peer-reviewed publications</p>
 
 <details class="paper">
