@@ -81,7 +81,7 @@ details.paper[open] > summary {
 </summary>
 <div class="paper-body">
 <div class="paper-links">
-[<a href="https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872"><em>Blogpost by Sjamadriaan (Dutch)</em></a>]
+<a href="https://www.sjamadriaan.nl/p/f76b9e72-e23a-4169-9dbd-3f841ebd1872"><em>Blogpost by Sjamadriaan (Dutch)</em></a>
 </div>
 <div class="paper-abstract">A study published in PLOS ONE finding that cold showers strongly decrease work absence has implausible descriptive statistics, uses an incorrect statistical model, and has undeclared conflicts of interest.</div>
 </div>
@@ -96,10 +96,10 @@ details.paper[open] > summary {
 </summary>
 <div class="paper-body">
 <div class="paper-links">
-[<a href="https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html"><em>Frankfurter Allgemeine Zeitung (German)</em></a>]
-[<a href="https://twitter.com/johannarickne/status/1773002832632836549"><em>Twitter thread</em></a>]
-[<a href="https://jopieadema.github.io/replication/replication_Ciacci.zip"><em>Replication files</em></a>]
-[<a href="https://open.spotify.com/episode/4Eo0DFGixG5i4RYKdRvLb9"><em>Podcast (Allegedly Does Not Replicate, ep. 18)</em></a>]
+<a href="https://www.faz.net/aktuell/wirtschaft/sexarbeit-fuehrt-ein-verbot-von-prostitution-zu-mehr-vergewaltigungen-19619721.html"><em>Frankfurter Allgemeine Zeitung (German)</em></a>
+<a href="https://twitter.com/johannarickne/status/1773002832632836549"><em>Twitter thread</em></a>
+<a href="https://jopieadema.github.io/replication/replication_Ciacci.zip"><em>Replication files</em></a>
+<a href="https://open.spotify.com/episode/4Eo0DFGixG5i4RYKdRvLb9"><em>Podcast (Allegedly Does Not Replicate, ep. 18)</em></a>
 </div>
 <div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
 </div>
@@ -113,9 +113,9 @@ details.paper[open] > summary {
 </summary>
 <div class="paper-body">
 <div class="paper-links">
-[<a href="https://jopieadema.github.io/replication/comment_AJK.pdf"><em>Comment</em></a>]
-[<a href="https://jopieadema.github.io/replication/replication_AJK.zip"><em>Replication files</em></a>]
-[<a href="https://bsky.app/profile/jopieboy.bsky.social/post/3lruvizr3yk2y"><em>Bluesky thread</em></a>]
+<a href="https://jopieadema.github.io/replication/comment_AJK.pdf"><em>Comment</em></a>
+<a href="https://jopieadema.github.io/replication/replication_AJK.zip"><em>Replication files</em></a>
+<a href="https://bsky.app/profile/jopieboy.bsky.social/post/3lruvizr3yk2y"><em>Bluesky thread</em></a>
 </div>
 <div class="paper-abstract">A study published in AER Insights finding a large effect of welfare benefits on non-EU migration to Denmark reports an ill-defined elasticity, conflates net migration with migrant residents turning 30, and disregards the origin country composition of migration flows.</div>
 </div>
