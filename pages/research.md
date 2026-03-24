@@ -170,6 +170,19 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">Criminalization of Purchasing Sex and Rape in Sweden</div>
+<div class="paper-outlet"><em>R&R at Evaluation Review</em></div>
+<div class="paper-authors">Adema, J., <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">O. Folke</a>, <a href="https://sites.google.com/site/ricknejohanna/">J. Rickne</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">Mobile Internet Access and the Desire to Emigrate (2021)</div>
 <div class="paper-outlet"><em>EBRD Working Paper</em></div>
 <div class="paper-authors">Adema, J., <a href="https://cevatgirayaksoy.com/">C.G. Aksoy</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
