@@ -47,6 +47,12 @@ details.paper[open] > summary {
   font-size: 0.975rem;
   line-height: 1.4;
 }
+.paper-outlet {
+  font-size: 0.825rem;
+  color: #444;
+  font-weight: 400;
+  margin-top: 0.1rem;
+}
 .paper-authors {
   font-size: 0.825rem;
   color: #666;
@@ -83,6 +89,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Non-Robustness in Log-Like Specifications</div>
+<div class="paper-outlet"><em>Preprint</em></div>
 <div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
 </div>
 </summary>
@@ -97,7 +104,8 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
-<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">S. Necker</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a> &nbsp;&middot;&nbsp; <em>R&R at Nature Human Behaviour</em></div>
+<div class="paper-outlet"><em>R&R at Nature Human Behaviour &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
+<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">S. Necker</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -112,6 +120,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)</div>
+<div class="paper-outlet"><em>RF Berlin Discussion Paper &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -146,6 +155,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Immigrant Narratives (2022)</div>
+<div class="paper-outlet"><em>CESifo Working Paper</em></div>
 <div class="paper-authors"><a href="https://www.kai-gehring.net/">Gehring, K.</a>, J. Adema, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
 </div>
 </summary>
@@ -161,6 +171,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Mobile Internet Access and the Desire to Emigrate (2021)</div>
+<div class="paper-outlet"><em>EBRD Working Paper</em></div>
 <div class="paper-authors">Adema, J., <a href="https://cevatgirayaksoy.com/">C.G. Aksoy</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
 </div>
 </summary>
@@ -195,6 +206,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Refugees from Ukraine value job opportunities over welfare (2025)</div>
+<div class="paper-outlet"><em>PNAS</em></div>
 <div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
 </div>
 </summary>
@@ -210,6 +222,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">On the stability of risk preferences: Measurement matters (2021)</div>
+<div class="paper-outlet"><em>Economics Letters</em></div>
 <div class="paper-authors">Adema, J., Nikolka, T., <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, <a href="https://sites.google.com/view/uwesunde/home">Sunde, U.</a></div>
 </div>
 </summary>
@@ -227,6 +240,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Missies met koningspaar naar Duitse deelstaten leiden niet tot meer handel</div>
+<div class="paper-outlet"><em>ESB</em></div>
 <div class="paper-authors">Adema, J. (2024) &nbsp;&middot;&nbsp; <em>in Dutch</em></div>
 </div>
 </summary>
@@ -241,6 +255,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Steigert Migration die Kriminalität? Ein datenbasierter Blick</div>
+<div class="paper-outlet"><em>ifo Schnelldienst</em></div>
 <div class="paper-authors">Adema, J. and <a href="https://sites.google.com/view/jv-alipour/">J-V. Alipour</a> (2025) &nbsp;&middot;&nbsp; <em>in German</em></div>
 </div>
 </summary>
@@ -258,6 +273,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres</div>
+<div class="paper-outlet"><em>ifo Forschungsbericht</em></div>
 <div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a>, M. Schlepper, T. Taghiyev, <a href="https://sites.google.com/view/timo-wochner/start">T. Wochner</a> (2024) &nbsp;&middot;&nbsp; <em>in German</em></div>
 </div>
 </summary>
@@ -275,6 +291,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Steuerbegünstigung für internationale Fachkräfte</div>
+<div class="paper-outlet"><em>ifo Forschungsbericht</em></div>
 <div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">Chargaziya, L.</a>, <a href="https://yvonnegiesing.wordpress.com/">Giesing, Y.</a>, Günther, A., Heil, P., Jacob, M., <a href="https://sites.google.com/view/niklas-potrafke">Potrafke, N.</a>, <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, Weinand, M. (2025)</div>
 </div>
 </summary>
