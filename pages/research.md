@@ -105,7 +105,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
 <div class="paper-outlet"><em>R&R at Nature Human Behaviour &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
-<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">S. Necker</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">Sarah Necker</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -156,7 +156,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Immigrant Narratives (2022)</div>
 <div class="paper-outlet"><em>CESifo Working Paper</em></div>
-<div class="paper-authors"><a href="https://www.kai-gehring.net/">Gehring, K.</a>, J. Adema, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+<div class="paper-authors">with <a href="https://www.kai-gehring.net/">Kai Gehring</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -172,7 +172,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Criminalization of Purchasing Sex and Rape in Sweden</div>
 <div class="paper-outlet"><em>R&R at Evaluation Review</em></div>
-<div class="paper-authors">Adema, J., <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">O. Folke</a>, <a href="https://sites.google.com/site/ricknejohanna/">J. Rickne</a></div>
+<div class="paper-authors">with <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a>, and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -185,7 +185,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Mobile Internet Access and the Desire to Emigrate (2021)</div>
 <div class="paper-outlet"><em>EBRD Working Paper</em></div>
-<div class="paper-authors">Adema, J., <a href="https://cevatgirayaksoy.com/">C.G. Aksoy</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+<div class="paper-authors">with <a href="https://cevatgirayaksoy.com/">Cevat Giray Aksoy</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -220,7 +220,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Refugees from Ukraine value job opportunities over welfare (2025)</div>
 <div class="paper-outlet"><em>PNAS</em></div>
-<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a></div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -236,7 +236,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">On the stability of risk preferences: Measurement matters (2021)</div>
 <div class="paper-outlet"><em>Economics Letters</em></div>
-<div class="paper-authors">Adema, J., Nikolka, T., <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, <a href="https://sites.google.com/view/uwesunde/home">Sunde, U.</a></div>
+<div class="paper-authors">with Till Nikolka, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and <a href="https://sites.google.com/view/uwesunde/home">Uwe Sunde</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -269,7 +269,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Steigert Migration die Kriminalität? Ein datenbasierter Blick</div>
 <div class="paper-outlet"><em>ifo Schnelldienst</em></div>
-<div class="paper-authors">Adema, J. and <a href="https://sites.google.com/view/jv-alipour/">J-V. Alipour</a> (2025) &nbsp;&middot;&nbsp; <em>in German</em></div>
+<div class="paper-authors">with <a href="https://sites.google.com/view/jv-alipour/">Jean-Victor Alipour</a> (2025) &nbsp;&middot;&nbsp; <em>in German</em></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -287,7 +287,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Volkswirtschaftliche Kosten einer Wiedereinführung der Wehrpflicht oder eines sozialen Pflichtjahres</div>
 <div class="paper-outlet"><em>ifo Forschungsbericht</em></div>
-<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a>, M. Schlepper, T. Taghiyev, <a href="https://sites.google.com/view/timo-wochner/start">T. Wochner</a> (2024) &nbsp;&middot;&nbsp; <em>in German</em></div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, Marcel Schlepper, Tuncay Taghiyev, and <a href="https://sites.google.com/view/timo-wochner/start">Timo Wochner</a> (2024) &nbsp;&middot;&nbsp; <em>in German</em></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -305,7 +305,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Steuerbegünstigung für internationale Fachkräfte</div>
 <div class="paper-outlet"><em>ifo Forschungsbericht</em></div>
-<div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">Chargaziya, L.</a>, <a href="https://yvonnegiesing.wordpress.com/">Giesing, Y.</a>, Günther, A., Heil, P., Jacob, M., <a href="https://sites.google.com/view/niklas-potrafke">Potrafke, N.</a>, <a href="https://www.ifo.de/en/poutvaara-p">Poutvaara, P.</a>, Weinand, M. (2025)</div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, Aaron Günther, Philipp Heil, Martin Jacob, <a href="https://sites.google.com/view/niklas-potrafke">Niklas Potrafke</a>, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and Michael Weinand (2025)</div>
 </div>
 </summary>
 <div class="paper-body">
