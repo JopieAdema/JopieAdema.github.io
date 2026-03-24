@@ -82,6 +82,20 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">Non-Robustness in Log-Like Specifications</div>
+<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+[<a href="https://osf.io/preprints/metaarxiv/juda7_v1"><em>OSF</em></a>]
+</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
 <div class="paper-authors">Adema, J., <a href="https://www.ifo.de/en/chargaziia-l">L. Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Y. Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">S. Necker</a>, <a href="https://www.ifo.de/en/poutvaara-p">P. Poutvaara</a> &nbsp;&middot;&nbsp; <em>R&R at Nature Human Behaviour</em></div>
 </div>
@@ -173,11 +187,6 @@ details.paper[open] > summary {
 
 <div class="paper-item">
 <div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
-</div>
-
-<div class="paper-item">
-<div class="paper-title">Non-Robustness in Log-Like Specifications [<a href="https://osf.io/preprints/metaarxiv/juda7_v1">OSF</a>]</div>
-<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
 </div>
 
 <p class="section-head">Peer-reviewed publications</p>
