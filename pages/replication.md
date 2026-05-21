@@ -105,20 +105,6 @@ details.paper[open] > summary {
 </div>
 </details>
 
-<details class="paper">
-<summary>
-<div>
-<div class="paper-title">Immigrants and the Making of America: A Comment</div>
-<div class="paper-authors">Adema, J.</div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-links">
-<a href="https://jopieadema.github.io/replication/replication_SNQ.zip"><em>Replication files</em></a>
-</div>
-<div class="paper-abstract">A study on the long-run impact of immigration during the Age of Mass Migration on US county-level economic outcomes instruments historical immigration with railroad connectivity interacted with European migration flows, but inadequately controls for the timing of railroad connection. Controlling for timing parametrically renders all main results insignificant. Asymptotic inference further severely overstates precision due to only seven decadal migration shifts.</div>
-</div>
-</details>
 
 <details class="paper">
 <summary>

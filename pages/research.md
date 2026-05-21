@@ -104,7 +104,7 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
-<div class="paper-title">Non-Robustness in Log-Like Specifications</div>
+<div class="paper-title">Non-Robustness in Log-Like Specifications (2026)</div>
 <div class="paper-outlet"><em>Preprint</em></div>
 <div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
 </div>
