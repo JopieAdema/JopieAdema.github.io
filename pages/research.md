@@ -88,21 +88,6 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
-<div class="paper-title">Non-Robustness in Log-Like Specifications</div>
-<div class="paper-outlet"><em>Preprint</em></div>
-<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-links">
-<a href="https://osf.io/preprints/metaarxiv/juda7_v1"><em>OSF</em></a>
-</div>
-</div>
-</details>
-
-<details class="paper">
-<summary>
-<div>
 <div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
 <div class="paper-outlet"><em>R&R at Nature Human Behaviour &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
 <div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">Sarah Necker</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
@@ -113,6 +98,21 @@ details.paper[open] > summary {
 <a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/what-drives-refugees-return-after-conflict"><em>CESifo Working Paper No. 12118</em></a>
 </div>
 <div class="paper-abstract">Refugees' decisions to return after conflict carry significant political and economic implications for the origin and host countries. We examine how conflict resolution, security, economic conditions, and corruption influence return decisions. To estimate the causal effect of post-war conditions, we conducted a single-profile conjoint experiment among 2543 Ukrainian refugees across 30 European countries. Respondents were asked how likely they would be to return to Ukraine under different hypothetical scenarios. Results show that territorial integrity and security guarantees are critical, while economic prospects and combating corruption also play an important role. Refugees planning to return are more responsive to different post-war scenarios, and younger respondents are particularly influenced by income opportunities, job prospects, and potential EU accession. Our findings suggest that targeted political and economic reconstruction policies can substantially influence post-conflict return. In the most optimistic scenario, the expected return rate is 47%; in the most pessimistic scenario, only 3%.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Non-Robustness in Log-Like Specifications</div>
+<div class="paper-outlet"><em>Preprint</em></div>
+<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://osf.io/preprints/metaarxiv/juda7_v1"><em>OSF</em></a>
+</div>
 </div>
 </details>
 
@@ -170,19 +170,6 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
-<div class="paper-title">Criminalization of Purchasing Sex and Rape in Sweden</div>
-<div class="paper-outlet"><em>R&R at Evaluation Review</em></div>
-<div class="paper-authors">with <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a>, and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
-</div>
-</details>
-
-<details class="paper">
-<summary>
-<div>
 <div class="paper-title">Mobile Internet Access and the Desire to Emigrate (2021)</div>
 <div class="paper-outlet"><em>EBRD Working Paper</em></div>
 <div class="paper-authors">with <a href="https://cevatgirayaksoy.com/">Cevat Giray Aksoy</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
@@ -211,9 +198,26 @@ details.paper[open] > summary {
 
 <div class="paper-item">
 <div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 
 <p class="section-head">Peer-reviewed publications</p>
+
+<details class="paper">
+<summary>
+<div>
+<div class="paper-title">Criminalization of Purchasing Sex and Rape in Sweden (2026)</div>
+<div class="paper-outlet"><em>Evaluation Review</em></div>
+<div class="paper-authors">with <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a>, and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://journals.sagepub.com/doi/abs/10.1177/0193841X261449106"><em>Evaluation Review</em></a>
+</div>
+<div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
+</div>
+</details>
 
 <details class="paper">
 <summary>

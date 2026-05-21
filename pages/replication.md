@@ -108,6 +108,22 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">The Political Effects of (Mis)perceived Immigration: a Comment</div>
+<div class="paper-authors">Adema, J.</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://jopieadema.github.io/replication/comment_BBCZ.pdf"><em>Comment</em></a>
+<a href="https://jopieadema.github.io/replication/replication_BBCZ.zip"><em>Replication files</em></a>
+</div>
+<div class="paper-abstract">A study published in the Journal of Economic Geography on the political effects of perceived immigration in Italian municipal elections constructs a shift-share exposure index that is mechanically correlated with municipality size. Controlling for electorate size renders all main results insignificant.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">The Welfare Magnet Hypothesis: Evidence from an Immigrant Welfare Scheme in Denmark: Comment</div>
 </div>
 </summary>
