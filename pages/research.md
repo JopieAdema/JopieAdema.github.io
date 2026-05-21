@@ -206,9 +206,9 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
-<div class="paper-title">Criminalization of Purchasing Sex and Rape in Sweden (2026)</div>
+<div class="paper-title">No Evidence that Banning the Purchase of Sex Increases Rape: A Replication Study of Ciacci (2024, 2025) (2026)</div>
 <div class="paper-outlet"><em>Evaluation Review</em></div>
-<div class="paper-authors">with <a href="https://www.sjamadriaan.nl">Sjamadriaan</a>, <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a>, and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
+<div class="paper-authors">with <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a> and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
 </div>
 </summary>
 <div class="paper-body">
