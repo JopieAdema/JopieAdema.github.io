@@ -29,7 +29,7 @@ table.preds tr.top td.score { color:#018F59; }
 </style>
 
 {% assign wc = site.data.worldcup %}
-{% if wc.updated %}<p class="updated">Last updated: {{ wc.updated }} &middot; refreshes every ~3 hours during the tournament.</p>{% endif %}
+{% if wc.updated %}<p class="updated">Last updated: {{ wc.updated }} &middot; refreshes once a day during the tournament.</p>{% endif %}
 
 {% if wc.matches and wc.matches.size > 0 %}
   {% for m in wc.matches %}
