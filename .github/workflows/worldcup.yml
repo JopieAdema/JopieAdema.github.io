@@ -1,12 +1,12 @@
 name: Update World Cup predictions
 
-# Refreshes _data/worldcup.json from live correct-score odds once per day.
-# Provider: API-Football (free tier = 100 requests/DAY). Each run uses ~1 call
-# per fixture + 2 lookups (~6-14/day), well within the daily limit.
-# Need it fresher? "0 */12 * * *" or "0 */6 * * *" — keep total calls/day < 100.
+# Refreshes _data/worldcup.json from live odds once per day.
+# Quota note: The Odds API free tier = 500 requests/month. Each run costs
+# ~2 credits (h2h + totals, 1 region); once daily ≈ 60/month, well within budget.
+# Need it fresher? Use "0 */6 * * *" (4x/day ≈ 240/mo) or "0 */3 * * *" (~480/mo).
 on:
   schedule:
-    - cron: "0 6 * * *"     # 06:00 UTC daily (~08:00 Munich in summer)
+    - cron: "0 13 * * *"    # 13:00 UTC = 15:00 Munich (CEST) during the tournament
   workflow_dispatch:        # allows a manual run from the Actions tab any time
 
 permissions:
@@ -28,11 +28,11 @@ jobs:
           r-version: release
 
       - name: Install dependencies
-        run: Rscript -e 'install.packages(c("jsonlite","curl"), repos="https://cloud.r-project.org")'
+        run: Rscript -e 'install.packages("jsonlite", repos="https://cloud.r-project.org")'
 
       - name: Compute predictions
         env:
-          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: Rscript scripts/worldcup_predictions.R
 
       - name: Commit updated data
