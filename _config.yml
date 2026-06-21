@@ -18,6 +18,7 @@ navbar-links:
   Research: "research"
   Replication: "replication"
   Talks: "talks"
+  World Cup: "worldcup"
  #   - Current: "published"
  #   - Student theses: "thesis"
  #   Teaching:
@@ -223,6 +224,7 @@ exclude:
   - LICENSE
   - README.md
   - archive/
+  - scripts/
 
 plugins:
   - jekyll-paginate

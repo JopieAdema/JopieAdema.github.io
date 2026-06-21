@@ -1,0 +1,49 @@
+name: Update World Cup predictions
+
+# Refreshes _data/worldcup.json from live odds every ~3 hours.
+# Quota note: The Odds API free tier = 500 requests/month. Each run costs
+# ~2 credits (h2h + totals, 1 region); every 3h ≈ 480/month. Widen to
+# "0 */4 * * *" (~360/month) for headroom, and enable only during the tournament.
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:        # allows a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+# avoid overlapping runs racing on the same push
+concurrency:
+  group: worldcup-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+
+      - name: Install dependencies
+        run: Rscript -e 'install.packages("jsonlite", repos="https://cloud.r-project.org")'
+
+      - name: Compute predictions
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: Rscript scripts/worldcup_predictions.R
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/worldcup.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update World Cup predictions"
+            git pull --rebase --autostash
+            git push
+          fi
