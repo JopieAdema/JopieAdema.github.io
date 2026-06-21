@@ -17,6 +17,7 @@ subtitle: Expected-points-optimal score predictions for today's and tomorrow's m
 .match-head .day { display:inline-block; background:#018F59; color:#fff; border-radius:3px;
   padding:0 0.4rem; font-size:0.72rem; font-weight:600; margin-right:0.3rem; }
 .model { font-size:0.8rem; color:#666; margin:0.4rem 0 0.6rem; }
+.src { font-style:italic; }
 table.preds { width:100%; border-collapse:collapse; font-size:0.9rem; }
 table.preds th, table.preds td { text-align:left; padding:0.3rem 0.5rem; border:none; }
 table.preds thead th { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.03em;
@@ -38,7 +39,7 @@ table.preds tr.top td.score { color:#018F59; }
       <span class="teams">{{ m.home }} <span class="vs">vs</span> {{ m.away }}</span>
       <span class="when"><span class="day">{{ m.day }}</span> {{ m.kickoff }}</span>
     </div>
-    <div class="model">Market: 1 {{ m.p_home | times: 100 | round }}% &middot; X {{ m.p_draw | times: 100 | round }}% &middot; 2 {{ m.p_away | times: 100 | round }}% &nbsp;|&nbsp; expected goals {{ m.exp_goals_home }} : {{ m.exp_goals_away }}</div>
+    <div class="model"><span class="src">{% if m.method == 'market' %}per-score market odds ({{ m.n_books }} bookmakers){% else %}modelled from 1X2 + O/U (no per-score market){% endif %}</span> &nbsp;|&nbsp; 1 {{ m.p_home | times: 100 | round }}% &middot; X {{ m.p_draw | times: 100 | round }}% &middot; 2 {{ m.p_away | times: 100 | round }}% &nbsp;|&nbsp; expected goals {{ m.exp_goals_home }} : {{ m.exp_goals_away }}</div>
     <table class="preds">
       <thead><tr><th>#</th><th>Score</th><th>Exp. pts</th></tr></thead>
       <tbody>
@@ -56,15 +57,17 @@ table.preds tr.top td.score { color:#018F59; }
 <details class="paper" style="margin-top:1.75rem;">
 <summary><div><div class="paper-title">How this works</div></div></summary>
 <div class="paper-body">
-<p>For each match I pull the bookmakers' match-winner (1&middot;X&middot;2) and over/under odds, strip out the
-margin to recover the implied probabilities, and fit an independent Poisson model for each team's goals
-(the <em>expected goals</em> shown above). That yields a probability for every possible scoreline.</p>
+<p>For each match I pull the bookmakers' <strong>correct-score odds</strong> &mdash; the price on every
+individual scoreline (0-0, 1-0, 0-1, &hellip;) &mdash; strip out the margin, and average across bookmakers
+to get a probability for each scoreline. If a match has no correct-score market quoted, I fall back to a
+Poisson model fitted to its match-winner (1&middot;X&middot;2) and over/under odds; each card shows which
+source was used.</p>
 <p>I then score <em>every</em> candidate prediction against that full distribution under the Kicktipp rules
 and report the three scores with the highest <strong>expected points</strong>. The table's top row (in green)
 is the expected-points-maximising tip &mdash; not necessarily the single most likely score.</p>
 <p><strong>Kicktipp scoring:</strong> 4 = exact score &middot; 3 = correct goal difference (non-draw) &middot;
 2 = correct tendency (win/draw/loss) &middot; 0 = otherwise. Because a draw tip only pays when the match is
 actually drawn, narrow favourites usually win on expected points even when a draw is fairly likely.</p>
-<p class="paper-outlet">Odds via The Odds API. For fun, not betting advice.</p>
+<p class="paper-outlet">Odds via API-Football. For fun, not betting advice.</p>
 </div>
 </details>
