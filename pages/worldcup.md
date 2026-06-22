@@ -26,6 +26,15 @@ table.preds td.pts { text-align:right; font-variant-numeric:tabular-nums; }
 table.preds tr.top td { background:#eaf7f0; }
 table.preds tr.top td.score { color:#018F59; }
 .nomatch { color:#777; font-style:italic; }
+.formula { text-align:center; font-family:Georgia,"Times New Roman",serif; font-size:1.05rem;
+  color:#333; margin:0.8rem 0 0.9rem; }
+.formula .lhs, .formula .opname { font-style:italic; }
+.formula .op { display:inline-flex; flex-direction:column; align-items:center;
+  vertical-align:middle; margin:0 0.3rem; }
+.formula .op .sig { font-size:1.55rem; line-height:0.8; }
+.formula .op .sub { font-size:0.7rem; color:#666; margin-top:-1px; }
+.parts { font-size:0.85rem; line-height:1.6; color:#444; margin:0.2rem 0 0.8rem 1.1rem; padding:0; }
+.parts li { margin-bottom:0.25rem; }
 </style>
 
 {% assign wc = site.data.worldcup %}
@@ -62,6 +71,20 @@ margin to recover the implied probabilities, and fit an independent Poisson mode
 <p>I then score <em>every</em> candidate prediction against that full distribution under the Kicktipp rules
 and report the three scores with the highest <strong>expected points</strong>. The table's top row (in green)
 is the expected-points-maximising tip &mdash; not necessarily the single most likely score.</p>
+<p>Formally, the tool picks the scoreline that maximises expected points:</p>
+<div class="formula">
+<span class="lhs">best&nbsp;tip</span> =
+<span class="op"><span class="opname">arg&nbsp;max</span><span class="sub">prediction</span></span>
+<span class="op"><span class="sig">&Sigma;</span><span class="sub">score</span></span>
+P(score) &times; Points(prediction,&nbsp;score)
+</div>
+<ul class="parts">
+<li><strong>prediction</strong> &mdash; a scoreline you could enter as your tip (home&#8202;:&#8202;away).</li>
+<li><strong>score</strong> &mdash; a possible actual final result; the sum runs over every scoreline.</li>
+<li><strong>P(score)</strong> &mdash; the model's probability that the match ends in exactly that score.</li>
+<li><strong>Points(prediction, score)</strong> &mdash; the Kicktipp points that tip earns for that result (4 / 3 / 2 / 0, by the rule below).</li>
+<li>The inner sum is a tip's <strong>expected points</strong>; <em>arg&nbsp;max</em> keeps the tip with the most &mdash; the green top row.</li>
+</ul>
 <p><strong>Kicktipp scoring:</strong> 4 = exact score &middot; 3 = correct goal difference (non-draw) &middot;
 2 = correct tendency (win/draw/loss) &middot; 0 = otherwise. Because a draw tip only pays when the match is
 actually drawn, narrow favourites usually win on expected points even when a draw is fairly likely.</p>
