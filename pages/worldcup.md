@@ -70,8 +70,7 @@ table.preds tr.top td.score { color:#018F59; }
 <div class="paper-body">
 <p>For each match I take <strong>Bet365's correct-score odds</strong> &mdash; the price on every individual
 scoreline (0-0, 1-0, 0-1, &hellip; up to around 7-4) &mdash; and strip out the bookmaker's margin to recover
-the implied probability of each scoreline. (If a match has no correct-score market yet, I fall back to a
-simple Poisson model fitted to its match-winner odds; the card notes when that happens.)</p>
+the implied probability of each scoreline.</p>
 <p>I then score <em>every</em> candidate prediction against that full distribution under the Kicktipp rules
 and report the three scores with the highest <strong>expected points</strong>. The table's top row (in green)
 is the expected-points-maximising tip &mdash; not necessarily the single most likely score.</p>
