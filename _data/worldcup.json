@@ -1,5 +1,5 @@
 {
-  "updated": "Mon 22 Jun 2026, 09:44 CEST",
+  "updated": "Mon 22 Jun 2026, 09:52 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
     {
@@ -10,23 +10,23 @@
       "sort_key": "202606221900",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 2.1,
-      "exp_goals_away": 0.86,
-      "p_home": 0.648,
-      "p_draw": 0.21,
-      "p_away": 0.143,
+      "exp_goals_home": 2.03,
+      "exp_goals_away": 0.85,
+      "p_home": 0.63,
+      "p_draw": 0.222,
+      "p_away": 0.149,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.65"
+          "points": "1.61"
         },
         {
           "score": "2:1",
-          "points": "1.62"
+          "points": "1.58"
         },
         {
           "score": "2:0",
-          "points": "1.59"
+          "points": "1.55"
         }
       ]
     },

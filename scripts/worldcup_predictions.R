@@ -16,7 +16,7 @@
 # Data: odds-api.io (https://api.odds-api.io/v3), free tier 5000 req/hour.
 # Auth: apiKey query parameter from env ODDSAPIIO_KEY.
 #
-# Run:  Rscript scripts/worldcup_predictions.R          (live; needs ODDSAPIIO_KEY + curl)
+# Run:  Rscript scripts/worldcup_predictions.R          (live; needs ODDSAPIIO_KEY)
 #       MOCK=1 Rscript scripts/worldcup_predictions.R   (offline; uses sample_odds.json)
 # Runtime: MOCK ~1 s; live ~10-20 s (one odds call per fixture).
 # ============================================================
@@ -99,16 +99,17 @@ best_predictions <- function(M, n = 3) {
 
 api_get <- function(path) {
   if (USE_MOCK) stop("api_get called in MOCK mode")
-  if (!requireNamespace("curl", quietly = TRUE))
-    stop("Package 'curl' is required for live mode (install.packages('curl')).")
-  r <- curl::curl_fetch_memory(paste0(API_BASE, path))
-  txt <- rawToChar(r$content); Encoding(txt) <- "UTF-8"
-  obj <- tryCatch(fromJSON(txt, simplifyVector = FALSE), error = function(e) NULL)
-  if (r$status_code != 200) {
-    msg <- if (!is.null(obj$error)) obj$error else substr(txt, 1, 160)
-    stop(sprintf("odds-api.io %s -> HTTP %d: %s", sub("&apiKey=.*", "", path),
-                 r$status_code, msg))
-  }
+  full <- paste0(API_BASE, path)
+  txt <- tryCatch({
+    con <- url(full, method = "libcurl", open = "rb")
+    on.exit(close(con))
+    rawToChar(readBin(con, "raw", n = 1e7))
+  }, error = function(e) stop(sprintf("odds-api.io %s failed: %s",
+                                      sub("&apiKey=.*", "", path), conditionMessage(e))))
+  Encoding(txt) <- "UTF-8"
+  obj <- fromJSON(txt, simplifyVector = FALSE)
+  if (!is.null(obj$error))
+    stop(sprintf("odds-api.io %s: %s", sub("&apiKey=.*", "", path), obj$error))
   obj
 }
 

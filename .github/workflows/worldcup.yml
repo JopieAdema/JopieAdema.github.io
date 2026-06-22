@@ -28,7 +28,7 @@ jobs:
           r-version: release
 
       - name: Install dependencies
-        run: Rscript -e 'install.packages(c("jsonlite","curl"), repos="https://cloud.r-project.org")'
+        run: Rscript -e 'install.packages("jsonlite", repos="https://cloud.r-project.org")'
 
       - name: Compute predictions
         env:
