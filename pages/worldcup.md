@@ -40,7 +40,7 @@ table.preds tr.top td.score { color:#018F59; }
 </style>
 
 {% assign wc = site.data.worldcup %}
-<p class="intro">I made a tool to provide optimal World Cup match predictions to beat all your colleagues in the World Cup pool. This tool maximizes the total expected points scored using the German Kicktipp Platform. For more details, see below!</p>
+<p class="intro">I made a tool to provide optimal World Cup match predictions to beat all your colleagues in the World Cup pool. Based on betting odds, this tool maximizes the total expected points scored using the German Kicktipp Platform. For more details, see below!</p>
 {% if wc.updated %}<p class="updated">Last updated: {{ wc.updated }} &middot; refreshes once a day during the tournament.</p>{% endif %}
 
 {% if wc.matches and wc.matches.size > 0 %}
