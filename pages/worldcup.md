@@ -26,6 +26,7 @@ table.preds td.pts { text-align:right; font-variant-numeric:tabular-nums; }
 table.preds tr.top td { background:#eaf7f0; }
 table.preds tr.top td.score { color:#018F59; }
 .nomatch { color:#777; font-style:italic; }
+.src { font-style:italic; }
 .formula { text-align:center; font-family:Georgia,"Times New Roman",serif; font-size:1.05rem;
   color:#333; margin:0.8rem 0 0.9rem; }
 .formula .lhs, .formula .opname { font-style:italic; }
@@ -47,7 +48,7 @@ table.preds tr.top td.score { color:#018F59; }
       <span class="teams">{{ m.home }} <span class="vs">vs</span> {{ m.away }}</span>
       <span class="when"><span class="day">{{ m.day }}</span> {{ m.kickoff }}</span>
     </div>
-    <div class="model">Market: 1 {{ m.p_home | times: 100 | round }}% &middot; X {{ m.p_draw | times: 100 | round }}% &middot; 2 {{ m.p_away | times: 100 | round }}% &nbsp;|&nbsp; expected goals {{ m.exp_goals_home }} : {{ m.exp_goals_away }}</div>
+    <div class="model"><span class="src">{% if m.method == 'market' %}per-score market odds ({{ m.n_books }} bookmaker{% if m.n_books != 1 %}s{% endif %}){% else %}modelled from match-winner odds{% endif %}</span> &nbsp;|&nbsp; 1 {{ m.p_home | times: 100 | round }}% &middot; X {{ m.p_draw | times: 100 | round }}% &middot; 2 {{ m.p_away | times: 100 | round }}% &nbsp;|&nbsp; expected goals {{ m.exp_goals_home }} : {{ m.exp_goals_away }}</div>
     <table class="preds">
       <thead><tr><th>#</th><th>Score</th><th>Exp. pts</th></tr></thead>
       <tbody>
@@ -65,9 +66,11 @@ table.preds tr.top td.score { color:#018F59; }
 <details class="paper" style="margin-top:1.75rem;">
 <summary><div><div class="paper-title">How this works</div></div></summary>
 <div class="paper-body">
-<p>For each match I pull the bookmakers' match-winner (1&middot;X&middot;2) and over/under odds, strip out the
-margin to recover the implied probabilities, and fit an independent Poisson model for each team's goals
-(the <em>expected goals</em> shown above). That yields a probability for every possible scoreline.</p>
+<p>For each match I pull the bookmaker's <strong>correct-score odds</strong> &mdash; the price on every
+individual scoreline (0-0, 1-0, 0-1, &hellip;) &mdash; and strip out the margin to recover the implied
+probability of each scoreline. If a match has no correct-score market yet, I fall back to an independent
+Poisson model fitted to its match-winner (1&middot;X&middot;2) odds; each card shows which source was used,
+along with the implied win/draw/win split and <em>expected goals</em>.</p>
 <p>I then score <em>every</em> candidate prediction against that full distribution under the Kicktipp rules
 and report the three scores with the highest <strong>expected points</strong>. The table's top row (in green)
 is the expected-points-maximising tip &mdash; not necessarily the single most likely score.</p>
@@ -81,13 +84,13 @@ P(score) &times; Points(prediction,&nbsp;score)
 <ul class="parts">
 <li><strong>prediction</strong> &mdash; a scoreline you could enter as your tip (home&#8202;:&#8202;away).</li>
 <li><strong>score</strong> &mdash; a possible actual final result; the sum runs over every scoreline.</li>
-<li><strong>P(score)</strong> &mdash; the model's probability that the match ends in exactly that score.</li>
+<li><strong>P(score)</strong> &mdash; the probability the match ends in exactly that score, from the bookmaker's correct-score odds.</li>
 <li><strong>Points(prediction, score)</strong> &mdash; the Kicktipp points that tip earns for that result (4 / 3 / 2 / 0, by the rule below).</li>
 <li>The inner sum is a tip's <strong>expected points</strong>; <em>arg&nbsp;max</em> keeps the tip with the most &mdash; the green top row.</li>
 </ul>
 <p><strong>Kicktipp scoring:</strong> 4 = exact score &middot; 3 = correct goal difference (non-draw) &middot;
 2 = correct tendency (win/draw/loss) &middot; 0 = otherwise. Because a draw tip only pays when the match is
 actually drawn, narrow favourites usually win on expected points even when a draw is fairly likely.</p>
-<p class="paper-outlet">Odds via The Odds API. For fun, not betting advice.</p>
+<p class="paper-outlet">Odds via odds-api.io. For fun, not betting advice.</p>
 </div>
 </details>

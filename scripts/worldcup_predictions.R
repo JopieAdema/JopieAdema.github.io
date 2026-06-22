@@ -1,27 +1,29 @@
 # ============================================================
 # worldcup_predictions.R
 # Predict the Kicktipp-optimal scoreline for today's & tomorrow's
-# World Cup matches from free 1X2 + over/under betting odds.
+# World Cup matches from real correct-score betting odds (odds-api.io).
 #
-# Pipeline: fetch odds (The Odds API) -> devig -> fit independent
-# Poisson (lambda_home, lambda_away) -> full scoreline distribution
-# -> expected Kicktipp points for every candidate score -> top 3.
-# Writes _data/worldcup.json (consumed by /worldcup/) and a
-# standalone worldcup_preview.html for local preview via serve.R.
+# Primary method ("market"): pull each fixture's Correct Score market
+# across bookmakers, devig it, average -> probability for every quoted
+# scoreline -> expected Kicktipp points for each candidate score.
+# Fallback ("model"): if a match has no usable correct-score quotes, fit
+# an independent Poisson model to its match-winner (ML) odds.
 #
 # Kicktipp scoring (max applicable tier):
 #   4 exact score | 3 right non-draw goal difference |
 #   2 right tendency (win/draw/loss) | 0 otherwise.
 #
-# Run:  Rscript scripts/worldcup_predictions.R          (live; needs ODDS_API_KEY)
+# Data: odds-api.io (https://api.odds-api.io/v3), free tier 5000 req/hour.
+# Auth: apiKey query parameter from env ODDSAPIIO_KEY.
+#
+# Run:  Rscript scripts/worldcup_predictions.R          (live; needs ODDSAPIIO_KEY + curl)
 #       MOCK=1 Rscript scripts/worldcup_predictions.R   (offline; uses sample_odds.json)
-# Runtime: ~3-5 s (R start-up + <1 s compute; + a few s network when live).
+# Runtime: MOCK ~1 s; live ~10-20 s (one odds call per fixture).
 # ============================================================
 
 # Block A: configuration & paths ----
 suppressMessages(library(jsonlite))
 
-# locate repo root from this script's own location (robust in CI & locally)
 .args <- commandArgs(trailingOnly = FALSE)
 .file <- sub("^--file=", "", grep("^--file=", .args, value = TRUE))
 script_dir <- if (length(.file)) dirname(normalizePath(.file)) else getwd()
@@ -30,37 +32,38 @@ repo_root  <- normalizePath(file.path(script_dir, ".."))
 data_out    <- file.path(repo_root, "_data", "worldcup.json")
 preview_out <- file.path(dirname(repo_root), "worldcup_preview.html")
 
-API_BASE        <- "https://api.the-odds-api.com/v4"
-REGIONS         <- "eu"
-MARKETS         <- "h2h,totals"
-WC_FALLBACK_KEY <- "soccer_fifa_world_cup"
-TZ              <- "Europe/Berlin"   # "today"/"tomorrow" are defined in this zone
+API_BASE         <- "https://api.odds-api.io/v3"
+API_KEY          <- Sys.getenv("ODDSAPIIO_KEY")
+SPORT            <- "football"
+WC_SLUG_FALLBACK <- "international-fifa-world-cup"
+PREF_BOOKMAKERS  <- c("Bet365")  # free plan allows up to 2 selected bookmakers; Bet365 has full correct-score
+TZ               <- "Europe/Berlin"   # "today"/"tomorrow" are defined in this zone
 
-MAXG         <- 15     # goals grid for the actual-score distribution & fitting
+MAXG         <- 15     # goals grid for the score distribution & Poisson fitting
 PRED_MAX     <- 6      # candidate predicted scores range 0..PRED_MAX
-DEFAULT_LINE <- 2.5    # totals line used if a match has no over/under market
+DEFAULT_LINE <- 2.5    # totals line for the model fallback (unused without O/U)
+MIN_SCORES   <- 4      # min quoted scorelines for a bookmaker's correct-score to count
 USE_MOCK     <- nzchar(Sys.getenv("MOCK"))
+MOCK <- if (USE_MOCK) fromJSON(file.path(script_dir, "sample_odds.json"),
+                               simplifyVector = FALSE) else NULL
 
-# actual-score index matrices (home goals down rows, away goals across cols)
+# score index matrices (home goals down rows, away goals across cols)
 gi <- matrix(0:MAXG, nrow = MAXG + 1, ncol = MAXG + 1)
 gj <- matrix(0:MAXG, nrow = MAXG + 1, ncol = MAXG + 1, byrow = TRUE)
 
 # Block B: model & scoring helpers ----
 
-# scoreline probability matrix for independent Poisson rates (lh, la)
 score_matrix <- function(lh, la) {
-  M <- outer(dpois(0:MAXG, lh), dpois(0:MAXG, la))
-  M / sum(M)
+  M <- outer(dpois(0:MAXG, lh), dpois(0:MAXG, la)); M / sum(M)
 }
 
-# aggregate market probabilities implied by (lh, la) at totals line `line`
 model_probs <- function(lh, la, line = DEFAULT_LINE) {
   M <- score_matrix(lh, la); tot <- gi + gj
   list(H = sum(M[gi > gj]), D = sum(M[gi == gj]), A = sum(M[gi < gj]),
        over = sum(M[tot > line]), under = sum(M[tot < line]))
 }
 
-# fit (lh, la) to devigged market probs by least squares (1X2 always; O/U if present)
+# fit (lh, la) to devigged 1X2 (+ O/U if present) by least squares
 fit_lambdas <- function(mk) {
   has_tot <- !is.null(mk$over)
   line <- if (has_tot) mk$line else DEFAULT_LINE
@@ -74,123 +77,172 @@ fit_lambdas <- function(mk) {
   c(lh = exp(op$par[1]), la = exp(op$par[2]))
 }
 
-# Kicktipp points matrix for predicting (ph, pa) against every actual score
 kicktipp_matrix <- function(ph, pa) {
   pd <- ph - pa; ad <- gi - gj
   pts <- matrix(0L, MAXG + 1, MAXG + 1)
-  pts[sign(ad) == sign(pd)] <- 2L         # correct tendency (win / draw / loss)
-  if (pd != 0) pts[ad == pd] <- 3L        # right non-draw goal difference
-  pts[gi == ph & gj == pa] <- 4L          # exact score
+  pts[sign(ad) == sign(pd)] <- 2L
+  if (pd != 0) pts[ad == pd] <- 3L
+  pts[gi == ph & gj == pa] <- 4L
   pts
 }
 
-# precompute points matrices for every candidate prediction (match-independent)
 CANDS    <- expand.grid(ph = 0:PRED_MAX, pa = 0:PRED_MAX)
 PTS_LIST <- Map(kicktipp_matrix, CANDS$ph, CANDS$pa)
 
-# top-n predicted scores by expected points, given score distribution M
 best_predictions <- function(M, n = 3) {
   ep  <- vapply(PTS_LIST, function(P) sum(P * M), numeric(1))
   ord <- order(-ep)[seq_len(n)]
   data.frame(ph = CANDS$ph[ord], pa = CANDS$pa[ord], ep = ep[ord])
 }
 
-# Block C: fetch odds & devig ----
+# Block C: odds-api.io transport & parsing ----
 
-fetch_events <- function() {
+api_get <- function(path) {
+  if (USE_MOCK) stop("api_get called in MOCK mode")
+  if (!requireNamespace("curl", quietly = TRUE))
+    stop("Package 'curl' is required for live mode (install.packages('curl')).")
+  r <- curl::curl_fetch_memory(paste0(API_BASE, path))
+  txt <- rawToChar(r$content); Encoding(txt) <- "UTF-8"
+  obj <- tryCatch(fromJSON(txt, simplifyVector = FALSE), error = function(e) NULL)
+  if (r$status_code != 200) {
+    msg <- if (!is.null(obj$error)) obj$error else substr(txt, 1, 160)
+    stop(sprintf("odds-api.io %s -> HTTP %d: %s", sub("&apiKey=.*", "", path),
+                 r$status_code, msg))
+  }
+  obj
+}
+
+# discover the FIFA World Cup league slug (not qualifiers / women / youth)
+get_wc_slug <- function() {
+  ls <- api_get(sprintf("/leagues?sport=%s&apiKey=%s", SPORT, API_KEY))
+  for (L in ls) {
+    nm <- L$name
+    if (!is.null(nm) && grepl("FIFA World Cup", nm, ignore.case = TRUE) &&
+        !grepl("Qualif|Wom|Beach|Futsal|U-?1[0-9]|U-?2[0-9]", nm, ignore.case = TRUE))
+      return(L$slug)
+  }
+  WC_SLUG_FALLBACK
+}
+
+# upcoming WC fixtures -> list(id, home, away, ts)
+get_events <- function() {
   if (USE_MOCK) {
-    evs <- fromJSON(file.path(script_dir, "sample_odds.json"), simplifyVector = FALSE)
-    # stamp kickoffs at today/tomorrow (local) so the preview always shows matches
-    n <- length(evs)
+    evs <- MOCK$events; n <- length(evs); out <- vector("list", n)
     for (i in seq_len(n)) {
       off  <- if (i <= ceiling(n / 2)) 0 else 1
       base <- as.POSIXct(format(Sys.time() + off * 86400, tz = TZ, "%Y-%m-%d"), tz = TZ)
-      evs[[i]]$commence_time <- format(base + (17 + i) * 3600, tz = "UTC",
-                                       "%Y-%m-%dT%H:%M:%SZ")
+      out[[i]] <- list(id = evs[[i]]$id, home = evs[[i]]$home, away = evs[[i]]$away,
+                       ts = base + (17 + i) * 3600)
     }
-    return(evs)
+    return(out)
   }
-  key <- Sys.getenv("ODDS_API_KEY")
-  if (!nzchar(key)) stop("ODDS_API_KEY is not set (and MOCK is off).")
-  # discover the active World Cup sport key (skip qualifiers); fall back to default
-  sports <- tryCatch(fromJSON(sprintf("%s/sports/?apiKey=%s", API_BASE, key),
-                              simplifyVector = FALSE),
-                     error = function(e) stop("Could not reach The Odds API /sports: ",
-                                              conditionMessage(e)))
-  sport_key <- WC_FALLBACK_KEY
-  for (s in sports) {
-    if (isTRUE(s$active) && identical(s$group, "Soccer") &&
-        grepl("World Cup", s$title, ignore.case = TRUE) &&
-        !grepl("Qualif", s$title, ignore.case = TRUE)) { sport_key <- s$key; break }
-  }
-  url <- sprintf(paste0("%s/sports/%s/odds/?apiKey=%s&regions=%s&markets=%s",
-                        "&oddsFormat=decimal&dateFormat=iso"),
-                 API_BASE, sport_key, key, REGIONS, MARKETS)
-  tryCatch(fromJSON(url, simplifyVector = FALSE),
-           error = function(e) stop("Could not fetch odds: ", conditionMessage(e)))
-}
-
-# average devigged market probabilities across bookmakers for one event
-devig_event <- function(ev) {
-  Hs <- Ds <- As <- numeric(0)
-  ov <- un <- list()                      # over/under devigged probs keyed by line
-  for (bk in ev$bookmakers) for (mk in bk$markets) {
-    if (identical(mk$key, "h2h")) {
-      ph <- pd <- pa <- NA_real_
-      for (oc in mk$outcomes) {
-        if (identical(oc$name, ev$home_team))      ph <- oc$price
-        else if (identical(oc$name, ev$away_team)) pa <- oc$price
-        else if (tolower(oc$name) == "draw")       pd <- oc$price
-      }
-      if (all(is.finite(c(ph, pd, pa)))) {
-        p <- 1 / c(ph, pd, pa); p <- p / sum(p)
-        Hs <- c(Hs, p[1]); Ds <- c(Ds, p[2]); As <- c(As, p[3])
-      }
-    } else if (identical(mk$key, "totals")) {
-      po <- pu <- ln <- NA_real_
-      for (oc in mk$outcomes) {
-        ln <- oc$point
-        if (tolower(oc$name) == "over")       po <- oc$price
-        else if (tolower(oc$name) == "under") pu <- oc$price
-      }
-      if (all(is.finite(c(po, pu, ln)))) {
-        k <- as.character(ln); p <- 1 / c(po, pu); p <- p / sum(p)
-        ov[[k]] <- c(ov[[k]], p[1]); un[[k]] <- c(un[[k]], p[2])
-      }
-    }
-  }
-  if (!length(Hs)) return(NULL)           # no usable 1X2 -> skip match
-  out <- list(H = mean(Hs), D = mean(Ds), A = mean(As))
-  if (length(ov)) {
-    line <- as.numeric(names(which.max(vapply(ov, length, integer(1)))))  # modal line
-    out$line <- line; out$over <- mean(ov[[as.character(line)]])
-    out$under <- mean(un[[as.character(line)]])
+  if (!nzchar(API_KEY)) stop("ODDSAPIIO_KEY is not set (and MOCK is off).")
+  ev <- api_get(sprintf("/events?sport=%s&league=%s&apiKey=%s", SPORT, get_wc_slug(), API_KEY))
+  out <- list()
+  for (e in ev) {
+    if (identical(e$status, "settled")) next
+    ts <- as.POSIXct(e$date, format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")
+    if (is.na(ts)) next
+    out[[length(out) + 1]] <- list(id = e$id, home = e$home, away = e$away, ts = ts)
   }
   out
+}
+
+# raw odds object for one fixture (has $bookmakers keyed by bookmaker name)
+get_event_odds <- function(id) {
+  if (USE_MOCK) return(MOCK$odds[[as.character(id)]])
+  api_get(sprintf("/odds?eventId=%s&bookmakers=%s&apiKey=%s", id, BK_PARAM, API_KEY))
+}
+
+.find_market <- function(markets, nm) {
+  for (m in markets) if (m$name %in% nm) return(m)
+  NULL
+}
+
+# devig the Correct Score market across bookmakers -> scores + probs (or NULL)
+parse_correct_score <- function(od) {
+  bms <- od$bookmakers; if (is.null(bms)) return(NULL)
+  acc <- list(); nbk <- 0
+  for (bk in names(bms)) {
+    cs <- .find_market(bms[[bk]], "Correct Score"); if (is.null(cs)) next
+    sc <- character(0); pr <- numeric(0)
+    for (o in cs$odds) {
+      m  <- regmatches(o$label, regexec("^\\s*(\\d+)\\s*[-:]\\s*(\\d+)\\s*$", o$label))[[1]]
+      pd <- suppressWarnings(as.numeric(o$odds))
+      if (length(m) == 3 && is.finite(pd) && pd > 1) {
+        sc <- c(sc, paste0(m[2], ":", m[3])); pr <- c(pr, 1 / pd)
+      }
+    }
+    if (length(pr) < MIN_SCORES) next
+    pr <- pr / sum(pr)
+    for (k in seq_along(sc)) acc[[sc[k]]] <- c(acc[[sc[k]]], pr[k])
+    nbk <- nbk + 1
+  }
+  if (nbk == 0) return(NULL)
+  probs <- vapply(acc, mean, numeric(1))
+  list(scores = names(acc), probs = probs / sum(probs), nbk = nbk)
+}
+
+build_market_M <- function(cs) {
+  M <- matrix(0, MAXG + 1, MAXG + 1)
+  for (k in seq_along(cs$scores)) {
+    ij <- as.integer(strsplit(cs$scores[k], ":")[[1]])
+    if (ij[1] <= MAXG && ij[2] <= MAXG) M[ij[1] + 1, ij[2] + 1] <- cs$probs[k]
+  }
+  if (sum(M) == 0) return(NULL)
+  M / sum(M)
+}
+
+# devig match-winner (ML) across bookmakers for the model fallback
+parse_ml <- function(od) {
+  bms <- od$bookmakers; if (is.null(bms)) return(NULL)
+  Hs <- Ds <- As <- numeric(0)
+  for (bk in names(bms)) {
+    ml <- .find_market(bms[[bk]], "ML"); if (is.null(ml) || !length(ml$odds)) next
+    o <- ml$odds[[1]]
+    h <- suppressWarnings(as.numeric(o$home)); d <- suppressWarnings(as.numeric(o$draw))
+    a <- suppressWarnings(as.numeric(o$away))
+    if (all(is.finite(c(h, d, a)))) {
+      p <- 1 / c(h, d, a); p <- p / sum(p)
+      Hs <- c(Hs, p[1]); Ds <- c(Ds, p[2]); As <- c(As, p[3])
+    }
+  }
+  if (!length(Hs)) return(NULL)
+  list(H = mean(Hs), D = mean(Ds), A = mean(As))
 }
 
 # Block D: assemble predictions for today & tomorrow ----
 
 now_local <- Sys.time()
 today     <- as.Date(format(now_local, tz = TZ, "%Y-%m-%d"))
-events    <- fetch_events()
+BK_PARAM  <- paste(gsub(" ", "%20", PREF_BOOKMAKERS), collapse = ",")
+events    <- get_events()
 
 matches <- list()
-for (ev in events) {
-  ko      <- as.POSIXct(ev$commence_time, format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")
-  ko_date <- as.Date(format(ko, tz = TZ, "%Y-%m-%d"))
+for (e in events) {
+  ko_date <- as.Date(format(e$ts, tz = TZ, "%Y-%m-%d"))
   if (is.na(ko_date) || !(ko_date %in% c(today, today + 1))) next
-  mk <- devig_event(ev); if (is.null(mk)) next
-  lam <- fit_lambdas(mk)
-  bp  <- best_predictions(score_matrix(lam["lh"], lam["la"]), 3)
+
+  od <- get_event_odds(e$id)
+  M <- NULL; method <- NA_character_; nbk <- 0L
+  cs <- parse_correct_score(od)
+  if (!is.null(cs)) { M <- build_market_M(cs); if (!is.null(M)) { method <- "market"; nbk <- cs$nbk } }
+  if (is.null(M)) {
+    mk <- parse_ml(od)
+    if (!is.null(mk)) { lam <- fit_lambdas(mk); M <- score_matrix(lam["lh"], lam["la"]); method <- "model" }
+  }
+  if (is.null(M)) next
+
+  ph <- sum(M[gi > gj]); pd <- sum(M[gi == gj]); pa <- sum(M[gi < gj])
+  bp <- best_predictions(M, 3)
   matches[[length(matches) + 1]] <- list(
-    home = ev$home_team, away = ev$away_team,
-    kickoff  = format(ko, tz = TZ, "%a %d %b, %H:%M"),
+    home = e$home, away = e$away,
+    kickoff  = format(e$ts, tz = TZ, "%a %d %b, %H:%M"),
     day      = if (ko_date == today) "Today" else "Tomorrow",
-    sort_key = format(ko, tz = TZ, "%Y%m%d%H%M"),
-    exp_goals_home = round(unname(lam["lh"]), 2),
-    exp_goals_away = round(unname(lam["la"]), 2),
-    p_home = round(mk$H, 3), p_draw = round(mk$D, 3), p_away = round(mk$A, 3),
+    sort_key = format(e$ts, tz = TZ, "%Y%m%d%H%M"),
+    method = method, n_books = nbk,
+    exp_goals_home = round(sum(M * gi), 2), exp_goals_away = round(sum(M * gj), 2),
+    p_home = round(ph, 3), p_draw = round(pd, 3), p_away = round(pa, 3),
     predictions = lapply(seq_len(nrow(bp)), function(i)
       list(score = sprintf("%d:%d", bp$ph[i], bp$pa[i]),
            points = sprintf("%.2f", bp$ep[i]))))
@@ -206,7 +258,6 @@ writeLines(toJSON(list(updated = updated, timezone = TZ, matches = matches),
                   auto_unbox = TRUE, pretty = TRUE), data_out)
 cat("Wrote", data_out, "(", length(matches), "matches )\n")
 
-# shared card CSS -- keep visually in sync with the <style> block in pages/worldcup.md
 CARD_CSS <- '
 .updated { font-size:0.8rem; color:#777; margin-bottom:1rem; }
 .match-card { border:1px solid #e0e0e0; border-radius:6px; background:#fafafa;
@@ -219,6 +270,7 @@ CARD_CSS <- '
 .match-head .day { display:inline-block; background:#018F59; color:#fff; border-radius:3px;
   padding:0 0.4rem; font-size:0.72rem; font-weight:600; margin-right:0.3rem; }
 .model { font-size:0.8rem; color:#666; margin:0.4rem 0 0.6rem; }
+.src { font-style:italic; }
 table.preds { width:100%; border-collapse:collapse; font-size:0.9rem; }
 table.preds th, table.preds td { text-align:left; padding:0.3rem 0.5rem; border:none; }
 table.preds thead th { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.03em;
@@ -229,6 +281,12 @@ table.preds tr.top td { background:#eaf7f0; }
 table.preds tr.top td.score { color:#018F59; }
 .nomatch { color:#777; font-style:italic; }'
 
+src_label <- function(m) {
+  if (identical(m$method, "market"))
+    sprintf("per-score market odds (%d bookmaker%s)", m$n_books, if (m$n_books == 1) "" else "s")
+  else "modelled from match-winner odds (no per-score market)"
+}
+
 render_card <- function(m) {
   rows <- paste(vapply(seq_along(m$predictions), function(i) {
     p <- m$predictions[[i]]
@@ -238,11 +296,11 @@ render_card <- function(m) {
   sprintf(paste0('<div class="match-card">\n',
     '  <div class="match-head"><span class="teams">%s <span class="vs">vs</span> %s</span>',
     '<span class="when"><span class="day">%s</span> %s</span></div>\n',
-    '  <div class="model">Market: 1 %.0f%% &middot; X %.0f%% &middot; 2 %.0f%%',
-    ' &nbsp;|&nbsp; expected goals %.2f : %.2f</div>\n',
+    '  <div class="model"><span class="src">%s</span> &nbsp;|&nbsp; 1 %.0f%% &middot; X %.0f%%',
+    ' &middot; 2 %.0f%% &nbsp;|&nbsp; expected goals %.2f : %.2f</div>\n',
     '  <table class="preds"><thead><tr><th>#</th><th>Score</th><th>Exp. pts</th></tr></thead>',
     '<tbody>\n%s\n</tbody></table>\n</div>'),
-    m$home, m$away, m$day, m$kickoff,
+    m$home, m$away, m$day, m$kickoff, src_label(m),
     100 * m$p_home, 100 * m$p_draw, 100 * m$p_away,
     m$exp_goals_home, m$exp_goals_away, rows)
 }

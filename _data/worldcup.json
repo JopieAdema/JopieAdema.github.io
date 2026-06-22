@@ -1,70 +1,20 @@
 {
-  "updated": "Mon 22 Jun 2026, 01:22 CEST",
+  "updated": "Mon 22 Jun 2026, 09:44 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
-    {
-      "home": "Uruguay",
-      "away": "Cape Verde",
-      "kickoff": "Mon 22 Jun, 00:00",
-      "day": "Today",
-      "sort_key": "202606220000",
-      "exp_goals_home": 3.73,
-      "exp_goals_away": 0.92,
-      "p_home": 0.865,
-      "p_draw": 0.112,
-      "p_away": 0.023,
-      "predictions": [
-        {
-          "score": "3:0",
-          "points": "2.00"
-        },
-        {
-          "score": "3:1",
-          "points": "1.99"
-        },
-        {
-          "score": "4:1",
-          "points": "1.99"
-        }
-      ]
-    },
-    {
-      "home": "New Zealand",
-      "away": "Egypt",
-      "kickoff": "Mon 22 Jun, 03:00",
-      "day": "Today",
-      "sort_key": "202606220300",
-      "exp_goals_home": 0.79,
-      "exp_goals_away": 1.76,
-      "p_home": 0.16,
-      "p_draw": 0.238,
-      "p_away": 0.602,
-      "predictions": [
-        {
-          "score": "0:1",
-          "points": "1.60"
-        },
-        {
-          "score": "1:2",
-          "points": "1.56"
-        },
-        {
-          "score": "0:2",
-          "points": "1.52"
-        }
-      ]
-    },
     {
       "home": "Argentina",
       "away": "Austria",
       "kickoff": "Mon 22 Jun, 19:00",
       "day": "Today",
       "sort_key": "202606221900",
-      "exp_goals_home": 1.87,
-      "exp_goals_away": 0.79,
-      "p_home": 0.628,
-      "p_draw": 0.232,
-      "p_away": 0.14,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.1,
+      "exp_goals_away": 0.86,
+      "p_home": 0.648,
+      "p_draw": 0.21,
+      "p_away": 0.143,
       "predictions": [
         {
           "score": "1:0",
@@ -72,11 +22,11 @@
         },
         {
           "score": "2:1",
-          "points": "1.61"
+          "points": "1.62"
         },
         {
           "score": "2:0",
-          "points": "1.58"
+          "points": "1.59"
         }
       ]
     },
@@ -86,23 +36,25 @@
       "kickoff": "Mon 22 Jun, 23:00",
       "day": "Today",
       "sort_key": "202606222300",
-      "exp_goals_home": 3.21,
-      "exp_goals_away": 0.49,
-      "p_home": 0.888,
-      "p_draw": 0.081,
-      "p_away": 0.031,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 3.45,
+      "exp_goals_away": 0.55,
+      "p_home": 0.874,
+      "p_draw": 0.089,
+      "p_away": 0.037,
       "predictions": [
         {
-          "score": "2:0",
-          "points": "2.11"
-        },
-        {
           "score": "3:0",
-          "points": "2.11"
+          "points": "2.07"
         },
         {
-          "score": "3:1",
-          "points": "2.05"
+          "score": "2:0",
+          "points": "2.04"
+        },
+        {
+          "score": "4:0",
+          "points": "1.99"
         }
       ]
     },
@@ -112,23 +64,25 @@
       "kickoff": "Tue 23 Jun, 02:00",
       "day": "Tomorrow",
       "sort_key": "202606230200",
-      "exp_goals_home": 1.46,
-      "exp_goals_away": 1.22,
-      "p_home": 0.421,
-      "p_draw": 0.273,
-      "p_away": 0.306,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 1.6,
+      "exp_goals_away": 1.32,
+      "p_home": 0.438,
+      "p_draw": 0.248,
+      "p_away": 0.314,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.18"
-        },
-        {
-          "score": "2:1",
           "points": "1.17"
         },
         {
+          "score": "2:1",
+          "points": "1.16"
+        },
+        {
           "score": "3:2",
-          "points": "1.10"
+          "points": "1.11"
         }
       ]
     },
@@ -138,23 +92,25 @@
       "kickoff": "Tue 23 Jun, 05:00",
       "day": "Tomorrow",
       "sort_key": "202606230500",
-      "exp_goals_home": 0.83,
-      "exp_goals_away": 1.83,
-      "p_home": 0.16,
-      "p_draw": 0.23,
-      "p_away": 0.611,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 0.92,
+      "exp_goals_away": 2.01,
+      "p_home": 0.174,
+      "p_draw": 0.212,
+      "p_away": 0.614,
       "predictions": [
         {
           "score": "0:1",
-          "points": "1.61"
-        },
-        {
-          "score": "1:2",
           "points": "1.57"
         },
         {
+          "score": "1:2",
+          "points": "1.55"
+        },
+        {
           "score": "0:2",
-          "points": "1.53"
+          "points": "1.51"
         }
       ]
     },
@@ -164,23 +120,25 @@
       "kickoff": "Tue 23 Jun, 19:00",
       "day": "Tomorrow",
       "sort_key": "202606231900",
-      "exp_goals_home": 2.51,
-      "exp_goals_away": 0.56,
-      "p_home": 0.799,
-      "p_draw": 0.138,
-      "p_away": 0.063,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.64,
+      "exp_goals_away": 0.7,
+      "p_home": 0.767,
+      "p_draw": 0.144,
+      "p_away": 0.09,
       "predictions": [
         {
           "score": "2:0",
-          "points": "1.97"
+          "points": "1.87"
         },
         {
           "score": "1:0",
-          "points": "1.94"
+          "points": "1.83"
         },
         {
           "score": "2:1",
-          "points": "1.90"
+          "points": "1.81"
         }
       ]
     },
@@ -190,23 +148,25 @@
       "kickoff": "Tue 23 Jun, 22:00",
       "day": "Tomorrow",
       "sort_key": "202606232200",
-      "exp_goals_home": 2.41,
-      "exp_goals_away": 0.56,
-      "p_home": 0.783,
-      "p_draw": 0.148,
-      "p_away": 0.068,
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.54,
+      "exp_goals_away": 0.65,
+      "p_home": 0.762,
+      "p_draw": 0.14,
+      "p_away": 0.098,
       "predictions": [
         {
           "score": "2:0",
-          "points": "1.94"
+          "points": "1.86"
         },
         {
           "score": "1:0",
-          "points": "1.92"
+          "points": "1.84"
         },
         {
           "score": "2:1",
-          "points": "1.88"
+          "points": "1.80"
         }
       ]
     }
