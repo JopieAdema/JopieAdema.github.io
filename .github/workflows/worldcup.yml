@@ -6,7 +6,8 @@ name: Update World Cup predictions
 # Need it fresher? "0 */6 * * *" (4x/day) or "0 */3 * * *" (8x/day).
 on:
   schedule:
-    - cron: "0 13 * * *"    # 13:00 UTC = 15:00 Munich (CEST) during the tournament
+    - cron: "10 13 * * *"   # 13:10 UTC ~ 15:10 Munich (CEST); a few min past the hour so
+                            # GitHub is less likely to delay/drop the run (it overloads at :00)
   workflow_dispatch:        # allows a manual run from the Actions tab any time
 
 permissions:
