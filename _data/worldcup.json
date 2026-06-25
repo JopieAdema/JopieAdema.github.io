@@ -1,5 +1,5 @@
 {
-  "updated": "Thu 25 Jun 2026, 08:56 CEST",
+  "updated": "Thu 25 Jun 2026, 17:45 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
     {
@@ -11,22 +11,22 @@
       "method": "market",
       "n_books": 1,
       "exp_goals_home": 1.11,
-      "exp_goals_away": 2.19,
-      "p_home": 0.201,
-      "p_draw": 0.18,
-      "p_away": 0.619,
+      "exp_goals_away": 2.17,
+      "p_home": 0.202,
+      "p_draw": 0.185,
+      "p_away": 0.613,
       "predictions": [
         {
           "score": "0:1",
-          "points": "1.55"
+          "points": "1.54"
         },
         {
           "score": "1:2",
-          "points": "1.55"
+          "points": "1.54"
         },
         {
           "score": "0:2",
-          "points": "1.51"
+          "points": "1.49"
         }
       ]
     },
@@ -38,23 +38,23 @@
       "sort_key": "202606252200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 0.61,
-      "exp_goals_away": 2.94,
+      "exp_goals_home": 0.67,
+      "exp_goals_away": 2.97,
       "p_home": 0.065,
-      "p_draw": 0.109,
-      "p_away": 0.826,
+      "p_draw": 0.121,
+      "p_away": 0.813,
       "predictions": [
         {
           "score": "0:2",
-          "points": "1.99"
+          "points": "1.95"
         },
         {
           "score": "0:3",
-          "points": "1.94"
+          "points": "1.91"
         },
         {
-          "score": "1:3",
-          "points": "1.93"
+          "score": "0:1",
+          "points": "1.89"
         }
       ]
     },
@@ -66,23 +66,23 @@
       "sort_key": "202606260100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 0.56,
-      "exp_goals_away": 3.21,
-      "p_home": 0.045,
-      "p_draw": 0.101,
-      "p_away": 0.854,
+      "exp_goals_home": 0.48,
+      "exp_goals_away": 3.37,
+      "p_home": 0.038,
+      "p_draw": 0.089,
+      "p_away": 0.873,
       "predictions": [
         {
-          "score": "0:2",
-          "points": "2.02"
-        },
-        {
           "score": "0:3",
-          "points": "2.00"
+          "points": "2.06"
         },
         {
-          "score": "1:3",
-          "points": "1.96"
+          "score": "0:2",
+          "points": "2.05"
+        },
+        {
+          "score": "0:4",
+          "points": "2.00"
         }
       ]
     },
@@ -94,11 +94,11 @@
       "sort_key": "202606260100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.92,
-      "exp_goals_away": 1.24,
-      "p_home": 0.514,
-      "p_draw": 0.253,
-      "p_away": 0.232,
+      "exp_goals_home": 1.78,
+      "exp_goals_away": 1.18,
+      "p_home": 0.506,
+      "p_draw": 0.249,
+      "p_away": 0.245,
       "predictions": [
         {
           "score": "1:0",
@@ -106,11 +106,11 @@
         },
         {
           "score": "2:1",
-          "points": "1.33"
+          "points": "1.32"
         },
         {
           "score": "3:2",
-          "points": "1.27"
+          "points": "1.26"
         }
       ]
     },
@@ -122,23 +122,23 @@
       "sort_key": "202606260400",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.3,
-      "exp_goals_away": 1.9,
-      "p_home": 0.27,
-      "p_draw": 0.219,
-      "p_away": 0.511,
+      "exp_goals_home": 1.36,
+      "exp_goals_away": 1.92,
+      "p_home": 0.272,
+      "p_draw": 0.228,
+      "p_away": 0.5,
       "predictions": [
         {
-          "score": "0:1",
-          "points": "1.32"
+          "score": "1:2",
+          "points": "1.29"
         },
         {
-          "score": "1:2",
-          "points": "1.32"
+          "score": "0:1",
+          "points": "1.28"
         },
         {
           "score": "2:3",
-          "points": "1.27"
+          "points": "1.24"
         }
       ]
     },
@@ -178,23 +178,23 @@
       "sort_key": "202606262100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.2,
-      "exp_goals_away": 2.04,
-      "p_home": 0.234,
-      "p_draw": 0.205,
-      "p_away": 0.561,
+      "exp_goals_home": 1.17,
+      "exp_goals_away": 2.09,
+      "p_home": 0.218,
+      "p_draw": 0.203,
+      "p_away": 0.58,
       "predictions": [
         {
-          "score": "0:1",
-          "points": "1.42"
-        },
-        {
           "score": "1:2",
-          "points": "1.42"
+          "points": "1.47"
         },
         {
-          "score": "0:2",
-          "points": "1.38"
+          "score": "0:1",
+          "points": "1.46"
+        },
+        {
+          "score": "2:3",
+          "points": "1.41"
         }
       ]
     },
@@ -206,11 +206,11 @@
       "sort_key": "202606262100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 2.71,
-      "exp_goals_away": 0.75,
+      "exp_goals_home": 2.66,
+      "exp_goals_away": 0.72,
       "p_home": 0.764,
-      "p_draw": 0.143,
-      "p_away": 0.092,
+      "p_draw": 0.146,
+      "p_away": 0.09,
       "predictions": [
         {
           "score": "2:0",
@@ -218,7 +218,7 @@
         },
         {
           "score": "1:0",
-          "points": "1.81"
+          "points": "1.82"
         },
         {
           "score": "2:1",
@@ -234,23 +234,23 @@
       "sort_key": "202606270200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 0.9,
+      "exp_goals_home": 0.93,
       "exp_goals_away": 2.06,
-      "p_home": 0.156,
-      "p_draw": 0.216,
-      "p_away": 0.628,
+      "p_home": 0.16,
+      "p_draw": 0.222,
+      "p_away": 0.617,
       "predictions": [
         {
           "score": "0:1",
-          "points": "1.59"
-        },
-        {
-          "score": "1:2",
           "points": "1.57"
         },
         {
+          "score": "1:2",
+          "points": "1.55"
+        },
+        {
           "score": "0:2",
-          "points": "1.56"
+          "points": "1.52"
         }
       ]
     },
@@ -262,23 +262,23 @@
       "sort_key": "202606270200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.48,
-      "exp_goals_away": 1.34,
-      "p_home": 0.4,
-      "p_draw": 0.263,
-      "p_away": 0.337,
+      "exp_goals_home": 1.43,
+      "exp_goals_away": 1.35,
+      "p_home": 0.383,
+      "p_draw": 0.267,
+      "p_away": 0.35,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.09"
+          "points": "1.05"
         },
         {
           "score": "2:1",
-          "points": "1.07"
+          "points": "1.04"
         },
         {
           "score": "3:2",
-          "points": "1.02"
+          "points": "0.98"
         }
       ]
     },
@@ -290,19 +290,19 @@
       "sort_key": "202606270500",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 0.67,
-      "exp_goals_away": 2.95,
-      "p_home": 0.07,
-      "p_draw": 0.122,
-      "p_away": 0.808,
+      "exp_goals_home": 0.72,
+      "exp_goals_away": 3.06,
+      "p_home": 0.065,
+      "p_draw": 0.123,
+      "p_away": 0.812,
       "predictions": [
         {
           "score": "0:2",
-          "points": "1.94"
+          "points": "1.93"
         },
         {
           "score": "0:3",
-          "points": "1.90"
+          "points": "1.89"
         },
         {
           "score": "1:3",
