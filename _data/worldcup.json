@@ -1,116 +1,32 @@
 {
-  "updated": "Mon 29 Jun 2026, 18:42 CEST",
+  "updated": "Tue 30 Jun 2026, 17:41 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
-    {
-      "home": "Brazil",
-      "away": "Japan",
-      "kickoff": "Mon 29 Jun, 19:00",
-      "day": "Today",
-      "sort_key": "202606291900",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 1.66,
-      "exp_goals_away": 0.95,
-      "p_home": 0.529,
-      "p_draw": 0.254,
-      "p_away": 0.217,
-      "predictions": [
-        {
-          "score": "1:0",
-          "points": "1.42"
-        },
-        {
-          "score": "2:1",
-          "points": "1.37"
-        },
-        {
-          "score": "3:2",
-          "points": "1.32"
-        }
-      ]
-    },
-    {
-      "home": "Germany",
-      "away": "Paraguay",
-      "kickoff": "Mon 29 Jun, 22:30",
-      "day": "Today",
-      "sort_key": "202606292230",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 2.33,
-      "exp_goals_away": 0.86,
-      "p_home": 0.683,
-      "p_draw": 0.187,
-      "p_away": 0.129,
-      "predictions": [
-        {
-          "score": "1:0",
-          "points": "1.69"
-        },
-        {
-          "score": "2:1",
-          "points": "1.67"
-        },
-        {
-          "score": "2:0",
-          "points": "1.67"
-        }
-      ]
-    },
-    {
-      "home": "Netherlands",
-      "away": "Morocco",
-      "kickoff": "Tue 30 Jun, 03:00",
-      "day": "Tomorrow",
-      "sort_key": "202606300300",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 1.47,
-      "exp_goals_away": 1.19,
-      "p_home": 0.419,
-      "p_draw": 0.292,
-      "p_away": 0.289,
-      "predictions": [
-        {
-          "score": "1:0",
-          "points": "1.15"
-        },
-        {
-          "score": "2:1",
-          "points": "1.12"
-        },
-        {
-          "score": "3:2",
-          "points": "1.07"
-        }
-      ]
-    },
     {
       "home": "Ivory Coast",
       "away": "Norway",
       "kickoff": "Tue 30 Jun, 19:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202606301900",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.24,
-      "exp_goals_away": 1.69,
-      "p_home": 0.277,
-      "p_draw": 0.254,
-      "p_away": 0.469,
+      "exp_goals_home": 1.28,
+      "exp_goals_away": 1.66,
+      "p_home": 0.281,
+      "p_draw": 0.274,
+      "p_away": 0.444,
       "predictions": [
         {
           "score": "0:1",
-          "points": "1.24"
+          "points": "1.18"
         },
         {
           "score": "1:2",
-          "points": "1.23"
+          "points": "1.17"
         },
         {
           "score": "2:3",
-          "points": "1.17"
+          "points": "1.12"
         }
       ]
     },
@@ -118,27 +34,27 @@
       "home": "France",
       "away": "Sweden",
       "kickoff": "Tue 30 Jun, 23:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202606302300",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 2.7,
-      "exp_goals_away": 0.86,
-      "p_home": 0.74,
+      "exp_goals_home": 2.69,
+      "exp_goals_away": 0.98,
+      "p_home": 0.723,
       "p_draw": 0.154,
-      "p_away": 0.106,
+      "p_away": 0.123,
       "predictions": [
         {
+          "score": "2:1",
+          "points": "1.74"
+        },
+        {
           "score": "2:0",
-          "points": "1.78"
+          "points": "1.73"
         },
         {
           "score": "1:0",
-          "points": "1.76"
-        },
-        {
-          "score": "2:1",
-          "points": "1.76"
+          "points": "1.73"
         }
       ]
     },
@@ -146,27 +62,27 @@
       "home": "Mexico",
       "away": "Ecuador",
       "kickoff": "Wed 01 Jul, 03:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607010300",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.29,
-      "exp_goals_away": 0.92,
-      "p_home": 0.437,
-      "p_draw": 0.313,
-      "p_away": 0.25,
+      "exp_goals_home": 1.26,
+      "exp_goals_away": 0.94,
+      "p_home": 0.424,
+      "p_draw": 0.312,
+      "p_away": 0.264,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.25"
+          "points": "1.22"
         },
         {
           "score": "2:1",
-          "points": "1.18"
+          "points": "1.15"
         },
         {
           "score": "3:2",
-          "points": "1.12"
+          "points": "1.10"
         }
       ]
     },
@@ -174,27 +90,27 @@
       "home": "England",
       "away": "Congo DR",
       "kickoff": "Wed 01 Jul, 18:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607011800",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 2.28,
-      "exp_goals_away": 0.6,
-      "p_home": 0.731,
-      "p_draw": 0.178,
-      "p_away": 0.091,
+      "exp_goals_home": 2.29,
+      "exp_goals_away": 0.59,
+      "p_home": 0.738,
+      "p_draw": 0.177,
+      "p_away": 0.085,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.82"
+          "points": "1.84"
         },
         {
           "score": "2:0",
-          "points": "1.81"
+          "points": "1.83"
         },
         {
           "score": "2:1",
-          "points": "1.76"
+          "points": "1.78"
         }
       ]
     },
@@ -202,14 +118,14 @@
       "home": "Belgium",
       "away": "Senegal",
       "kickoff": "Wed 01 Jul, 22:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607012200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.5,
-      "exp_goals_away": 1.15,
-      "p_home": 0.429,
-      "p_draw": 0.294,
+      "exp_goals_home": 1.51,
+      "exp_goals_away": 1.16,
+      "p_home": 0.43,
+      "p_draw": 0.293,
       "p_away": 0.277,
       "predictions": [
         {
@@ -218,11 +134,67 @@
         },
         {
           "score": "2:1",
-          "points": "1.14"
+          "points": "1.15"
         },
         {
           "score": "3:2",
           "points": "1.09"
+        }
+      ]
+    },
+    {
+      "home": "USA",
+      "away": "Bosnia and Herzegovina",
+      "kickoff": "Thu 02 Jul, 02:00",
+      "day": "Day after",
+      "sort_key": "202607020200",
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.21,
+      "exp_goals_away": 0.82,
+      "p_home": 0.671,
+      "p_draw": 0.19,
+      "p_away": 0.139,
+      "predictions": [
+        {
+          "score": "1:0",
+          "points": "1.67"
+        },
+        {
+          "score": "2:0",
+          "points": "1.66"
+        },
+        {
+          "score": "2:1",
+          "points": "1.64"
+        }
+      ]
+    },
+    {
+      "home": "Spain",
+      "away": "Austria",
+      "kickoff": "Thu 02 Jul, 21:00",
+      "day": "Day after",
+      "sort_key": "202607022100",
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.25,
+      "exp_goals_away": 0.72,
+      "p_home": 0.701,
+      "p_draw": 0.183,
+      "p_away": 0.115,
+      "predictions": [
+        {
+          "score": "1:0",
+          "points": "1.75"
+        },
+        {
+          "score": "2:0",
+          "points": "1.74"
+        },
+        {
+          "score": "2:1",
+          "points": "1.71"
         }
       ]
     }
