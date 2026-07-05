@@ -1,88 +1,32 @@
 {
-  "updated": "Sat 04 Jul 2026, 16:45 CEST",
+  "updated": "Sun 05 Jul 2026, 16:52 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
-    {
-      "home": "Canada",
-      "away": "Morocco",
-      "kickoff": "Sat 04 Jul, 19:00",
-      "day": "Today",
-      "sort_key": "202607041900",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 0.95,
-      "exp_goals_away": 1.69,
-      "p_home": 0.199,
-      "p_draw": 0.272,
-      "p_away": 0.529,
-      "predictions": [
-        {
-          "score": "0:1",
-          "points": "1.41"
-        },
-        {
-          "score": "1:2",
-          "points": "1.37"
-        },
-        {
-          "score": "0:2",
-          "points": "1.32"
-        }
-      ]
-    },
-    {
-      "home": "Paraguay",
-      "away": "France",
-      "kickoff": "Sat 04 Jul, 23:00",
-      "day": "Today",
-      "sort_key": "202607042300",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 0.66,
-      "exp_goals_away": 2.62,
-      "p_home": 0.089,
-      "p_draw": 0.132,
-      "p_away": 0.779,
-      "predictions": [
-        {
-          "score": "0:2",
-          "points": "1.89"
-        },
-        {
-          "score": "0:1",
-          "points": "1.88"
-        },
-        {
-          "score": "1:2",
-          "points": "1.85"
-        }
-      ]
-    },
     {
       "home": "Brazil",
       "away": "Norway",
       "kickoff": "Sun 05 Jul, 22:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202607052200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.94,
-      "exp_goals_away": 1.21,
-      "p_home": 0.523,
-      "p_draw": 0.251,
-      "p_away": 0.226,
+      "exp_goals_home": 2.03,
+      "exp_goals_away": 1.23,
+      "p_home": 0.541,
+      "p_draw": 0.242,
+      "p_away": 0.217,
       "predictions": [
         {
-          "score": "1:0",
-          "points": "1.34"
+          "score": "2:1",
+          "points": "1.38"
         },
         {
-          "score": "2:1",
-          "points": "1.34"
+          "score": "1:0",
+          "points": "1.37"
         },
         {
           "score": "3:2",
-          "points": "1.29"
+          "points": "1.33"
         }
       ]
     },
@@ -90,27 +34,27 @@
       "home": "Mexico",
       "away": "England",
       "kickoff": "Mon 06 Jul, 02:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607060200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.16,
-      "exp_goals_away": 1.36,
-      "p_home": 0.318,
-      "p_draw": 0.277,
-      "p_away": 0.405,
+      "exp_goals_home": 1.17,
+      "exp_goals_away": 1.38,
+      "p_home": 0.311,
+      "p_draw": 0.288,
+      "p_away": 0.401,
       "predictions": [
         {
           "score": "0:1",
-          "points": "1.13"
+          "points": "1.11"
         },
         {
           "score": "1:2",
-          "points": "1.09"
+          "points": "1.08"
         },
         {
           "score": "2:3",
-          "points": "1.03"
+          "points": "1.02"
         }
       ]
     },
@@ -118,14 +62,14 @@
       "home": "Portugal",
       "away": "Spain",
       "kickoff": "Mon 06 Jul, 21:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607062100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.22,
-      "exp_goals_away": 1.84,
-      "p_home": 0.248,
-      "p_draw": 0.246,
+      "exp_goals_home": 1.26,
+      "exp_goals_away": 1.89,
+      "p_home": 0.242,
+      "p_draw": 0.252,
       "p_away": 0.506,
       "predictions": [
         {
@@ -138,7 +82,91 @@
         },
         {
           "score": "2:3",
-          "points": "1.25"
+          "points": "1.26"
+        }
+      ]
+    },
+    {
+      "home": "USA",
+      "away": "Belgium",
+      "kickoff": "Tue 07 Jul, 02:00",
+      "day": "Day after",
+      "sort_key": "202607070200",
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 1.61,
+      "exp_goals_away": 1.61,
+      "p_home": 0.37,
+      "p_draw": 0.258,
+      "p_away": 0.372,
+      "predictions": [
+        {
+          "score": "1:2",
+          "points": "0.99"
+        },
+        {
+          "score": "2:1",
+          "points": "0.98"
+        },
+        {
+          "score": "0:1",
+          "points": "0.98"
+        }
+      ]
+    },
+    {
+      "home": "Argentina",
+      "away": "Egypt",
+      "kickoff": "Tue 07 Jul, 18:00",
+      "day": "Day after",
+      "sort_key": "202607071800",
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 2.06,
+      "exp_goals_away": 0.7,
+      "p_home": 0.668,
+      "p_draw": 0.209,
+      "p_away": 0.122,
+      "predictions": [
+        {
+          "score": "1:0",
+          "points": "1.70"
+        },
+        {
+          "score": "2:0",
+          "points": "1.66"
+        },
+        {
+          "score": "2:1",
+          "points": "1.65"
+        }
+      ]
+    },
+    {
+      "home": "Switzerland",
+      "away": "Colombia",
+      "kickoff": "Tue 07 Jul, 22:00",
+      "day": "Day after",
+      "sort_key": "202607072200",
+      "method": "market",
+      "n_books": 1,
+      "exp_goals_home": 1.1,
+      "exp_goals_away": 1.41,
+      "p_home": 0.281,
+      "p_draw": 0.296,
+      "p_away": 0.423,
+      "predictions": [
+        {
+          "score": "0:1",
+          "points": "1.17"
+        },
+        {
+          "score": "1:2",
+          "points": "1.13"
+        },
+        {
+          "score": "2:3",
+          "points": "1.08"
         }
       ]
     }
