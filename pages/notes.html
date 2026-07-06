@@ -1,0 +1,373 @@
+---
+permalink: /notes/
+sitemap: false
+---
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Notes</title>
+  <style>
+    :root{
+      --green:#018F59; --green-dark:#016a43; --ink:#222; --muted:#777;
+      --line:#e6e6e6; --bg:#f6f7f5; --card:#ffffff; --accent-bg:#eaf7f0;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--bg); line-height:1.55;}
+    button{font-family:inherit; cursor:pointer;}
+    input,textarea{font-family:inherit; font-size:1rem;}
+
+    /* ---- password gate ---- */
+    #gate{position:fixed; inset:0; z-index:1000; background:var(--bg);
+      display:flex; align-items:center; justify-content:center; padding:1rem;}
+    #gate .box{background:var(--card); border:1px solid var(--line); border-radius:10px;
+      padding:2rem 1.8rem; width:100%; max-width:360px; text-align:center;
+      box-shadow:0 6px 24px rgba(0,0,0,.06);}
+    #gate h1{font-size:1.3rem; margin:0 0 .3rem;}
+    #gate p{color:var(--muted); font-size:.9rem; margin:0 0 1.2rem;}
+    #gate input{width:100%; padding:.65rem .8rem; border:1px solid var(--line);
+      border-radius:8px; margin-bottom:.8rem; text-align:center;}
+    #gate button{width:100%; padding:.65rem; border:none; border-radius:8px;
+      background:var(--green); color:#fff; font-weight:600; font-size:1rem;}
+    #gate button:hover{background:var(--green-dark);}
+    #gate .err{color:#c0392b; font-size:.85rem; height:1.1em; margin-bottom:.4rem;}
+
+    /* ---- app ---- */
+    #app{display:none; max-width:760px; margin:0 auto; padding:1.5rem 1rem 4rem;}
+    .topbar{display:flex; flex-wrap:wrap; align-items:center; gap:.6rem;
+      border-bottom:1px solid var(--line); padding-bottom:1rem; margin-bottom:1.2rem;}
+    .topbar h1{font-size:1.5rem; margin:0; flex:1 1 auto;}
+    .topbar .who{display:flex; align-items:center; gap:.35rem; font-size:.85rem; color:var(--muted);}
+    .topbar .who input{padding:.35rem .5rem; border:1px solid var(--line); border-radius:6px;
+      width:130px; font-size:.85rem;}
+    .storage-tag{font-size:.7rem; text-transform:uppercase; letter-spacing:.04em;
+      padding:.15rem .5rem; border-radius:20px; font-weight:600; white-space:nowrap;}
+    .storage-tag.local{background:#fff3cd; color:#8a6d1a;}
+    .storage-tag.shared{background:var(--accent-bg); color:var(--green-dark);}
+    .btn{border:1px solid var(--line); background:var(--card); border-radius:8px;
+      padding:.45rem .8rem; font-size:.88rem; color:var(--ink);}
+    .btn:hover{background:#f0f0f0;}
+    .btn-primary{background:var(--green); color:#fff; border-color:var(--green);}
+    .btn-primary:hover{background:var(--green-dark);}
+    .btn-ghost{background:none; border:none; color:var(--muted); padding:.2rem .4rem; font-size:.85rem;}
+    .btn-ghost:hover{color:#c0392b;}
+
+    /* composer */
+    .composer{background:var(--card); border:1px solid var(--line); border-radius:10px;
+      padding:1rem; margin-bottom:1.4rem;}
+    .composer input.title{width:100%; padding:.55rem .7rem; border:1px solid var(--line);
+      border-radius:8px; margin-bottom:.6rem; font-weight:600;}
+    .composer textarea{width:100%; padding:.55rem .7rem; border:1px solid var(--line);
+      border-radius:8px; min-height:70px; resize:vertical;}
+    .composer .row{display:flex; justify-content:flex-end; gap:.5rem; margin-top:.6rem;}
+
+    /* notes */
+    .note{background:var(--card); border:1px solid var(--line); border-radius:10px;
+      padding:1rem 1.1rem; margin-bottom:1rem; box-shadow:0 1px 2px rgba(0,0,0,.03);}
+    .note-head{display:flex; align-items:baseline; gap:.5rem;}
+    .note-title{font-size:1.12rem; font-weight:700; margin:0; flex:1 1 auto;}
+    .note-meta{font-size:.78rem; color:var(--muted); white-space:nowrap;}
+    .note-body{margin:.5rem 0 .3rem; white-space:pre-wrap;}
+    .note-foot{display:flex; align-items:center; gap:.8rem; margin-top:.5rem;}
+    .toggle-comments{background:none; border:none; color:var(--green-dark); font-size:.85rem;
+      padding:0; font-weight:600;}
+    .toggle-comments:hover{text-decoration:underline;}
+
+    .comments{margin-top:.8rem; padding-top:.7rem; border-top:1px dashed var(--line); display:none;}
+    .comments.open{display:block;}
+    .comment{font-size:.9rem; padding:.4rem 0; border-bottom:1px solid #f0f0f0;
+      display:flex; gap:.5rem;}
+    .comment:last-of-type{border-bottom:none;}
+    .comment .c-body{flex:1 1 auto;}
+    .comment .c-meta{color:var(--muted); font-size:.75rem;}
+    .comment-form{display:flex; gap:.5rem; margin-top:.6rem;}
+    .comment-form input{flex:1 1 auto; padding:.45rem .6rem; border:1px solid var(--line); border-radius:8px;}
+
+    .empty{color:var(--muted); text-align:center; padding:2.5rem 1rem; font-style:italic;}
+  </style>
+</head>
+<body>
+
+  <!-- ===================== PASSWORD GATE ===================== -->
+  <div id="gate">
+    <div class="box">
+      <h1>🔒 Notes</h1>
+      <p>Enter the password to continue.</p>
+      <div class="err" id="gate-err"></div>
+      <input type="password" id="gate-pw" placeholder="Password" autocomplete="off" autofocus>
+      <button id="gate-btn">Enter</button>
+    </div>
+  </div>
+
+  <!-- ===================== APP ===================== -->
+  <div id="app">
+    <div class="topbar">
+      <h1>📝 Notes</h1>
+      <span class="storage-tag local" id="storage-tag">local only</span>
+      <div class="who">
+        <label for="author">You:</label>
+        <input type="text" id="author" placeholder="your name" maxlength="30">
+      </div>
+      <button class="btn" id="refresh-btn" title="Reload notes">↻</button>
+    </div>
+
+    <div class="composer">
+      <input type="text" class="title" id="new-title" placeholder="Note title…" maxlength="120">
+      <textarea id="new-body" placeholder="Write a note…"></textarea>
+      <div class="row">
+        <button class="btn-primary btn" id="add-note-btn">Add note</button>
+      </div>
+    </div>
+
+    <div id="notes-list"></div>
+  </div>
+
+<script>
+/* ============================================================
+   OPTIONAL SHARED STORAGE (Firebase)
+   ------------------------------------------------------------
+   The board works right away in "local only" mode: notes are
+   saved in THIS browser and are NOT shared with other people.
+
+   To turn it into a real SHARED board (turn-based is fine):
+     1. Go to https://console.firebase.google.com  ->  Add project (free).
+     2. In the project, click the </> "Web" icon to register a web app.
+     3. Copy the firebaseConfig values it shows you into the object below.
+     4. In the left menu open  Build > Firestore Database > Create database
+        (start in *test mode* is fine for a small private board).
+     5. Save this file and push. The tag will switch to "shared".
+   Leave the fields blank to stay in local-only mode.
+   ============================================================ */
+  const FIREBASE_CONFIG = {
+    apiKey:            "",
+    authDomain:        "",
+    projectId:         "",
+    appId:             ""
+  };
+
+  const PASSWORD = "piadmajajoop";
+
+  /* ---------------- password gate ---------------- */
+  const gate = document.getElementById('gate');
+  const gatePw = document.getElementById('gate-pw');
+  const gateErr = document.getElementById('gate-err');
+
+  function tryUnlock(){
+    if (gatePw.value === PASSWORD){
+      sessionStorage.setItem('notes_auth', '1');
+      openApp();
+    } else {
+      gateErr.textContent = 'Wrong password.';
+      gatePw.value = '';
+      gatePw.focus();
+    }
+  }
+  document.getElementById('gate-btn').addEventListener('click', tryUnlock);
+  gatePw.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
+
+  function openApp(){
+    gate.style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    initApp();
+  }
+  if (sessionStorage.getItem('notes_auth') === '1') openApp();
+
+  /* ---------------- storage layer ----------------
+     The whole board is stored as one JSON blob:
+       { notes: [ {id,title,body,author,created,comments:[{id,author,text,created}]} ] }
+     Local mode  -> localStorage.
+     Shared mode -> a single Firestore document (board/main).
+  -------------------------------------------------- */
+  const LOCAL_KEY = 'notesboard_v1';
+  let store = null;   // {mode, load(), save(board)}
+
+  function localStore(){
+    return {
+      mode: 'local',
+      async load(){
+        try { return JSON.parse(localStorage.getItem(LOCAL_KEY)) || {notes:[]}; }
+        catch(e){ return {notes:[]}; }
+      },
+      async save(board){ localStorage.setItem(LOCAL_KEY, JSON.stringify(board)); }
+    };
+  }
+
+  async function firebaseStore(){
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js');
+    const { getFirestore, doc, getDoc, setDoc } =
+      await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js');
+    const fb = initializeApp(FIREBASE_CONFIG);
+    const db = getFirestore(fb);
+    const ref = doc(db, 'board', 'main');
+    return {
+      mode: 'shared',
+      async load(){
+        const snap = await getDoc(ref);
+        return snap.exists() ? snap.data() : {notes:[]};
+      },
+      async save(board){ await setDoc(ref, board); }
+    };
+  }
+
+  /* ---------------- app ---------------- */
+  let board = {notes:[]};
+  const authorInput = document.getElementById('author');
+
+  async function initApp(){
+    authorInput.value = localStorage.getItem('notes_author') || '';
+    authorInput.addEventListener('input', () =>
+      localStorage.setItem('notes_author', authorInput.value.trim()));
+
+    // pick storage backend
+    if (FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.projectId){
+      try {
+        store = await firebaseStore();
+      } catch(e){
+        console.error('Firebase init failed, falling back to local:', e);
+        store = localStore();
+      }
+    } else {
+      store = localStore();
+    }
+    const tag = document.getElementById('storage-tag');
+    if (store.mode === 'shared'){
+      tag.textContent = 'shared'; tag.className = 'storage-tag shared';
+    } else {
+      tag.textContent = 'local only'; tag.className = 'storage-tag local';
+    }
+
+    document.getElementById('add-note-btn').addEventListener('click', addNote);
+    document.getElementById('refresh-btn').addEventListener('click', reload);
+    await reload();
+  }
+
+  async function reload(){
+    board = await store.load();
+    if (!board || !Array.isArray(board.notes)) board = {notes:[]};
+    render();
+  }
+
+  async function persist(){
+    try { await store.save(board); }
+    catch(e){ alert('Could not save: ' + e.message); }
+  }
+
+  function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+  function who(){ return (authorInput.value.trim() || 'Anonymous'); }
+  function fmt(iso){
+    const d = new Date(iso);
+    return d.toLocaleString(undefined,{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+  }
+  function esc(s){ const p=document.createElement('div'); p.textContent=s??''; return p.innerHTML; }
+
+  async function addNote(){
+    const title = document.getElementById('new-title');
+    const body  = document.getElementById('new-body');
+    const t = title.value.trim(), b = body.value.trim();
+    if (!t && !b){ title.focus(); return; }
+    board.notes.unshift({
+      id: uid(), title: t || '(untitled)', body: b,
+      author: who(), created: new Date().toISOString(), comments: []
+    });
+    title.value=''; body.value='';
+    render();
+    await persist();
+  }
+
+  async function deleteNote(id){
+    if (!confirm('Delete this note?')) return;
+    board.notes = board.notes.filter(n => n.id !== id);
+    render(); await persist();
+  }
+
+  async function addComment(noteId, inputEl){
+    const text = inputEl.value.trim();
+    if (!text) return;
+    const note = board.notes.find(n => n.id === noteId);
+    if (!note) return;
+    if (!Array.isArray(note.comments)) note.comments = [];
+    note.comments.push({id:uid(), author:who(), text, created:new Date().toISOString()});
+    openThreads.add(noteId);
+    render(); await persist();
+  }
+
+  async function deleteComment(noteId, cId){
+    const note = board.notes.find(n => n.id === noteId);
+    if (!note) return;
+    note.comments = (note.comments||[]).filter(c => c.id !== cId);
+    openThreads.add(noteId);
+    render(); await persist();
+  }
+
+  const openThreads = new Set();   // which note threads are expanded
+
+  function render(){
+    const list = document.getElementById('notes-list');
+    if (!board.notes.length){
+      list.innerHTML = '<div class="empty">No notes yet. Write the first one above.</div>';
+      return;
+    }
+    list.innerHTML = '';
+    board.notes.forEach(n => {
+      const comments = n.comments || [];
+      const isOpen = openThreads.has(n.id);
+      const el = document.createElement('div');
+      el.className = 'note';
+      el.innerHTML = `
+        <div class="note-head">
+          <p class="note-title">${esc(n.title)}</p>
+          <span class="note-meta">${esc(n.author)} · ${fmt(n.created)}</span>
+        </div>
+        ${n.body ? `<div class="note-body">${esc(n.body)}</div>` : ''}
+        <div class="note-foot">
+          <button class="toggle-comments" data-id="${n.id}">
+            💬 ${comments.length} comment${comments.length===1?'':'s'} ${isOpen?'▲':'▼'}
+          </button>
+          <button class="btn-ghost del-note" data-id="${n.id}">delete</button>
+        </div>
+        <div class="comments ${isOpen?'open':''}" id="c-${n.id}">
+          ${comments.map(c => `
+            <div class="comment">
+              <div class="c-body">${esc(c.text)}
+                <div class="c-meta">${esc(c.author)} · ${fmt(c.created)}</div>
+              </div>
+              <button class="btn-ghost del-comment" data-note="${n.id}" data-id="${c.id}">×</button>
+            </div>`).join('')}
+          <div class="comment-form">
+            <input type="text" placeholder="Add a comment…" data-note="${n.id}">
+            <button class="btn add-comment" data-note="${n.id}">Send</button>
+          </div>
+        </div>`;
+      list.appendChild(el);
+    });
+
+    // wire events
+    list.querySelectorAll('.toggle-comments').forEach(b =>
+      b.addEventListener('click', () => {
+        const id = b.dataset.id;
+        if (openThreads.has(id)) openThreads.delete(id); else openThreads.add(id);
+        render();
+      }));
+    list.querySelectorAll('.del-note').forEach(b =>
+      b.addEventListener('click', () => deleteNote(b.dataset.id)));
+    list.querySelectorAll('.del-comment').forEach(b =>
+      b.addEventListener('click', () => deleteComment(b.dataset.note, b.dataset.id)));
+    list.querySelectorAll('.add-comment').forEach(b =>
+      b.addEventListener('click', () => {
+        const input = list.querySelector(`.comment-form input[data-note="${b.dataset.note}"]`);
+        addComment(b.dataset.note, input);
+      }));
+    list.querySelectorAll('.comment-form input').forEach(inp =>
+      inp.addEventListener('keydown', e => {
+        if (e.key === 'Enter') addComment(inp.dataset.note, inp);
+      }));
+  }
+</script>
+</body>
+</html>
+{% endraw %}
