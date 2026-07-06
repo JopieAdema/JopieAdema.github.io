@@ -1,75 +1,19 @@
 {
-  "updated": "Sun 05 Jul 2026, 16:52 CEST",
+  "updated": "Mon 06 Jul 2026, 18:30 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
-    {
-      "home": "Brazil",
-      "away": "Norway",
-      "kickoff": "Sun 05 Jul, 22:00",
-      "day": "Today",
-      "sort_key": "202607052200",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 2.03,
-      "exp_goals_away": 1.23,
-      "p_home": 0.541,
-      "p_draw": 0.242,
-      "p_away": 0.217,
-      "predictions": [
-        {
-          "score": "2:1",
-          "points": "1.38"
-        },
-        {
-          "score": "1:0",
-          "points": "1.37"
-        },
-        {
-          "score": "3:2",
-          "points": "1.33"
-        }
-      ]
-    },
-    {
-      "home": "Mexico",
-      "away": "England",
-      "kickoff": "Mon 06 Jul, 02:00",
-      "day": "Tomorrow",
-      "sort_key": "202607060200",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 1.17,
-      "exp_goals_away": 1.38,
-      "p_home": 0.311,
-      "p_draw": 0.288,
-      "p_away": 0.401,
-      "predictions": [
-        {
-          "score": "0:1",
-          "points": "1.11"
-        },
-        {
-          "score": "1:2",
-          "points": "1.08"
-        },
-        {
-          "score": "2:3",
-          "points": "1.02"
-        }
-      ]
-    },
     {
       "home": "Portugal",
       "away": "Spain",
       "kickoff": "Mon 06 Jul, 21:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202607062100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.26,
-      "exp_goals_away": 1.89,
-      "p_home": 0.242,
-      "p_draw": 0.252,
+      "exp_goals_home": 1.24,
+      "exp_goals_away": 1.88,
+      "p_home": 0.24,
+      "p_draw": 0.254,
       "p_away": 0.506,
       "predictions": [
         {
@@ -82,7 +26,7 @@
         },
         {
           "score": "2:3",
-          "points": "1.26"
+          "points": "1.25"
         }
       ]
     },
@@ -90,27 +34,27 @@
       "home": "USA",
       "away": "Belgium",
       "kickoff": "Tue 07 Jul, 02:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607070200",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.61,
-      "exp_goals_away": 1.61,
-      "p_home": 0.37,
-      "p_draw": 0.258,
-      "p_away": 0.372,
+      "exp_goals_home": 1.75,
+      "exp_goals_away": 1.59,
+      "p_home": 0.405,
+      "p_draw": 0.257,
+      "p_away": 0.338,
       "predictions": [
         {
-          "score": "1:2",
-          "points": "0.99"
-        },
-        {
           "score": "2:1",
-          "points": "0.98"
+          "points": "1.07"
         },
         {
-          "score": "0:1",
-          "points": "0.98"
+          "score": "1:0",
+          "points": "1.06"
+        },
+        {
+          "score": "3:2",
+          "points": "1.03"
         }
       ]
     },
@@ -118,27 +62,27 @@
       "home": "Argentina",
       "away": "Egypt",
       "kickoff": "Tue 07 Jul, 18:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607071800",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 2.06,
-      "exp_goals_away": 0.7,
-      "p_home": 0.668,
-      "p_draw": 0.209,
-      "p_away": 0.122,
+      "exp_goals_home": 2.09,
+      "exp_goals_away": 0.69,
+      "p_home": 0.678,
+      "p_draw": 0.199,
+      "p_away": 0.123,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.70"
+          "points": "1.72"
         },
         {
           "score": "2:0",
-          "points": "1.66"
+          "points": "1.69"
         },
         {
           "score": "2:1",
-          "points": "1.65"
+          "points": "1.66"
         }
       ]
     },
@@ -146,7 +90,7 @@
       "home": "Switzerland",
       "away": "Colombia",
       "kickoff": "Tue 07 Jul, 22:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607072200",
       "method": "market",
       "n_books": 1,
