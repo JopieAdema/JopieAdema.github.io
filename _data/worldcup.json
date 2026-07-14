@@ -1,32 +1,32 @@
 {
-  "updated": "Mon 13 Jul 2026, 17:51 CEST",
+  "updated": "Tue 14 Jul 2026, 17:03 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
     {
       "home": "France",
       "away": "Spain",
       "kickoff": "Tue 14 Jul, 21:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202607142100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.63,
-      "exp_goals_away": 1.39,
-      "p_home": 0.418,
-      "p_draw": 0.27,
-      "p_away": 0.312,
+      "exp_goals_home": 1.57,
+      "exp_goals_away": 1.35,
+      "p_home": 0.408,
+      "p_draw": 0.281,
+      "p_away": 0.31,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.11"
+          "points": "1.09"
         },
         {
           "score": "2:1",
-          "points": "1.11"
+          "points": "1.09"
         },
         {
           "score": "3:2",
-          "points": "1.06"
+          "points": "1.04"
         }
       ]
     },
@@ -34,27 +34,27 @@
       "home": "England",
       "away": "Argentina",
       "kickoff": "Wed 15 Jul, 21:00",
-      "day": "Day after",
+      "day": "Tomorrow",
       "sort_key": "202607152100",
       "method": "market",
       "n_books": 1,
-      "exp_goals_home": 1.36,
+      "exp_goals_home": 1.32,
       "exp_goals_away": 1.24,
-      "p_home": 0.376,
-      "p_draw": 0.301,
-      "p_away": 0.324,
+      "p_home": 0.363,
+      "p_draw": 0.308,
+      "p_away": 0.329,
       "predictions": [
         {
           "score": "1:0",
-          "points": "1.04"
-        },
-        {
-          "score": "2:1",
           "points": "1.01"
         },
         {
+          "score": "2:1",
+          "points": "0.99"
+        },
+        {
           "score": "3:2",
-          "points": "0.96"
+          "points": "0.94"
         }
       ]
     }
