@@ -1,40 +1,12 @@
 {
-  "updated": "Sat 18 Jul 2026, 16:31 CEST",
+  "updated": "Sun 19 Jul 2026, 16:34 CEST",
   "timezone": "Europe/Berlin",
   "matches": [
-    {
-      "home": "France",
-      "away": "England",
-      "kickoff": "Sat 18 Jul, 23:00",
-      "day": "Today",
-      "sort_key": "202607182300",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 2.12,
-      "exp_goals_away": 1.52,
-      "p_home": 0.505,
-      "p_draw": 0.218,
-      "p_away": 0.278,
-      "predictions": [
-        {
-          "score": "2:1",
-          "points": "1.29"
-        },
-        {
-          "score": "1:0",
-          "points": "1.26"
-        },
-        {
-          "score": "3:2",
-          "points": "1.25"
-        }
-      ]
-    },
     {
       "home": "Spain",
       "away": "Argentina",
       "kickoff": "Sun 19 Jul, 21:00",
-      "day": "Tomorrow",
+      "day": "Today",
       "sort_key": "202607192100",
       "method": "market",
       "n_books": 1,
