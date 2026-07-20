@@ -1,34 +1,5 @@
 {
-  "updated": "Sun 19 Jul 2026, 16:34 CEST",
+  "updated": "Mon 20 Jul 2026, 17:20 CEST",
   "timezone": "Europe/Berlin",
-  "matches": [
-    {
-      "home": "Spain",
-      "away": "Argentina",
-      "kickoff": "Sun 19 Jul, 21:00",
-      "day": "Today",
-      "sort_key": "202607192100",
-      "method": "market",
-      "n_books": 1,
-      "exp_goals_home": 1.49,
-      "exp_goals_away": 1.16,
-      "p_home": 0.423,
-      "p_draw": 0.297,
-      "p_away": 0.28,
-      "predictions": [
-        {
-          "score": "1:0",
-          "points": "1.15"
-        },
-        {
-          "score": "2:1",
-          "points": "1.13"
-        },
-        {
-          "score": "3:2",
-          "points": "1.08"
-        }
-      ]
-    }
-  ]
+  "matches": []
 }
