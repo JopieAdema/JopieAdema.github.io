@@ -104,6 +104,23 @@ details.paper[open] > summary {
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">Refugee Return (2026)</div>
+<div class="paper-outlet"><em>RF Berlin Discussion Paper</em></div>
+<div class="paper-authors">with <a href="https://cevatgirayaksoy.com/">Cevat Giray Aksoy</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://www.rfberlin.com/wp-content/uploads/2026/03/26076.pdf"><em>Paper</em></a>
+<a href="https://www.rfberlin.com/discussion-papers"><em>RF Berlin Discussion Paper No. 076/26</em></a>
+</div>
+<div class="paper-abstract">Despite rising refugee numbers worldwide, refugees' return decisions remain poorly understood. Prior work examines either intentions or realized return, but not both. We fielded a ten-wave panel of Ukrainian refugees, linking prewar home municipalities to geocoded conflict and territorial control data and eliciting war expectations. Intentions strongly predict behavior: by 2025, 42% of those planning to return soon in 2022 had returned, versus 1% of those planning to settle abroad. Increasing conflict in the home municipality reduces return there but barely affects return to Ukraine overall. More pessimistic war expectations explain 21% of the decline in return intentions.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">Non-Robustness in Log-Like Specifications (2026)</div>
 <div class="paper-outlet"><em>Preprint</em></div>
 <div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
