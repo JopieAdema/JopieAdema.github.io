@@ -1,9 +1,12 @@
 ---
-title: Live Research
+title: Live Research Notes
 permalink: /live-research/
+full-width: true
 css:
   - "/assets/css/live-research.css"
 ---
+
+<div class="lr-page">
 
 <section class="lr-intro" aria-labelledby="live-research-introduction">
   <h2 id="live-research-introduction">A faster feedback loop for policy</h2>
@@ -11,11 +14,8 @@ css:
   <p>If you're interested, shoot me an email at <a href="mailto:j.a.h.adema94@gmail.com">j.a.h.adema94@gmail.com</a>!</p>
 </section>
 
-<section class="lr-projects" aria-labelledby="research-notes">
-  <div class="lr-section-heading">
-    <div>
-      <h2 id="research-notes">Research notes</h2>
-    </div>
+<section class="lr-projects" aria-label="Live research projects">
+  <div class="lr-status-row">
     <span class="lr-status"><span aria-hidden="true"></span> Updating monthly</span>
   </div>
 
@@ -57,3 +57,5 @@ css:
     <div><span>3</span><h3>Results update</h3><p>Only validated outputs replace the last successful publication.</p></div>
   </div>
 </aside>
+
+</div>
