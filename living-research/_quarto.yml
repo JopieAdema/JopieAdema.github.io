@@ -1,0 +1,13 @@
+project:
+  type: website
+
+format:
+  html:
+    toc: true
+    code-fold: true
+    embed-resources: false
+    theme: cosmo
+
+execute:
+  freeze: auto
+  warning: false

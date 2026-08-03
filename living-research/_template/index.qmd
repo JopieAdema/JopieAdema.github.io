@@ -1,0 +1,33 @@
+---
+title: "[Policy reform]: a living research note"
+subtitle: "[One-sentence research question]"
+date: last-modified
+---
+
+> **Preliminary.** Data through **[vintage]**. Last successful update: **[date]**.
+
+## Setting and research idea
+
+[Explain the reform, question, relevance, and gap.]
+
+## Research design
+
+[Name the estimand and comparison in plain language.]
+
+<details><summary>Technical details</summary>
+
+[Specification, uncertainty, restrictions, and robustness plan.]
+
+</details>
+
+## Preliminary results
+
+[Add one or two validated figures or tables. Never use placeholder data as evidence.]
+
+## Conclusion
+
+[State the current finding, policy relevance, and principal limitation.]
+
+---
+
+**Sources:** [links] · **Code:** [repository] · **Contact:** [email]
