@@ -25,11 +25,11 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: "1.7.32"
+          version: "1.10.18"
 
       - name: Install R dependencies
         run: |
-          Rscript -e 'install.packages(c("jsonlite", "dplyr", "tidyr", "ggplot2", "scales", "fixest", "rdrobust", "knitr"), repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c("jsonlite", "dplyr", "tidyr", "ggplot2", "scales", "fixest", "rdrobust", "knitr", "rmarkdown"), repos="https://cloud.r-project.org")'
 
       - name: Update, validate, and render notes
         run: Rscript scripts/update_living_research.R
