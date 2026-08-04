@@ -5,6 +5,19 @@ format:
     code-fold: true
     embed-resources: true
     theme: cosmo
+    include-in-header:
+      text: |
+        <style>
+        html.lr-embedded #title-block-header,
+        html.lr-embedded #title-block-header + blockquote.blockquote {
+          display: none;
+        }
+        </style>
+        <script>
+        if (window.self !== window.top) {
+          document.documentElement.classList.add('lr-embedded');
+        }
+        </script>
 
 execute:
   freeze: auto

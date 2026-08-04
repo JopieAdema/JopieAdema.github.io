@@ -1,6 +1,6 @@
 ---
 title: "The Twenty Percent Border"
-subtitle: "Does EU-wide fast-track asylum processing change application volume, timing, or destination?"
+subtitle: "Does EU-wide fast-track asylum processing reduce asylum applications?"
 date: last-modified
 resources:
   - "figures/*.png"
