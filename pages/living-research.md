@@ -10,7 +10,7 @@ css:
 
 <section class="lr-intro" aria-labelledby="living-research-introduction">
   <h2 id="living-research-introduction">A faster feedback loop for policy evaluation</h2>
-  <p>Social science research is slower than it can be: we observe a policy change, wait until the data is there, send it to a journal, leading to a long lag until the relevant policy makers receive feedback. However, this does not need to be (it's 2026). On this page, I post real-time research notes that automatically update as new data becomes available. The first, on EU migration policy, can be found below.</p>
+  <p>Social science research is slow: we observe a policy change, wait till data arrives, and try to publish it, leading to a long lag until policy makers receive feedback. However, this does not need to be (it's 2026). Here, I post real-time research notes that automatically update as new data becomes available. The first is on EU migration policy.</p>
 </section>
 
 <section class="lr-projects" aria-label="Living research projects">
