@@ -20,7 +20,7 @@ Under the EU's new Asylum Procedure Regulation (2024/1348), a nationality group 
 
 ## Research design
 
-The design is a **dynamic difference-in-discontinuities**: at each quarterly horizon, it compares the change in EU-wide applications for origins just below the 20% cutoff against origins just above it, relative to the most recent (reference) quarter, using a fixed 20-percentage-point bandwidth with triangular-kernel local-linear and local-quadratic fits on each side. A complementary Poisson (PPML) event study with origin and quarter fixed effects checks the same pre-trend without relying on local smoothing.
+The note runs **two complementary designs** side by side. The first is a **difference-in-differences**: origins with a 2025 recognition rate between 12.5% and 20% (treated by the cutoff) are compared to origins between 20% and 27.5% (control), using a Poisson (PPML) event study with origin and quarter fixed effects. The second is a **dynamic difference-in-discontinuities**: at each quarterly horizon, it compares the change in EU-wide applications for origins just below the 20% cutoff against origins just above it, relative to the most recent (reference) quarter, using a fixed 20-percentage-point bandwidth with triangular-kernel local-linear and local-quadratic fits on each side. The first design is simpler and does not depend on local smoothing; the second uses a wider 0-40% support and treats the cutoff itself, rather than the 12.5-27.5% band, as the source of identification. Agreement between the two is a stronger pre-policy check than either alone.
 
 <details><summary>Technical details</summary>
 
@@ -30,7 +30,9 @@ The running variable is the 2025 EU-wide recognition rate minus 20. The sample k
 
 ## Preliminary results
 
-@fig-trends plots the raw monthly application totals for the two groups; both have been drifting down over 2025-26 without an obvious break yet, but volumes and composition differ, so this alone is not evidence of parallel trends. @fig-ppml is the quarter-fixed-effects event study: the treated-control gap is close to zero in every pre-reference quarter and never statistically distinguishable from it. @fig-rdd is the main dynamic difference-in-discontinuities estimate: linear and quadratic fits agree that the gap has been converging toward zero as the reference quarter approaches, with wide, overlapping confidence bands throughout.
+@fig-cutoff shows where the `r results$n_treated + results$n_control` origins in the 12.5-27.5% window actually sit relative to the 20% cutoff -- the dashed line marks the threshold, with treated origins (accelerated) below it and control origins above it. @fig-trends plots the raw monthly application totals for the two groups; both have been drifting down over 2025-26 without an obvious break yet, but volumes and composition differ, so this alone is not evidence of parallel trends. @fig-ppml is the difference-in-differences design's quarter-fixed-effects event study: the treated-control gap is close to zero in every pre-reference quarter and never statistically distinguishable from it. @fig-rdd is the dynamic difference-in-discontinuities design's main estimate, plotted on the same y-axis scale as @fig-ppml for direct comparison: linear and quadratic fits agree that the gap has been converging toward zero as the reference quarter approaches, with wide, overlapping confidence bands throughout.
+
+![Origin countries around the 20% fast-track threshold](figures/fig1_recognition_rate_cutoff.png){#fig-cutoff}
 
 ![Monthly first-time applications by recognition-rate group](figures/fig2_group_trends.png){#fig-trends}
 
@@ -38,11 +40,11 @@ The running variable is the 2025 EU-wide recognition rate minus 20. The sample k
 
 ![Fixed-bandwidth dynamic difference-in-discontinuities estimates](figures/fig4_dynamic_disc_event_study.png){#fig-rdd}
 
-<details><summary>Explainer: what's behind Figure 3 (the local RDD fits)</summary>
+<details><summary>Explainer: what's behind Figure 4 (the local RDD fits)</summary>
 
 Each panel of the figure below is one quarterly horizon's cutoff comparison: origin-level normalized changes plotted against the 2025 recognition rate, with application-weighted bins and the triangular-kernel linear/quadratic fits that @fig-rdd summarizes into a single treated-minus-control estimate per quarter. It's the diagnostic view behind the headline numbers, useful for checking that no single origin or outlier is driving a quarter's estimate.
 
-![Fixed-bandwidth quarterly RDD plots underlying Figure 3](figures/fig5_quarterly_rdd_panels.png){#fig-rdd-panels}
+![Fixed-bandwidth quarterly RDD plots underlying Figure 4](figures/fig5_quarterly_rdd_panels.png){#fig-rdd-panels}
 
 </details>
 

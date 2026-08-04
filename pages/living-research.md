@@ -9,7 +9,7 @@ css:
 <div class="lr-page">
 
 <section class="lr-intro" aria-labelledby="living-research-introduction">
-  <h2 id="living-research-introduction">A faster feedback loop for policy</h2>
+  <h2 id="living-research-introduction">A faster feedback loop for policy evaluation</h2>
   <p>Social science research is slower than it can be: we observe a policy change, wait until the data is there, send it to a journal, leading to a long lag until the relevant policy makers receive feedback. However, this does not need to be (it's 2026). On this page, I post real-time research notes that automatically update as new data becomes available. The first, on EU migration policy, can be found below.</p>
   <p>If you're interested, shoot me an email at <a href="mailto:j.a.h.adema94@gmail.com">j.a.h.adema94@gmail.com</a>!</p>
 </section>
@@ -28,7 +28,11 @@ css:
     </div>
     <h3><a href="/assets/living-research/{{ note.slug }}/">{{ note.title }}</a></h3>
     <p>{{ note.summary }}</p>
-    <a class="lr-card-link" href="/assets/living-research/{{ note.slug }}/">Read the living note <span aria-hidden="true">→</span></a>
+    <div class="lr-embed">
+      <iframe src="/assets/living-research/{{ note.slug }}/" title="{{ note.title }}" loading="lazy"></iframe>
+      <div class="lr-embed-fade"></div>
+    </div>
+    <a class="lr-card-link" href="/assets/living-research/{{ note.slug }}/">Read the full living note <span aria-hidden="true">→</span></a>
   </article>
   {% endfor %}
   {% else %}

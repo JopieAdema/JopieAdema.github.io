@@ -6,8 +6,9 @@
 # All horizons are indexed by how many months/quarters of data are actually
 # available (latest_month, plot_end_date, quarter_axis_breaks), not by literal
 # calendar dates, so the figures keep working as new months arrive without
-# code changes. The only hardcoded calendar date is policy_date, which is an
-# institutional fact (the Pact's Q2 2026 application date), not a moving target.
+# code changes. The only hardcoded calendar dates are the policy_date_*
+# markers, which are an institutional fact (the Pact's Q2 2026 application
+# date), not a moving target.
 
 suppressPackageStartupMessages({
   library(jsonlite)
@@ -35,9 +36,13 @@ EU_EX_DK <- c(
 EU_MEMBERS <- c(EU_EX_DK, "DK")
 
 # The EU Pact on Migration and Asylum enters into application in Q2 2026.
-# Fixed at the quarter-start so the reference line lands exactly on the
-# quarterly axis tick rather than partway between two quarters.
-policy_date <- as.Date("2026-04-01")
+# Two markers for the same institutional date, because the monthly and
+# quarterly figures use different axis-tick conventions: monthly figures
+# tick on quarter-END months (Mar/Jun/Sep/Dec), quarterly "20XX QN" figures
+# tick on quarter-START months (Jan/Apr/Jul/Oct). Each marker is fixed to
+# land exactly on its own figure's tick rather than partway between two.
+policy_date_monthly <- as.Date("2026-06-01")
+policy_date_quarterly <- as.Date("2026-04-01")
 
 dir.create("figures", showWarnings = FALSE)
 
@@ -90,6 +95,36 @@ rates <- decision_parsed$data %>%
   ) %>%
   filter(citizen != "EXT_EU27_2020") %>%
   arrange(recognition_rate, citizen)
+
+# === Figure 1: origin countries around the 20% fast-track threshold =======
+
+cutoff_plot_data <- rates %>%
+  filter(recognition_rate > 12.5, recognition_rate <= 27.5, !is.na(country)) %>%
+  arrange(recognition_rate, country) %>%
+  mutate(
+    country_ordered = factor(country, levels = country),
+    assignment = if_else(eligible, "Treated", "Control")
+  )
+n_treated_cutoff <- sum(cutoff_plot_data$eligible)
+cutoff_divider <- n_treated_cutoff + 0.5
+
+p_cutoff <- ggplot(cutoff_plot_data, aes(recognition_rate, country_ordered, fill = assignment)) +
+  geom_col(width = 0.72) +
+  geom_hline(yintercept = cutoff_divider, linetype = "dashed", colour = "grey25", linewidth = 0.55) +
+  annotate("text", x = 27.5, y = cutoff_divider + 0.32, label = "Control",
+           hjust = 1, vjust = 0, fontface = "bold", size = 3.2) +
+  annotate("text", x = 27.5, y = cutoff_divider - 0.32, label = "Treated",
+           hjust = 1, vjust = 1, fontface = "bold", size = 3.2) +
+  scale_fill_manual(values = c("Treated" = "#003399", "Control" = "#B8C6D1"), guide = "none") +
+  scale_x_continuous(limits = c(0, 28.5), breaks = seq(0, 25, 5),
+                     labels = function(x) paste0(x, "%"), expand = expansion(mult = c(0, 0))) +
+  labs(x = "Recognition rate in 2025", y = NULL,
+    title = "Origin countries around the 20% fast-track threshold",
+    subtitle = "EU-wide recognition rates excluding Denmark; 12.5% < rate <= 27.5%") +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(),
+        plot.title = element_text(face = "bold"), axis.text.y = element_text(size = 7))
+ggsave("figures/fig1_recognition_rate_cutoff.png", p_cutoff, width = 7.0, height = 8.5, dpi = 200, bg = "white")
 
 # --- Monthly first-time applications ------------------------------------
 
@@ -159,8 +194,8 @@ trend_plot_data <- baseline %>% group_by(group, date) %>%
 
 p_trends <- ggplot(trend_plot_data, aes(date, applications, colour = group, group = group)) +
   geom_line(linewidth = 0.85) +
-  geom_vline(xintercept = policy_date, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
-  annotate("text", x = policy_date, y = Inf, label = "EU Migration Pact",
+  geom_vline(xintercept = policy_date_monthly, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
+  annotate("text", x = policy_date_monthly, y = Inf, label = "EU Migration Pact",
            angle = 90, hjust = 1.05, vjust = 1.25, colour = "grey20", size = 3) +
   scale_colour_manual(values = c("12.5% < rate <= 20%" = "#003399", "20% < rate <= 27.5%" = "#D95F02")) +
   scale_x_date(limits = c(plot_start_date, plot_end_date), date_breaks = "3 months",
@@ -222,8 +257,8 @@ quarter_event_ppml <- extract_quarter_event(quarter_ppml_model)
 
 p_quarter_ppml <- ggplot(quarter_event_ppml, aes(quarter_start, estimate)) +
   geom_hline(yintercept = 0, colour = "grey45", linewidth = 0.5) +
-  geom_vline(xintercept = policy_date, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
-  annotate("text", x = policy_date, y = Inf, label = "EU Migration Pact",
+  geom_vline(xintercept = policy_date_quarterly, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
+  annotate("text", x = policy_date_quarterly, y = Inf, label = "EU Migration Pact",
            angle = 90, hjust = 1.05, vjust = 1.25, colour = "grey20", size = 2.8) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "#9ECAE1", alpha = 0.55) +
   geom_line(colour = "#003399", linewidth = 0.75) +
@@ -236,7 +271,8 @@ p_quarter_ppml <- ggplot(quarter_event_ppml, aes(quarter_start, estimate)) +
   theme_minimal(base_size = 10) +
   theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"),
         axis.text.x = element_text(angle = 35, hjust = 1))
-ggsave("figures/fig3_quarterly_ppml_event_study.png", p_quarter_ppml, width = 7.1, height = 4.2, dpi = 200, bg = "white")
+# ggsave deferred until Figure 4's estimates exist, so both event studies can
+# share one y-axis range (see below) and stay visually comparable.
 
 # === Figures 4 and 5: dynamic difference-in-discontinuities ===============
 # Origin-specific rate of change, scaled to a full-quarter-equivalent using
@@ -272,7 +308,7 @@ rdd_quarter_base <- rdd_quarter_base %>%
     relative_change_pct = if_else(
       applications_2025 == 0, 0,
       if_else(
-        quarter_start < policy_date,
+        quarter_start < policy_date_quarterly,
         (reference_quarter_applications - quarter_applications_full) / (applications_2025 / 4),
         (quarter_applications_full - reference_quarter_applications) / (applications_2025 / 4)
       )
@@ -313,8 +349,8 @@ rdd_quarter_fixed20 <- bind_rows(
 
 p_fixed20_event <- ggplot(rdd_quarter_fixed20, aes(quarter_start, estimate, colour = polynomial, fill = polynomial)) +
   geom_hline(yintercept = 0, colour = "grey45", linewidth = 0.5) +
-  geom_vline(xintercept = policy_date, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
-  annotate("text", x = policy_date, y = Inf, label = "EU Migration Pact",
+  geom_vline(xintercept = policy_date_quarterly, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
+  annotate("text", x = policy_date_quarterly, y = Inf, label = "EU Migration Pact",
            angle = 90, hjust = 1.05, vjust = 1.25, colour = "grey20", size = 2.8) +
   geom_ribbon(aes(ymin = conf_low, ymax = conf_high, group = polynomial), alpha = 0.13, colour = NA) +
   geom_line(aes(linetype = polynomial), linewidth = 0.8) +
@@ -331,6 +367,21 @@ p_fixed20_event <- ggplot(rdd_quarter_fixed20, aes(quarter_start, estimate, colo
   theme_minimal(base_size = 10) +
   theme(legend.position = "bottom", panel.grid.minor = element_blank(),
         plot.title = element_text(face = "bold"), axis.text.x = element_text(angle = 35, hjust = 1))
+
+# Figures 3 and 4 are both treated-control event studies and are meant to be
+# read side by side, so they share one symmetric y-axis range instead of each
+# auto-scaling to its own data (which would make comparable magnitudes look
+# different just because of axis choice).
+shared_event_study_limit <- max(abs(c(
+  quarter_event_ppml$conf.low, quarter_event_ppml$conf.high,
+  rdd_quarter_fixed20$conf_low, rdd_quarter_fixed20$conf_high
+)), na.rm = TRUE) * 1.05
+shared_event_study_limits <- c(-shared_event_study_limit, shared_event_study_limit)
+
+p_quarter_ppml <- p_quarter_ppml + scale_y_continuous(limits = shared_event_study_limits)
+p_fixed20_event <- p_fixed20_event + scale_y_continuous(limits = shared_event_study_limits)
+
+ggsave("figures/fig3_quarterly_ppml_event_study.png", p_quarter_ppml, width = 7.1, height = 4.2, dpi = 200, bg = "white")
 ggsave("figures/fig4_dynamic_disc_event_study.png", p_fixed20_event, width = 7.1, height = 4.4, dpi = 200, bg = "white")
 
 fixed20_raw <- rdd_quarter_base %>%
