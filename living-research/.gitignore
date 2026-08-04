@@ -1,0 +1,7 @@
+/.quarto/
+**/*.quarto_ipynb
+# Never commit the knitr freeze cache: results_summary.json/figures change
+# monthly without the qmd source changing, and a committed cache would make
+# quarto reuse stale cached output instead of re-executing on the next run.
+**/_freeze/
+**/index.html

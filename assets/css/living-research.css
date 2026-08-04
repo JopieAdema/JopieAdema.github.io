@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+.intro-header .page-heading h1 {
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 5vw, 2.75rem);
+}
+
 .lr-intro,
 .lr-method {
   border-radius: 14px;

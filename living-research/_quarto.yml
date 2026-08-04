@@ -1,11 +1,8 @@
-project:
-  type: website
-
 format:
   html:
     toc: true
     code-fold: true
-    embed-resources: false
+    embed-resources: true
     theme: cosmo
 
 execute:

@@ -20,13 +20,22 @@ for (i in seq_along(projects)) {
   if (status != 0L) stop("Validation failed for ", basename(project))
 
   metadata <- jsonlite::read_json(file.path(project, "metadata.json"), simplifyVector = TRUE)
-  destination <- file.path("assets", "live-research", metadata$slug)
+  destination <- file.path("assets", "living-research", metadata$slug)
   staging <- tempfile(pattern = paste0(metadata$slug, "-"))
   dir.create(staging, recursive = TRUE)
   on.exit(unlink(staging, recursive = TRUE, force = TRUE), add = TRUE)
 
-  status <- system2("quarto", c("render", shQuote(file.path(project, "index.qmd")), "--output-dir", shQuote(staging)))
-  if (status != 0L || !file.exists(file.path(staging, "index.html"))) stop("Render failed for ", metadata$slug)
+  # Render in place (next to index.qmd) rather than via --output-dir: quarto
+  # nests --output-dir output under the source directory's own name for a
+  # standalone (non-project) file render, which broke the flat staging layout
+  # this script expects. embed-resources: true in living-research/_quarto.yml
+  # makes index.html fully self-contained, so a single file copy suffices.
+  rendered_html <- file.path(project, "index.html")
+  if (file.exists(rendered_html)) file.remove(rendered_html)
+  status <- system2("quarto", c("render", shQuote(file.path(project, "index.qmd"))))
+  if (status != 0L || !file.exists(rendered_html)) stop("Render failed for ", metadata$slug)
+  file.copy(rendered_html, file.path(staging, "index.html"))
+  file.remove(rendered_html)
 
   if (dir.exists(destination)) unlink(destination, recursive = TRUE, force = TRUE)
   dir.create(dirname(destination), recursive = TRUE, showWarnings = FALSE)

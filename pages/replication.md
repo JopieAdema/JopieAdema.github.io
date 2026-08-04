@@ -101,7 +101,7 @@ details.paper[open] > summary {
 <a href="https://jopieadema.github.io/replication/replication_Ciacci.zip"><em>Replication files</em></a>
 <a href="https://open.spotify.com/episode/4Eo0DFGixG5i4RYKdRvLb9"><em>Podcast (Allegedly Does Not Replicate, ep. 18)</em></a>
 </div>
-<div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
+<div class="paper-abstract">A study published in the Journal of Population Economics finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
 </div>
 </details>
 

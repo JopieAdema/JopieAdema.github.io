@@ -1,20 +1,20 @@
 ---
-title: Live Research Notes
-permalink: /live-research/
+title: Living Research Notes
+permalink: /living-research/
 full-width: true
 css:
-  - "/assets/css/live-research.css"
+  - "/assets/css/living-research.css"
 ---
 
 <div class="lr-page">
 
-<section class="lr-intro" aria-labelledby="live-research-introduction">
-  <h2 id="live-research-introduction">A faster feedback loop for policy</h2>
+<section class="lr-intro" aria-labelledby="living-research-introduction">
+  <h2 id="living-research-introduction">A faster feedback loop for policy</h2>
   <p>Social science research is slower than it can be: we observe a policy change, wait until the data is there, send it to a journal, leading to a long lag until the relevant policy makers receive feedback. However, this does not need to be (it's 2026). On this page, I post real-time research notes that automatically update as new data becomes available. The first, on EU migration policy, can be found below.</p>
   <p>If you're interested, shoot me an email at <a href="mailto:j.a.h.adema94@gmail.com">j.a.h.adema94@gmail.com</a>!</p>
 </section>
 
-<section class="lr-projects" aria-label="Live research projects">
+<section class="lr-projects" aria-label="Living research projects">
   <div class="lr-status-row">
     <span class="lr-status"><span aria-hidden="true"></span> Updating monthly</span>
   </div>
@@ -26,9 +26,9 @@ css:
       <span class="lr-pill">{{ note.status }}</span>
       <span>Data through {{ note.data_vintage }}</span>
     </div>
-    <h3><a href="/assets/live-research/{{ note.slug }}/">{{ note.title }}</a></h3>
+    <h3><a href="/assets/living-research/{{ note.slug }}/">{{ note.title }}</a></h3>
     <p>{{ note.summary }}</p>
-    <a class="lr-card-link" href="/assets/live-research/{{ note.slug }}/">Read the live note <span aria-hidden="true">→</span></a>
+    <a class="lr-card-link" href="/assets/living-research/{{ note.slug }}/">Read the living note <span aria-hidden="true">→</span></a>
   </article>
   {% endfor %}
   {% else %}
@@ -49,8 +49,8 @@ css:
   {% endif %}
 </section>
 
-<aside class="lr-method" aria-labelledby="how-live-research-works">
-  <h2 id="how-live-research-works">How Live Research works</h2>
+<aside class="lr-method" aria-labelledby="how-living-research-works">
+  <h2 id="how-living-research-works">How Living Research works</h2>
   <div class="lr-method-grid">
     <div><span>1</span><h3>New data arrive</h3><p>Public source data are checked on a monthly schedule.</p></div>
     <div><span>2</span><h3>Analysis reruns</h3><p>Versioned R code validates and analyzes the latest release.</p></div>

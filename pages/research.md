@@ -232,7 +232,7 @@ details.paper[open] > summary {
 <div class="paper-links">
 <a href="https://journals.sagepub.com/doi/abs/10.1177/0193841X261449106"><em>Evaluation Review</em></a>
 </div>
-<div class="paper-abstract">A study published in JPOBE finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
+<div class="paper-abstract">A study published in the Journal of Population Economics finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
 </div>
 </details>
 

@@ -1,0 +1,13 @@
+{
+  "data_vintage": "2026-05",
+  "last_successful_update": "2026-08-04 01:09 UTC",
+  "n_treated": 13,
+  "n_control": 12,
+  "min_pretreatment_applications": 200,
+  "min_reporting_coverage": 0.9,
+  "reference_quarter": "2026 Q2",
+  "n_quarters": 6,
+  "latest_pretrend_quarter": "2026 Q1",
+  "latest_pretrend_estimate": -0.053,
+  "latest_pretrend_se": 0.049
+}
