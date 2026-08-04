@@ -32,7 +32,11 @@ The running variable is the 2025 EU-wide recognition rate minus 20. The sample k
 
 @fig-cutoff shows where the `r results$n_treated + results$n_control` origins in the 12.5-27.5% window actually sit relative to the 20% cutoff -- the dashed line marks the threshold, with treated origins (accelerated) below it and control origins above it. @fig-trends plots the raw monthly application totals for the two groups; both have been drifting down over 2025-26 without an obvious break yet, but volumes and composition differ, so this alone is not evidence of parallel trends. @fig-ppml is the difference-in-differences design's quarter-fixed-effects event study: the treated-control gap is close to zero in every pre-reference quarter and never statistically distinguishable from it. @fig-rdd is the dynamic difference-in-discontinuities design's main estimate, plotted on the same y-axis scale as @fig-ppml for direct comparison: linear and quadratic fits agree that the gap has been converging toward zero as the reference quarter approaches, with wide, overlapping confidence bands throughout.
 
+<details><summary>Figure 1: origin countries around the 20% cutoff</summary>
+
 ![Origin countries around the 20% fast-track threshold](figures/fig1_recognition_rate_cutoff.png){#fig-cutoff}
+
+</details>
 
 ![Monthly first-time applications by recognition-rate group](figures/fig2_group_trends.png){#fig-trends}
 
