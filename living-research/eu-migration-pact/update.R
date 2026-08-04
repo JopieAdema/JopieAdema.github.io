@@ -239,12 +239,12 @@ p_quarter_ppml <- ggplot(quarter_event_ppml, aes(quarter_start, estimate)) +
 ggsave("figures/fig3_quarterly_ppml_event_study.png", p_quarter_ppml, width = 7.1, height = 4.2, dpi = 200, bg = "white")
 
 # === Figures 4 and 5: dynamic difference-in-discontinuities ===============
-# Origin-specific rate of change is always CURRENT quarter minus REFERENCE
-# quarter, scaled to a full-quarter-equivalent using months_observed so a
-# partial reference or horizon quarter isn't mechanically under-counted.
-# (Uniform y_l - y_ref convention -- no sign flip between pre- and post-
-# reference horizons, which would otherwise manufacture a spurious break at
-# the reference point.)
+# Origin-specific rate of change, scaled to a full-quarter-equivalent using
+# months_observed so a partial reference or horizon quarter isn't
+# mechanically under-counted. Matches the manuscript's Eq. 3: horizons before
+# the policy date are signed reference-minus-horizon, horizons at or after it
+# are signed horizon-minus-reference, so both pre- and post-policy deviations
+# read as "how far applications moved in the policy-consistent direction."
 
 rdd_quarter_base <- event_applications %>%
   left_join(pretreatment_volume, by = "citizen") %>%
@@ -271,7 +271,11 @@ rdd_quarter_base <- rdd_quarter_base %>%
   mutate(
     relative_change_pct = if_else(
       applications_2025 == 0, 0,
-      (quarter_applications_full - reference_quarter_applications) / (applications_2025 / 4)
+      if_else(
+        quarter_start < policy_date,
+        (reference_quarter_applications - quarter_applications_full) / (applications_2025 / 4),
+        (quarter_applications_full - reference_quarter_applications) / (applications_2025 / 4)
+      )
     ),
     running_variable = recognition_rate - 20
   )

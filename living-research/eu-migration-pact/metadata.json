@@ -4,7 +4,7 @@
   "summary": "Tracking whether EU-wide fast-track asylum eligibility at the 20% recognition-rate cutoff shifts application volume, timing, or destination.",
   "status": "pre-policy monitoring",
   "data_vintage": "2026-05",
-  "last_successful_update": "2026-08-04 01:09 UTC",
+  "last_successful_update": "2026-08-04 06:36 UTC",
   "source_urls": [
     "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asydec1pc",
     "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm"
