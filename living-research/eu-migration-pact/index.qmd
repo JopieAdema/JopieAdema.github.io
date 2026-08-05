@@ -1,5 +1,5 @@
 ---
-title: "The Twenty Percent Border"
+title: "The Twenty Percent Border: Impact of the EU Migration and Asylum Pact"
 subtitle: "Does EU-wide fast-track asylum processing reduce asylum applications?"
 date: last-modified
 resources:
@@ -55,7 +55,13 @@ Each panel of the figure below is one quarterly horizon's cutoff comparison: ori
 
 ## Conclusion
 
-With `r results$n_treated` treated and `r results$n_control` control origins, the event study design has reasonable power: the most recent complete pre-reference quarter's PPML estimate is `r results$latest_pretrend_estimate` (SE `r results$latest_pretrend_se`). The differences in discontinuities estimates are more imprecise, although it is probably better identified than the diff in diff. However, as every year in January the recognition rates list updates, every january becomes a new natural experiment, which will allow us to gradually build evidence, as some treated countries become control and vice versa. Let the data flow in!
+With `r results$n_treated` treated and `r results$n_control` control origins, the event study design has reasonable power: the most recent complete pre-reference quarter's PPML estimate is `r results$latest_pretrend_estimate` (SE `r results$latest_pretrend_se`). Because PPML is a log-linear model, that estimate reads on the percentage scale as a `r sprintf("%.1f", (exp(results$latest_pretrend_estimate) - 1) * 100)`% pre-trend (95% CI `r sprintf("%.1f", (exp(results$latest_pretrend_estimate - 1.96 * results$latest_pretrend_se) - 1) * 100)`% to `r sprintf("%.1f", (exp(results$latest_pretrend_estimate + 1.96 * results$latest_pretrend_se) - 1) * 100)`%) -- small next to the kind of effect a genuine fast-track deterrent could plausibly produce (order 20%), so the PPML design should have real power to pick up an effect that size once post-policy data arrive. The dynamic difference-in-discontinuities estimates are far more imprecise, so most of that power comes from the PPML side rather than the RDD one, even though the RDD is arguably better identified. However, as every year in January the recognition rates list updates, every january becomes a new natural experiment, which will allow us to gradually build evidence, as some treated countries become control and vice versa. Let the data flow in!
+
+<details><summary>How this page updates itself</summary>
+
+Once a month, a GitHub Actions workflow checks Eurostat's bulk data files for a new release, reruns the versioned R analysis script (`update.R`), and re-renders this Quarto note. If the new data pass validation -- enough Member States reporting, no broken joins -- the workflow commits the refreshed figures, results, and this page straight to the repository, and GitHub Pages serves the update automatically. Nothing here is edited by hand: the same code that produced the numbers above produces every future update, and the full history of past versions stays visible in the repository's commit log.
+
+</details>
 
 ---
 

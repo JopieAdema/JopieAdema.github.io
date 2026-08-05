@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-08-04">
 
-<title>The Twenty Percent Border</title>
+<title>The Twenty Percent Border: Impact of the EU Migration and Asylum Pact</title>
 <style>
 
 span.smallcaps{font-variant: small-caps;}
@@ -2198,7 +2198,7 @@ if (window.self !== window.top) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Twenty Percent Border</h1>
+<h1 class="title">The Twenty Percent Border: Impact of the EU Migration and Asylum Pact</h1>
 <p class="subtitle lead">Does EU-wide fast-track asylum processing reduce asylum applications?</p>
 </div>
 
@@ -2306,7 +2306,13 @@ Figure 5: Fixed-bandwidth quarterly RDD plots underlying Figure 4
 </section>
 <section id="conclusion" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">4</span> Conclusion</h2>
-<p>With 13 treated and 12 control origins, the event study design has reasonable power: the most recent complete pre-reference quarter’s PPML estimate is -0.053 (SE 0.049). The differences in discontinuities estimates are more imprecise, although it is probably better identified than the diff in diff. However, as every year in January the recognition rates list updates, every january becomes a new natural experiment, which will allow us to gradually build evidence, as some treated countries become control and vice versa. Let the data flow in!</p>
+<p>With 13 treated and 12 control origins, the event study design has reasonable power: the most recent complete pre-reference quarter’s PPML estimate is -0.053 (SE 0.049). Because PPML is a log-linear model, that estimate reads on the percentage scale as a -5.2% pre-trend (95% CI -13.8% to 4.4%) – small next to the kind of effect a genuine fast-track deterrent could plausibly produce (order 20%), so the PPML design should have real power to pick up an effect that size once post-policy data arrive. The dynamic difference-in-discontinuities estimates are far more imprecise, so most of that power comes from the PPML side rather than the RDD one, even though the RDD is arguably better identified. However, as every year in January the recognition rates list updates, every january becomes a new natural experiment, which will allow us to gradually build evidence, as some treated countries become control and vice versa. Let the data flow in!</p>
+<details>
+<summary>
+How this page updates itself
+</summary>
+<p>Once a month, a GitHub Actions workflow checks Eurostat’s bulk data files for a new release, reruns the versioned R analysis script (<code>update.R</code>), and re-renders this Quarto note. If the new data pass validation – enough Member States reporting, no broken joins – the workflow commits the refreshed figures, results, and this page straight to the repository, and GitHub Pages serves the update automatically. Nothing here is edited by hand: the same code that produced the numbers above produces every future update, and the full history of past versions stays visible in the repository’s commit log.</p>
+</details>
 <hr>
 <p><strong>Sources:</strong> <a href="https://ec.europa.eu/eurostat/databrowser/product/view/migr_asydec1pc">Eurostat <code>migr_asydec1pc</code></a> (first-instance decisions) · <a href="https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm">Eurostat <code>migr_asyappctzm</code></a> (first-time applications) · <strong>Code:</strong> <a href="https://github.com/JopieAdema/JopieAdema.github.io/blob/master/living-research/eu-migration-pact/update.R">update.R</a> · <strong>Contact:</strong> <a href="mailto:j.a.h.adema94@gmail.com">j.a.h.adema94@gmail.com</a></p>
 </section>
