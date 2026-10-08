@@ -76,7 +76,7 @@ details.paper[open] > summary {
 <summary>
 <div>
 <div class="paper-title">Cold Showers and work absence</div>
-<div class="paper-authors">Adema, J., Adriaan ter Braak</div>
+<div class="paper-authors">Adema, J., <a href="https://www.sjamadriaan.nl/">Adriaan ter Braack</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -144,7 +144,7 @@ I participate in several replication projects and many-analyst studies that aim 
 
   - [*R2E*](https://www.rwi-essen.de/en/rwi/team/person/projects/detail/robustness-and-replicability-in-economics-r2e-277)
   - [*ERROR*](https://error.reviews/)
-  - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/)
-  - [*Elasticity Open Science*](https://www.elasticity-open-science.com/)
+  - [*ManyEconomists*](https://nickch-k.github.io/ManyEconomists/): [The Sources of Researcher Variation in Economics](https://www.nber.org/papers/w33729) ([Huntington-Klein](https://nickchk.com/), [Pörtner](https://clausportner.com/), and the Many-Economists Collaborative on Researcher Variation), forthcoming in the *Journal of Economic Literature*
+  - [*Elasticity Open Science*](https://www.elasticity-open-science.com/): [How Researchers' Analytical Decisions Impact Brand Price Elasticity Estimates: Insights from a Many-Analyst Study](https://osf.io/preprints/psyarxiv/fs3k2) (Koll, Datta, Teichmann, et al., 2026)
   - [*Many Daughters*](https://www.manydaughters.com/)
 <p></p>

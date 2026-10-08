@@ -1,87 +1,83 @@
 ---
+title: Research
 permalink: /research/
+full-width: true
+css:
+  - "/assets/css/research.css"
 ---
-<style>
-details.paper {
-  margin-bottom: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  background: #fafafa;
-  overflow: hidden;
-}
-details.paper > summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  margin: 0;
-  padding: 0.75rem 1rem;
-  user-select: none;
-}
-details.paper > summary::-webkit-details-marker { display: none; }
-details.paper > summary::before {
-  content: "▶";
-  font-size: 0.6rem;
-  color: #018F59;
-  transition: transform 0.2s;
-  flex-shrink: 0;
-  margin-top: 0.35rem;
-}
-details.paper[open] > summary::before {
-  transform: rotate(90deg);
-}
-details.paper[open] > summary {
-  border-bottom: 1px solid #e0e0e0;
-  background: #f2f2f2;
-}
-.paper-item {
-  margin-bottom: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  background: #fafafa;
-  padding: 0.75rem 1rem;
-}
-.paper-title {
-  font-weight: 600;
-  font-size: 0.975rem;
-  line-height: 1.4;
-}
-.paper-outlet {
-  font-size: 0.825rem;
-  color: #444;
-  font-weight: 400;
-  margin-top: 0.1rem;
-}
-.paper-authors {
-  font-size: 0.825rem;
-  color: #666;
-  font-weight: 400;
-  margin-top: 0.15rem;
-}
-.paper-body {
-  padding: 0.85rem 1rem 1rem;
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: #444;
-}
-.paper-links {
-  margin-bottom: 0.7rem;
-  font-size: 0.85rem;
-}
-.paper-links a {
-  margin-right: 0.4rem;
-}
-.paper-abstract {
-  color: #444;
-}
-.section-head {
-  font-weight: 700;
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-}
-</style>
+
+<div class="research-page">
+
+<section class="research-intro" aria-label="Research overview">
+  <p>Working papers, publications, and work in progress on migration, refugees, and political economy. Click a title to expand the abstract.</p>
+</section>
+
+<p class="section-head section-head--pub">Peer-reviewed publications</p>
+
+<details class="paper paper--pub">
+<summary>
+<div>
+<div class="pub-venue"><span class="pub-journal">Journal of Economic Literature</span><span class="pub-cite">forthcoming</span></div>
+<div class="paper-title">The Sources of Researcher Variation in Economics (2026)</div>
+<div class="paper-authors">with <a href="https://nickchk.com/">Nick Huntington-Klein</a>, <a href="https://clausportner.com/">Claus C. Pörtner</a>, and the Many-Economists Collaborative on Researcher Variation</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://www.nber.org/papers/w33729"><em>NBER Working Paper No. 33729</em></a>
+<a href="https://www.iza.org/de/publications/dp/17744"><em>IZA Discussion Paper No. 17744</em></a>
+</div>
+<div class="paper-abstract">Disagreement among researchers is a central and productive feature of scientific progress, but a growing literature shows that standard errors understate uncertainty because results depend on researchers' discretionary choices, some of which are not easily observable. This paper synthesizes evidence on how researcher variation shapes empirical conclusions and presents new evidence on its sources and implications. Variation across researchers is often comparable in magnitude to sampling uncertainty but unevenly distributed across stages of the research process. We report results from a many-analyst study in which 146 research teams estimate the same causal effect under varying constraints. Although central estimates are broadly aligned, dispersion remains substantial: restricting data cleaning and preparation leads to greater agreement, whereas imposing a shared research design or adding peer review has more limited effects. Overall, the evidence suggests that conventional uncertainty summaries understate total uncertainty and that less visible research decisions warrant greater scrutiny.</div>
+</div>
+</details>
+
+<details class="paper paper--pub">
+<summary>
+<div>
+<div class="pub-venue"><span class="pub-journal">Evaluation Review</span><span class="pub-cite">online first</span></div>
+<div class="paper-title">No Evidence that Banning the Purchase of Sex Increases Rape: A Replication Study of Ciacci (2024, 2025) (2026)</div>
+<div class="paper-authors">with <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a> and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://doi.org/10.1177/0193841X261449106"><em>Evaluation Review</em></a>
+</div>
+<div class="paper-abstract">We re-analyze two research articles with results showing that Sweden's criminalization of purchasing sex triggered a large increase in rape. Our analysis documents discrepancies that produce unreliable results in five identification strategies in the first paper (Ciacci, 2024), and in all specifications indicating a large reform effect in the other (Ciacci, 2025). These discrepancies include estimating different statistical relationships, using different methods, or employing different variables than the paper describes. Correcting them by implementing the analysis described in the text yields no evidence that the Swedish reform increased rape.</div>
+</div>
+</details>
+
+<details class="paper paper--pub">
+<summary>
+<div>
+<div class="pub-venue"><span class="pub-journal">Proceedings of the National Academy of Sciences</span><span class="pub-cite">122 (32), e2502420122</span></div>
+<div class="paper-title">Refugees from Ukraine value job opportunities over welfare (2025)</div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://www.pnas.org/doi/10.1073/pnas.2502420122"><em>PNAS</em></a>
+</div>
+<div class="paper-abstract">Understanding refugees' destination choices is key to designing appropriate policies, but little is known about this beyond correlational patterns and the effects of isolated policy changes. To derive causal evidence on how destination country characteristics affect refugees' destination choices, we conducted a forced-choice conjoint experiment among 3,348 Ukrainian refugees across Europe. In the survey experiment, refugees repeatedly chose between two hypothetical countries that varied on eight relevant attributes. Ukrainian refugees are uniquely suited to study the relative importance of different host country attributes as they have the right to choose in which member state of the European Union they apply for temporary protection. We find that job opportunities are a much stronger driver of destination choice than social assistance. A one SD increase in average wages makes it 16.4 percentage points more likely that the country is chosen in the survey experiment, while a corresponding increase in social assistance increases the probability of the country being chosen by only 4.5 percentage points. The ease of finding a job matching one's qualifications is valued even more than having friends or family and knowing the language of the country. We also find strong sorting in that respondents who value knowing the language and job opportunities in our survey experiments are also more likely to have settled in countries where this is the case. Conjoint experiments can be used to assess refugees' anticipated migratory responses to proposed policy changes.</div>
+</div>
+</details>
+
+<details class="paper paper--pub">
+<summary>
+<div>
+<div class="pub-venue"><span class="pub-journal">Economics Letters</span><span class="pub-cite">210, 110172</span></div>
+<div class="paper-title">On the stability of risk preferences: Measurement matters (2022)</div>
+<div class="paper-authors">with <a href="https://www.dji.de/en/about-us/employees/detailview/mitarbeiter/till-nikolka.html">Till Nikolka</a>, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and <a href="https://sites.google.com/view/uwesunde/home">Uwe Sunde</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://www.sciencedirect.com/science/article/pii/S0165176521004377"><em>Economics Letters</em></a>
+</div>
+<div class="paper-abstract">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</div>
+</div>
+</details>
 
 <p class="section-head">Working papers</p>
 
@@ -123,13 +119,14 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Non-Robustness in Log-Like Specifications (2026)</div>
 <div class="paper-outlet"><em>Preprint</em></div>
-<div class="paper-authors">with Jack Fitzgerald, Lenka Fiala, Essi Kujansuu, and David Valenta</div>
+<div class="paper-authors">with <a href="https://jack-fitzgerald.github.io/">Jack Fitzgerald</a>, <a href="http://www.lenkafiala.com/">Lenka Fiala</a>, <a href="https://sites.google.com/view/essi-kujansuu">Essi Kujansuu</a>, and <a href="https://valenta.dev/">David Valenta</a></div>
 </div>
 </summary>
 <div class="paper-body">
 <div class="paper-links">
-<a href="https://osf.io/preprints/metaarxiv/juda7_v1"><em>OSF</em></a>
+<a href="https://osf.io/preprints/metaarxiv/juda7"><em>OSF</em></a>
 </div>
+<div class="paper-abstract">Recent literature shows that when regression models are estimated on variables transformed with 'log-like' functions such as the inverse hyperbolic sine or ln(Z + 1) transformations, one can obtain (semi-)elasticity estimates of any magnitude by linearly re-scaling the input variable(s) before transformation. We systematically re-analyze the replication data of 46 papers whose main conclusions are defended by log-like specifications. Our replication findings motivate new theoretical and simulation results showing that in log-like specifications, unit scale can be used to overfit data, creating an uncontrolled multiple hypothesis testing problem that frequently yields spuriously significant results. In particular, 38% of the estimates we re-analyze sit in a 'sweet spot', where both upward and downward re-scalings of variables' units before transformation shrink test statistics. Consequently, published estimates in this literature are statistically significant over 40% more frequently than in the general economics literature. We find that modest changes to model specification yield different statistical significance conclusions for 14-37% of estimates defending papers' main claims. We also show that for 99.8% of estimates, variables transformed with log-like functions do not meet data requirements for log-like specifications from a methodological recommendation cited by all papers in our replication sample. We synthesize and harmonize methodological guidelines and advocate for more robust alternative specifications, including normalized estimands, Poisson regression, and quantile regression.</div>
 </div>
 </details>
 
@@ -138,6 +135,7 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)</div>
 <div class="paper-outlet"><em>RF Berlin Discussion Paper &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
+<div class="paper-authors">with <a href="https://milanvansteenvoort.com/">Milan van Steenvoort</a></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -146,7 +144,7 @@ details.paper[open] > summary {
 <a href="https://www.rfberlin.com/network-paper/expected-asylum-seekers-and-far-right-voting-effects-of-a-dispersal-act/"><em>RF Berlin Discussion Paper No. 150/25</em></a>
 <a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/expected-asylum-seekers-and-far-right-voting-effects-dispersal-act"><em>CESifo Working Paper No. 12312</em></a>
 </div>
-<div class="paper-abstract">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum migration. Prior work shows that exposure to transit routes and regional inflows tends to raise far-right support, whereas direct local contact with asylum seekers can dampen it. Yet much of the sharp rise in far-right voting around major refugee waves remains unexplained by actual inflows. I study a Dutch policy reform, the Dispersal Act, which obligated municipalities to host asylum seekers and thereby generated a sudden, plausibly exogenous increase in expected future local inflows. Comparing changes in far-right vote shares between not-yet and already hosting municipalities before the actual arrival of asylum seekers allows me to isolate the electoral effect of heightened expectations of future hosting. I find that affected municipalities experienced a substantial increase in far-right support following the Act's passage. The effect operates on both the extensive margin (whether municipalities expect to host) and the intensive margin (how many they expect to host): a one-percentage-point increase in allocated asylum-seeker share raises far-right vote shares by about 1.2 percentage points.</div>
+<div class="paper-abstract">Far-right parties frequently mobilize anti-refugee sentiment during periods of high asylum migration. Prior work shows that exposure to transit routes and regional inflows tends to raise far-right support, whereas direct local contact with asylum seekers can dampen it. Yet much of the sharp rise in far-right voting around major refugee waves remains unexplained by actual inflows. We study a Dutch policy reform, the Dispersal Act, which obligated municipalities to host asylum seekers and thereby generated a sudden, plausibly exogenous increase in expected future local inflows. Comparing changes in far-right vote shares between not-yet and already hosting municipalities before the actual arrival of asylum seekers allows us to isolate the electoral effect of heightened expectations of future hosting. We find that affected municipalities experienced a substantial increase in far-right support following the Act's passage. The effect operates on both the extensive margin (whether municipalities expect to host) and the intensive margin (how many they expect to host): a one-percentage-point increase in allocated asylum-seeker share raises far-right vote shares by about 1.2 percentage points.</div>
 </div>
 </details>
 
@@ -210,63 +208,13 @@ details.paper[open] > summary {
 
 <div class="paper-item">
 <div class="paper-title">Between Compassion and Contempt: Home Country Events and Hosts' Attitudes</div>
-<div class="paper-authors">with Padmaja Kadambi</div>
+<div class="paper-authors">with <a href="https://www.hwwi.org/en/person/padmaja-kadambi/">Padmaja Kadambi</a></div>
 </div>
 
 <div class="paper-item">
 <div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
 <div class="paper-authors">with <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
-
-<p class="section-head">Peer-reviewed publications</p>
-
-<details class="paper">
-<summary>
-<div>
-<div class="paper-title">No Evidence that Banning the Purchase of Sex Increases Rape: A Replication Study of Ciacci (2024, 2025) (2026)</div>
-<div class="paper-outlet"><em>Evaluation Review</em></div>
-<div class="paper-authors">with <a href="https://sites.google.com/site/folkeolle/">Olle Folke</a> and <a href="https://sites.google.com/site/ricknejohanna/">Johanna Rickne</a></div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-links">
-<a href="https://journals.sagepub.com/doi/abs/10.1177/0193841X261449106"><em>Evaluation Review</em></a>
-</div>
-<div class="paper-abstract">A study published in the Journal of Population Economics finding large effects of criminalization of prostitution on rape estimates an impossible RDD specification, which effectively identifies a seasonal effect rather than a discontinuity.</div>
-</div>
-</details>
-
-<details class="paper">
-<summary>
-<div>
-<div class="paper-title">Refugees from Ukraine value job opportunities over welfare (2025)</div>
-<div class="paper-outlet"><em>PNAS</em></div>
-<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-links">
-<a href="https://www.pnas.org/doi/10.1073/pnas.2502420122"><em>PNAS, 122 (32)</em></a>
-</div>
-<div class="paper-abstract">More than 53 million people are forcibly displaced across borders, with Syria, Afghanistan, and Ukraine being the main countries of origin. A major concern in receiving countries around the world is that generous social assistance may attract asylum seekers. To test how important social assistance in destination countries is for refugees' destination choice, we conducted a survey experiment among Ukrainian refugees across Europe. In the survey experiment, respondents chose between hypothetical countries that varied in labor markets, social assistance, and other potentially relevant attributes. Our results show that concerns about welfare magnets are overstated. Job opportunities are much more important for the destination country choice than social assistance. Additionally, having networks in the country and knowing its language are important.</div>
-</div>
-</details>
-
-<details class="paper">
-<summary>
-<div>
-<div class="paper-title">On the stability of risk preferences: Measurement matters (2021)</div>
-<div class="paper-outlet"><em>Economics Letters</em></div>
-<div class="paper-authors">with Till Nikolka, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and <a href="https://sites.google.com/view/uwesunde/home">Uwe Sunde</a></div>
-</div>
-</summary>
-<div class="paper-body">
-<div class="paper-links">
-<a href="https://www.sciencedirect.com/science/article/pii/S0165176521004377"><em>Economics Letters, 110172</em></a>
-</div>
-<div class="paper-abstract">We exploit the unique design of a repeated survey experiment among students in four countries to explore the stability of risk preferences in the context of the COVID-19 pandemic. Relative to a baseline before the pandemic, we find that self-assessed willingness to take risks decreased while the willingness to take risks in an incentivized lottery task increased, for the same sample of respondents. These findings suggest domain specificity of preferences that is partly reflected in the different measures.</div>
-</div>
-</details>
 
 <p class="section-head">Other publications</p>
 
@@ -282,6 +230,7 @@ details.paper[open] > summary {
 <div class="paper-links">
 <a href="https://esb.nu/missies-met-koningspaar-naar-duitse-deelstaten-leiden-niet-tot-meer-handel/"><em>ESB</em></a>
 </div>
+<div class="paper-abstract">Het koningspaar ging tussen 2013 en 2019 mee op vijftien vooraf geplande handelsmissies naar Duitse deelstaten. Deze gespreide handelsmissies zijn geschikt om het causale effect op de handel te schatten. De handel van Nederland naar een Duitse deelstaat neemt niet significant toe na een koninklijke handelsmissie.</div>
 </div>
 </details>
 
@@ -300,6 +249,7 @@ details.paper[open] > summary {
 <a href="https://www.zeit.de/gesellschaft/2025-02/ifo-institut-studie-migration-kriminalitaet-deutschland"><em>Zeit</em></a>
 <a href="https://www.infomigrants.net/en/post/68102/are-migrants-making-europe-less-safe"><em>InfoMigrants</em></a>
 </div>
+<div class="paper-abstract">Ausländer sind in der Polizeilichen Kriminalstatistik (PKS) gegenüber ihrem Bevölkerungsanteil überrepräsentiert. Dies nährt die Sorge, Migration gefährde die Sicherheit durch eine vermeintlich höhere Kriminalitätsneigung von Ausländern. Dieser Artikel analysiert Daten der PKS (2018-2023) nach Kreisen und erörtert bestehende Erkenntnisse aus der Forschung zur Auswirkung von Zuwanderung auf Kriminalität. Die Ergebnisse zeigen, dass die höhere Kriminalitätsrate von Ausländern überwiegend durch ortsspezifische Faktoren, etwa ihre Konzentration in Ballungsräumen mit hoher Kriminalitätsdichte, erklärt wird. Ihre Demografie (jünger und männlicher) spielt dagegen eine geringere Rolle. Im Zeitraum 2018-2023 lässt sich kein Zusammenhang zwischen einer Veränderung im regionalen Ausländeranteil und der lokalen Kriminalitätsrate nachweisen. Die Ergebnisse decken sich mit Befunden der internationalen Forschung: (Flucht-) Migration hat keinen systematischen Einfluss auf die Kriminalität im Aufnahmeland.</div>
 </div>
 </details>
 
@@ -318,6 +268,7 @@ details.paper[open] > summary {
 <a href="https://www.mdr.de/nachrichten/deutschland/politik/bundeswehr-wehrpflicht-kosten-106.html"><em>MDR</em></a>
 <a href="https://www.krone.at/3732541"><em>Kronen Zeitung</em></a>
 </div>
+<div class="paper-abstract">Der russische Angriffskrieg gegen die Ukraine hat das sicherheitspolitische Umfeld in Europa massiv verschlechtert. Als Reaktion wird in Deutschland eine Wiedereinführung der Wehrpflicht diskutiert. Die Studie berechnet die volkswirtschaftlichen Kosten verschiedener Wehrpflicht-Szenarien, um eine Grundlage für den Vergleich mit alternativen sicherheitspolitischen Maßnahmen zu schaffen.</div>
 </div>
 </details>
 
@@ -326,13 +277,14 @@ details.paper[open] > summary {
 <div>
 <div class="paper-title">Steuerbegünstigung für internationale Fachkräfte</div>
 <div class="paper-outlet"><em>ifo Forschungsbericht</em></div>
-<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, Aaron Günther, Philipp Heil, Martin Jacob, <a href="https://sites.google.com/view/niklas-potrafke">Niklas Potrafke</a>, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and Michael Weinand (2025)</div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, <a href="https://www.ifo.de/en/guenther-a">Aaron Günther</a>, <a href="https://sites.google.com/view/philipp-heil/start">Philipp Heil</a>, <a href="https://www.martinjacob.info/">Martin Jacob</a>, <a href="https://sites.google.com/view/niklas-potrafke">Niklas Potrafke</a>, <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a>, and Michael Weinand (2025)</div>
 </div>
 </summary>
 <div class="paper-body">
 <div class="paper-links">
 <a href="https://www.ifo.de/publikationen/2025/monographie-autorenschaft/steuerbeguenstigung-fuer-internationale-fachkraefte"><em>ifo Forschungsbericht</em></a>
 </div>
+<div class="paper-abstract">In Deutschland herrscht ein erheblicher Fachkräftemangel mit rund 700.000 offenen Stellen. Um dem entgegenzuwirken, hatte die Bundesregierung eine einkommensteuerliche Entlastung für internationale Fachkräfte erwogen.</div>
 </div>
 </details>
 
@@ -346,4 +298,6 @@ details.paper[open] > summary {
 <div class="paper-item">
 <div class="paper-title"><a href="https://europeancorrespondent.com:8443/en/r/what-next-for-ukrainian-refugees-in-europe">What next for Ukrainian refugees in Europe?</a></div>
 <div class="paper-authors"><em>The European Correspondent</em></div>
+</div>
+
 </div>
