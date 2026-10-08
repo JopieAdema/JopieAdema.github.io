@@ -1,6 +1,6 @@
 {
-  "data_vintage": "2026-05",
-  "last_successful_update": "2026-08-04 07:31 UTC",
+  "data_vintage": "2026-06",
+  "last_successful_update": "2026-10-08 16:07 UTC",
   "n_treated": 13,
   "n_control": 12,
   "min_pretreatment_applications": 200,
@@ -8,6 +8,6 @@
   "reference_quarter": "2026 Q2",
   "n_quarters": 6,
   "latest_pretrend_quarter": "2026 Q1",
-  "latest_pretrend_estimate": -0.053,
-  "latest_pretrend_se": 0.049
+  "latest_pretrend_estimate": -0.037,
+  "latest_pretrend_se": 0.062
 }
