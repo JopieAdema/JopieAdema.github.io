@@ -223,9 +223,12 @@ quarterly_baseline <- baseline %>%
   group_by(citizen, country, treated_num, quarter_start, quarter) %>%
   summarise(applications = sum(applications), months_observed = n(), .groups = "drop")
 
-latest_quarter_start <- max(quarterly_baseline$quarter_start)
-latest_quarter <- quarterly_baseline %>%
-  filter(quarter_start == latest_quarter_start) %>% distinct(quarter) %>% pull(quarter)
+# Reference quarter: the latest available quarter until the policy quarter
+# (2026 Q2) is reached, then fixed at the policy quarter so that later
+# quarters enter as post-policy horizons instead of becoming the reference.
+ref_quarter_start <- min(max(quarterly_baseline$quarter_start), policy_date_quarterly)
+ref_quarter <- quarterly_baseline %>%
+  filter(quarter_start == ref_quarter_start) %>% distinct(quarter) %>% pull(quarter)
 quarterly_baseline <- quarterly_baseline %>%
   mutate(quarter = factor(quarter, levels = unique(quarter[order(quarter_start)])))
 
@@ -233,7 +236,7 @@ quarterly_baseline <- quarterly_baseline %>%
 # the Poisson mean scale with observed exposure instead of biasing the level
 # of the (possibly incomplete) most recent quarter downward.
 quarter_ppml_model <- fepois(
-  applications ~ i(quarter, treated_num, ref = latest_quarter) | citizen + quarter,
+  applications ~ i(quarter, treated_num, ref = ref_quarter) | citizen + quarter,
   offset = ~ log(months_observed / 3), cluster = ~ citizen, data = quarterly_baseline
 )
 
@@ -247,7 +250,7 @@ extract_quarter_event <- function(model) {
       estimate, std.error, conf.low = estimate - 1.96 * std.error,
       conf.high = estimate + 1.96 * std.error
     ) %>%
-    bind_rows(tibble(quarter = latest_quarter, estimate = 0, std.error = 0,
+    bind_rows(tibble(quarter = ref_quarter, estimate = 0, std.error = 0,
       conf.low = 0, conf.high = 0)) %>%
     mutate(quarter_start = as.Date(paste0(substr(quarter, 1, 4), "-",
       3 * (as.integer(sub(".*Q", "", quarter)) - 1) + 1, "-01"))) %>%
@@ -267,7 +270,7 @@ p_quarter_ppml <- ggplot(quarter_event_ppml, aes(quarter_start, estimate)) +
     labels = function(x) paste0(format(x, "%Y"), " Q", ((as.integer(format(x, "%m")) - 1) %/% 3) + 1),
     expand = expansion(mult = c(0.01, 0.02))) +
   labs(x = NULL, y = "Treated-control difference", title = "Quarterly PPML pre-trend event study",
-    subtitle = paste0(latest_quarter, " omitted; origin & quarter FE, partial-quarter exposure offset; 95% origin-clustered CIs")) +
+    subtitle = paste0(ref_quarter, " omitted; origin & quarter FE, partial-quarter exposure offset; 95% origin-clustered CIs")) +
   theme_minimal(base_size = 10) +
   theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"),
         axis.text.x = element_text(angle = 35, hjust = 1))
@@ -294,7 +297,7 @@ rdd_quarter_base <- event_applications %>%
   summarise(quarter_applications = sum(applications), months_observed = n(), .groups = "drop") %>%
   mutate(quarter_applications_full = quarter_applications * 3 / months_observed)
 
-reference_quarter_start <- max(rdd_quarter_base$quarter_start)
+reference_quarter_start <- min(max(rdd_quarter_base$quarter_start), policy_date_quarterly)
 reference_quarter <- rdd_quarter_base %>%
   filter(quarter_start == reference_quarter_start) %>% distinct(quarter) %>% pull(quarter)
 
@@ -418,7 +421,7 @@ ggsave("figures/fig5_quarterly_rdd_panels.png", p_fixed20_panels, width = 8.0, h
 
 # === Summary numbers consumed by index.qmd ================================
 
-latest_pretrend <- quarter_event_ppml %>% filter(quarter_start != latest_quarter_start) %>%
+latest_pretrend <- quarter_event_ppml %>% filter(quarter_start < ref_quarter_start) %>%
   slice_max(quarter_start, n = 1)
 
 update_timestamp <- format(as.POSIXct(Sys.time(), tz = "UTC"), "%Y-%m-%d %H:%M UTC")
