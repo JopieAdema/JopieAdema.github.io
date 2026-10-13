@@ -312,6 +312,7 @@ img {
   left: 50%;
   width: 3.125rem;
   margin-top: 3.1rem;
+  pointer-events: none; /* the image is shifted left by half its width; don't let the empty right half block nav links */
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -327,6 +328,7 @@ img {
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
   margin-left: -50%;
+  pointer-events: auto;
   {% unless site.round-avatar == false %}
     border-radius: 50%;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);

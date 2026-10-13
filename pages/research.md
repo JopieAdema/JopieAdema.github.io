@@ -8,11 +8,25 @@ css:
 
 <div class="research-page">
 
-<section class="research-intro" aria-label="Research overview">
-  <p>Working papers, publications, and work in progress on migration, refugees, and political economy. Click a title to expand the abstract.</p>
-</section>
-
 <p class="section-head section-head--pub">Peer-reviewed publications</p>
+
+<details class="paper paper--pub">
+<summary>
+<div>
+<div class="pub-venue"><span class="pub-journal">Review of Economic Studies</span><span class="pub-cite">conditionally accepted</span></div>
+<div class="paper-title">Immigrants and the Making of America: A Comment (2026)</div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://jopieadema.github.io/replication/comment_SNQ.pdf"><em>Comment</em></a>
+<a href="https://jopieadema.github.io/replication/replication_SNQ.zip"><em>Replication files</em></a>
+<a href="https://jopieadema.github.io/replication/note_SNQ_shift_share.pdf"><em>Supplementary note on shift-share identification</em></a>
+</div>
+<div class="paper-abstract">Sequeira, Nunn, and Qian (2020) study the long-run impact of immigration during the Age of Mass Migration on US county-level economic outcomes in 2000 and report large positive effects. They instrument historical immigration with the interaction between county railroad connectivity and European migration to the US, averaged over seven decades (1860–1920). Because this instrument predicts larger inflows in earlier-connected counties, the authors aim to control for this by controlling for <em>log(years since railroad connection in 2000)</em>. However, to accommodate the 4% of counties that never received railroads, they instead control for <em>log(years since railroad connection in 2000 + 1)</em>, which mainly captures differences between ever- and never-connected counties, rather than between earlier- and later-connected ones. Effectively controlling for the timing of railroad connection substantially reduces the residual variation in the instrument and yields a negative 2SLS estimate, consistent with upward bias in the original estimates: early-connected counties performed better in the long run for reasons unrelated to migration. Because residual variation then depends on county age, the exclusion restriction may still fail; additionally controlling for county age yields an irrelevant first stage. The instrument thus provides insufficient identifying variation to credibly estimate the long-run effects of migration.</div>
+<div class="paper-abstract">The supplementary note shows that the instrument is a shift-share instrument whose shocks are the seven decadal immigration inflows, and applies the shocks-as-random framework of Borusyak, Hull, and Jaravel (2022) together with randomization inference over the seven shocks. It may be useful for readers interested in shift-share instruments with few shocks and in how to conduct randomization inference in such designs.</div>
+</div>
+</details>
 
 <details class="paper paper--pub">
 <summary>
@@ -101,7 +115,7 @@ css:
 <summary>
 <div>
 <div class="paper-title">Refugee Return (2026)</div>
-<div class="paper-outlet"><em>RF Berlin Discussion Paper</em></div>
+<div class="paper-outlet"><em>Submitted &nbsp;&middot;&nbsp; RF Berlin Discussion Paper</em></div>
 <div class="paper-authors">with <a href="https://cevatgirayaksoy.com/">Cevat Giray Aksoy</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
@@ -118,7 +132,7 @@ css:
 <summary>
 <div>
 <div class="paper-title">Non-Robustness in Log-Like Specifications (2026)</div>
-<div class="paper-outlet"><em>Preprint</em></div>
+<div class="paper-outlet"><em>Submitted &nbsp;&middot;&nbsp; Preprint</em></div>
 <div class="paper-authors">with <a href="https://jack-fitzgerald.github.io/">Jack Fitzgerald</a>, <a href="http://www.lenkafiala.com/">Lenka Fiala</a>, <a href="https://sites.google.com/view/essi-kujansuu">Essi Kujansuu</a>, and <a href="https://valenta.dev/">David Valenta</a></div>
 </div>
 </summary>
@@ -171,7 +185,7 @@ css:
 <div>
 <div class="paper-title">Immigrant Narratives (2022)</div>
 <div class="paper-outlet"><em>CESifo Working Paper</em></div>
-<div class="paper-authors">with <a href="https://www.kai-gehring.net/">Kai Gehring</a> and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
+<div class="paper-authors">with Remo Agovic, <a href="https://www.kai-gehring.net/">Kai Gehring</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
 <div class="paper-body">
