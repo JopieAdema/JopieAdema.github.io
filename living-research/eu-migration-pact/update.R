@@ -25,7 +25,7 @@ ANALYSIS_START <- "2023-01"
 EVENT_START <- "2025-01"
 PRETREATMENT_YEAR <- "2025"
 MIN_PRETREATMENT_APPLICATIONS <- 200
-MIN_REPORTING_COVERAGE <- 0.90
+MIN_REPORTING_COVERAGE <- 0.85
 API_ROOT <- "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
 
 EU_EX_DK <- c(
@@ -148,6 +148,11 @@ month_coverage <- applications_country %>%
 latest_month <- month_coverage %>%
   filter(coverage >= MIN_REPORTING_COVERAGE) %>% summarise(x = max(month)) %>% pull(x)
 
+# Sum only over Member States that have reported the latest month, so a
+# non-reporting state is not zero-filled there (a balanced panel of reporters).
+reporting_members <- applications_country %>%
+  filter(month == latest_month) %>% distinct(geo) %>% pull(geo)
+
 plot_start_date <- as.Date(paste0(EVENT_START, "-01"))
 plot_end_date <- seq(as.Date(paste0(latest_month, "-01")), by = "month", length.out = 4)[4]
 quarter_axis_breaks <- seq(plot_start_date, plot_end_date, by = "3 months")
@@ -158,8 +163,8 @@ analysis_months <- format(
 
 # Eurostat omits structural zeroes in JSON-stat; complete the panel before summing.
 applications <- applications_country %>%
-  filter(citizen %in% rates$citizen, month %in% analysis_months) %>%
-  complete(geo = EU_MEMBERS, citizen = rates$citizen, month = analysis_months,
+  filter(citizen %in% rates$citizen, month %in% analysis_months, geo %in% reporting_members) %>%
+  complete(geo = reporting_members, citizen = rates$citizen, month = analysis_months,
            fill = list(applications = 0)) %>%
   group_by(citizen, month) %>%
   summarise(applications = sum(applications, na.rm = TRUE), .groups = "drop") %>%
@@ -433,6 +438,7 @@ results_summary <- list(
   n_control = n_control,
   min_pretreatment_applications = MIN_PRETREATMENT_APPLICATIONS,
   min_reporting_coverage = MIN_REPORTING_COVERAGE,
+  non_reporting_member_states = paste(setdiff(EU_MEMBERS, reporting_members), collapse = ", "),
   reference_quarter = reference_quarter,
   n_quarters = length(quarter_horizons),
   latest_pretrend_quarter = latest_pretrend$quarter,
