@@ -424,6 +424,60 @@ p_fixed20_panels <- ggplot(fixed20_bins, aes(running_variable, relative_change_p
         plot.title = element_text(face = "bold"), strip.text = element_text(face = "bold"))
 ggsave("figures/fig5_quarterly_rdd_panels.png", p_fixed20_panels, width = 8.0, height = 6.2, dpi = 200, bg = "white")
 
+# === Figure 6: linear RDD with side means, last pre- and latest post-quarter ===
+# The application-weighted mean of the change on each side compares all treated
+# with all control origins in the bandwidth (a plain first-difference
+# comparison); the gap between the linear fits at the cutoff is the RDD.
+focus_quarter_starts <- c(
+  max(fixed20_raw$quarter_start[fixed20_raw$quarter_start < reference_quarter_start]),
+  suppressWarnings(max(fixed20_raw$quarter_start[fixed20_raw$quarter_start > reference_quarter_start]))
+)
+focus_quarter_starts <- focus_quarter_starts[is.finite(focus_quarter_starts)]
+focus_raw <- fixed20_raw %>% filter(quarter_start %in% focus_quarter_starts) %>% droplevels()
+focus_bins <- fixed20_bins %>% filter(quarter %in% levels(focus_raw$quarter)) %>% droplevels()
+focus_means <- focus_raw %>%
+  group_by(quarter, side) %>%
+  summarise(side_mean = weighted.mean(relative_change_pct, applications_2025), .groups = "drop") %>%
+  mutate(x_from = if_else(side == "Treated side", -20, 0), x_to = if_else(side == "Treated side", 0, 20))
+
+p_focus_rdd <- ggplot(focus_bins, aes(running_variable, relative_change_pct, colour = side)) +
+  geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.3) +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "grey35", linewidth = 0.4) +
+  geom_segment(data = focus_means, aes(x = x_from, xend = x_to, y = side_mean, yend = side_mean),
+    linetype = "dotted", linewidth = 0.7, inherit.aes = FALSE,
+    colour = if_else(focus_means$side == "Treated side", "#003399", "#D95F02")) +
+  geom_text(data = focus_means, aes(x = (x_from + x_to) / 2, y = side_mean,
+    label = paste0("mean ", sprintf("%.2f", side_mean))), vjust = -0.6, size = 2.8, show.legend = FALSE) +
+  geom_point(aes(size = bin_weight), alpha = 0.68) +
+  geom_smooth(data = focus_raw, aes(weight = kernel_weight, group = side),
+    method = "lm", formula = y ~ x, se = FALSE, linewidth = 0.8) +
+  facet_wrap(~quarter, ncol = 2) +
+  scale_colour_manual(values = c("Treated side" = "#003399", "Control side" = "#D95F02"), guide = "none") +
+  scale_size_area(max_size = 4.5, guide = "none") +
+  scale_x_continuous(breaks = c(-20, -10, 0, 10, 20), labels = c("0", "10", "20", "30", "40"),
+    name = "2025 recognition rate (%)") +
+  labs(y = "Change / average quarterly 2025 applications",
+    title = paste0("Linear RDD and side means, relative to ", reference_quarter),
+    subtitle = "Solid: triangular-kernel linear fits; dotted: application-weighted mean on each side") +
+  theme_minimal(base_size = 9.5) +
+  theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"),
+        strip.text = element_text(face = "bold"))
+ggsave("figures/fig6_linear_rdd_means.png", p_focus_rdd, width = 8.0, height = 3.8, dpi = 200, bg = "white")
+
+focus_summary <- lapply(levels(focus_raw$quarter), function(q) {
+  m <- focus_means %>% filter(quarter == q)
+  r <- rdd_quarter_fixed20 %>% filter(quarter == q, polynomial == "Linear")
+  list(
+    quarter = q,
+    post_policy = unique(focus_raw$quarter_start[focus_raw$quarter == q]) >= policy_date_quarterly,
+    mean_treated = round(m$side_mean[m$side == "Treated side"], 3),
+    mean_control = round(m$side_mean[m$side == "Control side"], 3),
+    linear_rdd_estimate = round(r$estimate, 3),
+    linear_rdd_ci_low = round(r$conf_low, 3),
+    linear_rdd_ci_high = round(r$conf_high, 3)
+  )
+})
+
 # === Summary numbers consumed by index.qmd ================================
 
 latest_pretrend <- quarter_event_ppml %>% filter(quarter_start < ref_quarter_start) %>%
@@ -443,7 +497,8 @@ results_summary <- list(
   n_quarters = length(quarter_horizons),
   latest_pretrend_quarter = latest_pretrend$quarter,
   latest_pretrend_estimate = round(latest_pretrend$estimate, 3),
-  latest_pretrend_se = round(latest_pretrend$std.error, 3)
+  latest_pretrend_se = round(latest_pretrend$std.error, 3),
+  focus_quarters = focus_summary
 )
 write_json(results_summary, "results_summary.json", auto_unbox = TRUE, pretty = TRUE)
 
