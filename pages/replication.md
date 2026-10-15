@@ -72,6 +72,7 @@ css:
 <div class="paper-body">
 <div class="paper-links">
 <a href="https://jopieadema.github.io/replication/comment_AJK.pdf"><em>Comment</em></a>
+<a href="https://hdl.handle.net/10419/341574"><em>I4R Discussion Paper 302</em></a>
 <a href="https://jopieadema.github.io/replication/replication_AJK.zip"><em>Replication files</em></a>
 <a href="https://bsky.app/profile/jopieboy.bsky.social/post/3lruvizr3yk2y"><em>Bluesky thread</em></a>
 </div>
@@ -83,7 +84,7 @@ css:
 <summary>
 <div>
 <div class="paper-title">Statistical Power in Immigration–Crime Studies: A Comment on Riaz (2026)</div>
-<div class="paper-outlet"><em>Comment on Riaz (2026), British Journal of Political Science &nbsp;&middot;&nbsp; Draft available upon request</em></div>
+<div class="paper-outlet"><em>Comment on Riaz (2026), British Journal of Political Science &nbsp;&middot;&nbsp; Submitted</em></div>
 </div>
 </summary>
 <div class="paper-body">
