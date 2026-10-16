@@ -440,6 +440,19 @@ focus_means <- focus_raw %>%
   summarise(side_mean = weighted.mean(relative_change_pct, applications_2025), .groups = "drop") %>%
   mutate(x_from = if_else(side == "Treated side", -20, 0), x_to = if_else(side == "Treated side", 0, 20))
 
+# Label an incomplete quarter by the months it covers (e.g. "July 2026"),
+# a complete one by its quarter (e.g. "2026 Q1").
+focus_labels <- focus_raw %>%
+  group_by(quarter, quarter_start) %>% summarise(months = max(months_observed), .groups = "drop") %>%
+  mutate(
+    first_month = as.integer(format(quarter_start, "%m")),
+    label = if_else(months == 3, as.character(quarter), paste0(
+      month.name[first_month],
+      if_else(months > 1, paste0("–", month.name[first_month + months - 1]), ""),
+      " ", format(quarter_start, "%Y")))
+  )
+focus_label_map <- setNames(focus_labels$label, as.character(focus_labels$quarter))
+
 p_focus_rdd <- ggplot(focus_bins, aes(running_variable, relative_change_pct, colour = side)) +
   geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.3) +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "grey35", linewidth = 0.4) +
@@ -451,7 +464,7 @@ p_focus_rdd <- ggplot(focus_bins, aes(running_variable, relative_change_pct, col
   geom_point(aes(size = bin_weight), alpha = 0.68) +
   geom_smooth(data = focus_raw, aes(weight = kernel_weight, group = side),
     method = "lm", formula = y ~ x, se = FALSE, linewidth = 0.8) +
-  facet_wrap(~quarter, ncol = 2) +
+  facet_wrap(~quarter, ncol = 2, labeller = as_labeller(focus_label_map)) +
   scale_colour_manual(values = c("Treated side" = "#003399", "Control side" = "#D95F02"), guide = "none") +
   scale_size_area(max_size = 4.5, guide = "none") +
   scale_x_continuous(breaks = c(-20, -10, 0, 10, 20), labels = c("0", "10", "20", "30", "40"),
@@ -469,6 +482,7 @@ focus_summary <- lapply(levels(focus_raw$quarter), function(q) {
   r <- rdd_quarter_fixed20 %>% filter(quarter == q, polynomial == "Linear")
   list(
     quarter = q,
+    label = unname(focus_label_map[q]),
     post_policy = unique(focus_raw$quarter_start[focus_raw$quarter == q]) >= policy_date_quarterly,
     mean_treated = round(m$side_mean[m$side == "Treated side"], 3),
     mean_control = round(m$side_mean[m$side == "Control side"], 3),
