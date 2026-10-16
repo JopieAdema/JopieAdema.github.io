@@ -1,13 +1,34 @@
 {
-  "data_vintage": "2026-06",
-  "last_successful_update": "2026-10-08 16:07 UTC",
+  "data_vintage": "2026-07",
+  "last_successful_update": "2026-10-16 09:45 UTC",
   "n_treated": 13,
   "n_control": 12,
   "min_pretreatment_applications": 200,
-  "min_reporting_coverage": 0.9,
+  "min_reporting_coverage": 0.85,
+  "non_reporting_member_states": "",
   "reference_quarter": "2026 Q2",
-  "n_quarters": 6,
+  "n_quarters": 7,
   "latest_pretrend_quarter": "2026 Q1",
   "latest_pretrend_estimate": -0.037,
-  "latest_pretrend_se": 0.062
+  "latest_pretrend_se": 0.062,
+  "focus_quarters": [
+    {
+      "quarter": "2026 Q1",
+      "post_policy": false,
+      "mean_treated": -0.164,
+      "mean_control": -0.162,
+      "linear_rdd_estimate": -0.027,
+      "linear_rdd_ci_low": -0.281,
+      "linear_rdd_ci_high": 0.227
+    },
+    {
+      "quarter": "2026 Q3",
+      "post_policy": true,
+      "mean_treated": -0.201,
+      "mean_control": 0.079,
+      "linear_rdd_estimate": -0.11,
+      "linear_rdd_ci_low": -0.341,
+      "linear_rdd_ci_high": 0.121
+    }
+  ]
 }
