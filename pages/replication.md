@@ -66,7 +66,7 @@ css:
 <summary>
 <div>
 <div class="paper-title">The Welfare Magnet Hypothesis: Evidence from an Immigrant Welfare Scheme in Denmark: Comment</div>
-<div class="paper-outlet"><em>Comment on Agersnap, Jensen and Kleven (2020), AER: Insights &nbsp;&middot;&nbsp; Draft available upon request</em></div>
+<div class="paper-outlet"><em>Comment on Agersnap, Jensen and Kleven (2020), AER: Insights &nbsp;&middot;&nbsp; Rejected by journal</em></div>
 </div>
 </summary>
 <div class="paper-body">
@@ -84,7 +84,7 @@ css:
 <summary>
 <div>
 <div class="paper-title">Statistical Power in Immigration–Crime Studies: A Comment on Riaz (2026)</div>
-<div class="paper-outlet"><em>Comment on Riaz (2026), British Journal of Political Science &nbsp;&middot;&nbsp; Submitted</em></div>
+<div class="paper-outlet"><em>Comment on Riaz (2026), British Journal of Political Science &nbsp;&middot;&nbsp; Rejected by journal</em></div>
 </div>
 </summary>
 <div class="paper-body">
