@@ -95,11 +95,12 @@ css:
 
 <p class="section-head">Working papers</p>
 
-<details class="paper">
+<details class="paper paper--pub">
 <summary>
 <div>
+<div class="pub-venue"><span class="pub-journal">Nature Human Behaviour</span><span class="pub-cite">revise &amp; resubmit</span></div>
 <div class="paper-title">What Drives Refugees' Return After Conflict? (2025)</div>
-<div class="paper-outlet"><em>R&R at Nature Human Behaviour &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
+<div class="paper-outlet"><em>CESifo Working Paper</em></div>
 <div class="paper-authors">with <a href="https://www.ifo.de/en/chargaziia-l">Lasha Chargaziia</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, <a href="https://sites.google.com/view/sarahnecker/home">Sarah Necker</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
@@ -111,11 +112,12 @@ css:
 </div>
 </details>
 
-<details class="paper">
+<details class="paper paper--pub">
 <summary>
 <div>
+<div class="pub-venue"><span class="pub-journal">Economic Journal</span><span class="pub-cite">revise &amp; resubmit</span></div>
 <div class="paper-title">Refugee Return (2026)</div>
-<div class="paper-outlet"><em>Submitted &nbsp;&middot;&nbsp; RF Berlin Discussion Paper</em></div>
+<div class="paper-outlet"><em>RF Berlin Discussion Paper</em></div>
 <div class="paper-authors">with <a href="https://cevatgirayaksoy.com/">Cevat Giray Aksoy</a>, <a href="https://yvonnegiesing.wordpress.com/">Yvonne Giesing</a>, and <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 </summary>
