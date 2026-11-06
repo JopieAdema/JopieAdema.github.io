@@ -1,7 +1,7 @@
 # Production data pipeline for the "Twenty Percent Border" living research note.
 # Runs monthly under GitHub Actions: pulls the current Eurostat series live (no
 # cached/committed raw data), rebuilds the panel, and re-estimates every exhibit.
-# Expected runtime: ~1-2 minutes (27 live Eurostat API calls plus estimation).
+# Expected runtime: ~2-4 minutes (~80 live Eurostat API calls plus estimation).
 #
 # All horizons are indexed by how many months/quarters of data are actually
 # available (latest_month, plot_end_date, quarter_axis_breaks), not by literal
@@ -492,6 +492,273 @@ focus_summary <- lapply(levels(focus_raw$quarter), function(q) {
   )
 })
 
+# === First stage: share of applicants processed in the accelerated procedure ===
+# Does the 20% cutoff actually change the procedure applicants go through?
+# Numerator: Eurostat migr_asyaccm (A19, applicants whose application was
+# processed under the accelerated procedure in the month). Denominator: all
+# (first-time + subsequent) applicants in the same month from migr_asyappctzm.
+# This is a flow ratio, not a cohort share, so monthly values can exceed 1.
+# June 2026 is dropped as a transition month: the Pact applies from 12 June
+# and Eurostat flags June data as split between the 2021 guidelines and the
+# 2026 Asylum Manual (incomplete for ES/AT). From July 2026 applicants are
+# counted at registration rather than lodging; breaks common to treated and
+# control origins difference out of the treated-control contrasts below.
+# Denmark is excluded (opt-out; different accelerated-procedure definition).
+# The whole block is wrapped in tryCatch so a problem here never blocks the
+# main note from updating; the qmd then reports the first stage as pending.
+
+ACCELERATED_DATASET <- "migr_asyaccm"
+PRE_END <- "2026-05"
+TRANSITION_MONTH <- "2026-06"
+POST_START <- "2026-07"
+
+first_stage <- tryCatch({
+  safe_jsonstat <- function(url) tryCatch(jsonstat_long(url)$data, error = function(e) tibble())
+
+  accelerated_url <- function(geo) paste0(
+    API_ROOT, "/", ACCELERATED_DATASET,
+    "?lang=en&freq=M&age=TOTAL&sex=T&unit=PER",
+    "&geo=", geo, "&sinceTimePeriod=", EVENT_START
+  )
+  all_applicants_url <- function(geo) paste0(
+    API_ROOT, "/", APPLICATION_DATASET,
+    "?lang=en&freq=M&age=TOTAL&sex=T&unit=PER",
+    "&geo=", geo, "&sinceTimePeriod=", EVENT_START
+  )
+
+  accelerated_country <- bind_rows(lapply(EU_EX_DK, function(g) {
+    d <- safe_jsonstat(accelerated_url(g))
+    if (!nrow(d)) return(tibble())
+    d %>% transmute(geo = g, citizen, month = time, accelerated = value)
+  }))
+  if (!nrow(accelerated_country)) stop("No accelerated-procedure data returned by Eurostat")
+
+  all_applicants_raw <- bind_rows(lapply(EU_EX_DK, function(g) {
+    d <- safe_jsonstat(all_applicants_url(g))
+    if (!nrow(d)) return(tibble())
+    d %>% transmute(geo = g, citizen, applicant, month = time, value)
+  }))
+  applicant_codes <- unique(all_applicants_raw$applicant)
+  all_applicants_raw <- if ("TOTAL" %in% applicant_codes) {
+    all_applicants_raw %>% filter(applicant == "TOTAL")
+  } else if (all(c("FRST", "SBSQ") %in% applicant_codes)) {
+    all_applicants_raw %>% filter(applicant %in% c("FRST", "SBSQ"))
+  } else {
+    stop("Unexpected applicant codes in ", APPLICATION_DATASET, ": ",
+         paste(applicant_codes, collapse = ", "))
+  }
+  all_applicants_country <- all_applicants_raw %>%
+    group_by(geo, citizen, month) %>%
+    summarise(applications = sum(value), .groups = "drop")
+
+  # Which Member States use/report the accelerated procedure, and how far the
+  # accelerated series reaches: the latest month in which states accounting
+  # for >= MIN_REPORTING_COVERAGE of pre-policy accelerated volume reported.
+  # (Volume-weighted, because small states legitimately report zero cases in
+  # many months and JSON-stat drops zeros.)
+  pre_accelerated_volume <- accelerated_country %>%
+    filter(month >= EVENT_START, month <= PRE_END) %>%
+    group_by(geo) %>% summarise(volume = sum(accelerated), .groups = "drop") %>%
+    filter(volume > 0)
+  if (!nrow(pre_accelerated_volume)) stop("No Member State reports accelerated cases before the Pact")
+  accelerated_coverage <- accelerated_country %>%
+    filter(accelerated > 0) %>% distinct(geo, month) %>%
+    inner_join(pre_accelerated_volume, by = "geo") %>%
+    group_by(month) %>%
+    summarise(coverage = sum(volume) / sum(pre_accelerated_volume$volume), .groups = "drop")
+  accelerated_latest_month <- accelerated_coverage %>%
+    filter(coverage >= MIN_REPORTING_COVERAGE) %>% summarise(x = max(month)) %>% pull(x)
+  accelerated_latest_month <- min(accelerated_latest_month, latest_month)
+  if (accelerated_latest_month < POST_START) {
+    stop("Accelerated-procedure data do not yet reach ", POST_START,
+         " (latest well-covered month: ", accelerated_latest_month, ")")
+  }
+
+  # Balanced set of states: used the accelerated procedure before the Pact and
+  # report the latest month. Within that set, missing cells are true zeros.
+  first_stage_states <- accelerated_country %>%
+    filter(month == accelerated_latest_month, accelerated > 0, geo %in% pre_accelerated_volume$geo) %>%
+    distinct(geo) %>% pull(geo) %>% sort()
+
+  first_stage_months <- format(
+    seq(as.Date(paste0(EVENT_START, "-01")), as.Date(paste0(accelerated_latest_month, "-01")), by = "month"),
+    "%Y-%m"
+  )
+  first_stage_months <- setdiff(first_stage_months, TRANSITION_MONTH)
+  pre_months <- first_stage_months[first_stage_months <= PRE_END]
+  post_months <- first_stage_months[first_stage_months >= POST_START]
+  first_stage_origins <- intersect(eligible_origins, rates$citizen)
+
+  fs_panel <- full_join(
+    accelerated_country %>% filter(geo %in% first_stage_states),
+    all_applicants_country %>% filter(geo %in% first_stage_states),
+    by = c("geo", "citizen", "month")
+  ) %>%
+    filter(citizen %in% first_stage_origins, month %in% first_stage_months) %>%
+    complete(geo = first_stage_states, citizen = first_stage_origins, month = first_stage_months) %>%
+    mutate(accelerated = coalesce(accelerated, 0), applications = coalesce(applications, 0)) %>%
+    group_by(citizen, month) %>%
+    summarise(accelerated = sum(accelerated), applications = sum(applications), .groups = "drop") %>%
+    left_join(rates %>% select(citizen, country, recognition_rate), by = "citizen") %>%
+    left_join(pretreatment_volume, by = "citizen") %>%
+    mutate(
+      treated = recognition_rate <= 20,
+      post = month >= POST_START,
+      in_window = recognition_rate > 12.5 & recognition_rate <= 27.5,
+      date = as.Date(paste0(month, "-01"))
+    )
+
+  # --- Figure 7: monthly accelerated share by side of the cutoff ----------
+  fs_group_month <- bind_rows(
+    fs_panel %>% mutate(sample = "All origins"),
+    fs_panel %>% filter(in_window) %>% mutate(sample = "12.5% < rate <= 27.5%")
+  ) %>%
+    group_by(sample, treated, date) %>%
+    summarise(share = sum(accelerated) / sum(applications), .groups = "drop") %>%
+    mutate(
+      group = if_else(treated, "Recognition rate <= 20%", "Recognition rate > 20%"),
+      sample = factor(sample, levels = c("All origins", "12.5% < rate <= 27.5%"))
+    )
+
+  p_fs_trends <- ggplot(fs_group_month, aes(date, share, colour = group, group = group)) +
+    annotate("rect", xmin = as.Date("2026-06-01"), xmax = as.Date("2026-07-01"),
+             ymin = -Inf, ymax = Inf, fill = "grey88") +
+    geom_vline(xintercept = policy_date_monthly, linetype = "dashed", colour = "grey30", linewidth = 0.55) +
+    geom_line(linewidth = 0.8) +
+    geom_point(size = 1.1) +
+    facet_wrap(~sample, ncol = 2) +
+    scale_colour_manual(values = c("Recognition rate <= 20%" = "#003399",
+                                   "Recognition rate > 20%" = "#D95F02")) +
+    scale_x_date(date_breaks = "3 months", date_labels = "%b\n%Y",
+                 expand = expansion(mult = c(0.01, 0.02))) +
+    scale_y_continuous(labels = scales::label_percent(accuracy = 1), limits = c(0, NA),
+                       expand = expansion(mult = c(0, 0.05))) +
+    labs(x = NULL, y = "Accelerated procedures / all applicants", colour = NULL,
+         title = "First stage: share of applicants processed in an accelerated procedure",
+         subtitle = paste0(length(first_stage_states), " Member States reporting accelerated data; ",
+                           "June 2026 (shaded) omitted as transition month; latest month: ",
+                           accelerated_latest_month)) +
+    theme_minimal(base_size = 10) +
+    theme(legend.position = "bottom", panel.grid.minor = element_blank(),
+          plot.title = element_text(face = "bold"), strip.text = element_text(face = "bold"))
+  ggsave("figures/fig7_first_stage_trends.png", p_fs_trends, width = 8.0, height = 4.2, dpi = 200, bg = "white")
+
+  # --- Origin-level pre/post shares ----------------------------------------
+  fs_origin <- fs_panel %>%
+    mutate(period = if_else(post, "post", "pre")) %>%
+    group_by(citizen, country, recognition_rate, applications_2025, in_window, period) %>%
+    summarise(accelerated = sum(accelerated), applications = sum(applications), .groups = "drop") %>%
+    pivot_wider(names_from = period, values_from = c(accelerated, applications)) %>%
+    filter(applications_pre > 0, applications_post > 0) %>%
+    mutate(
+      share_pre = accelerated_pre / applications_pre,
+      share_post = accelerated_post / applications_post,
+      change = share_post - share_pre,
+      running_variable = recognition_rate - 20
+    )
+
+  pooled_shares <- fs_panel %>%
+    group_by(treated, post) %>%
+    summarise(share = sum(accelerated) / sum(applications), .groups = "drop")
+  pooled_share <- function(tr, po) round(pooled_shares$share[pooled_shares$treated == tr & pooled_shares$post == po], 3)
+
+  # --- Difference-in-differences on the monthly origin panel ---------------
+  fs_reg_data <- fs_panel %>%
+    filter(applications > 0) %>%
+    mutate(share = accelerated / applications, treated_post = as.integer(treated & post))
+  did_fit <- function(dat) {
+    fit <- feols(share ~ treated_post | citizen + month, weights = ~applications,
+                 cluster = ~citizen, data = dat)
+    c(estimate = unname(coef(fit)["treated_post"]), se = unname(se(fit)["treated_post"]))
+  }
+  did_all <- did_fit(fs_reg_data)
+  did_window <- did_fit(fs_reg_data %>% filter(in_window))
+
+  # --- RD in the pre-to-post change at the cutoff --------------------------
+  rd_dat <- fs_origin %>% filter(abs(running_variable) <= 20, applications_2025 > 0)
+  rd_fit <- tryCatch(rdrobust(
+    y = rd_dat$change, x = rd_dat$running_variable, weights = rd_dat$applications_2025,
+    c = 0, p = 1, q = 2, h = 20, b = 20, kernel = "triangular", vce = "hc1", masspoints = "adjust"
+  ), error = function(e) NULL)
+  # rdrobust reports right-minus-left; treated is left of the cutoff, so negate.
+  rd_estimate <- if (is.null(rd_fit)) NA_real_ else -unname(rd_fit$coef["Robust", 1])
+  rd_ci <- if (is.null(rd_fit)) c(NA_real_, NA_real_) else
+    -unname(rd_fit$ci["Robust", c("CI Upper", "CI Lower")])
+
+  # --- Figure 8: pre vs post share against the recognition rate ------------
+  pre_label <- paste0(format(as.Date(paste0(min(pre_months), "-01")), "%b %Y"), "–",
+                      format(as.Date(paste0(max(pre_months), "-01")), "%b %Y"))
+  post_label <- paste0(format(as.Date(paste0(min(post_months), "-01")), "%b %Y"), "–",
+                       format(as.Date(paste0(max(post_months), "-01")), "%b %Y"))
+  fs_rd_long <- rd_dat %>%
+    select(citizen, running_variable, applications_2025, share_pre, share_post) %>%
+    pivot_longer(c(share_pre, share_post), names_to = "period", values_to = "share") %>%
+    mutate(
+      period = factor(if_else(period == "share_pre", paste0("Before: ", pre_label), paste0("After: ", post_label)),
+                      levels = c(paste0("Before: ", pre_label), paste0("After: ", post_label))),
+      side = if_else(running_variable <= 0, "Treated side", "Control side"),
+      kernel_weight = applications_2025 * pmax(0, 1 - abs(running_variable) / 20)
+    )
+  fs_rd_bins <- fs_rd_long %>%
+    group_by(period, side) %>% mutate(bin = ntile(running_variable, pmin(8L, n()))) %>%
+    group_by(period, side, bin) %>%
+    summarise(running_variable = weighted.mean(running_variable, applications_2025),
+              share = weighted.mean(share, applications_2025),
+              bin_weight = sum(applications_2025), .groups = "drop")
+
+  p_fs_rd <- ggplot(fs_rd_bins, aes(running_variable, share, colour = side)) +
+    geom_vline(xintercept = 0, linetype = "dashed", colour = "grey35", linewidth = 0.4) +
+    geom_point(aes(size = bin_weight), alpha = 0.7) +
+    geom_smooth(data = fs_rd_long, aes(weight = kernel_weight, group = side),
+                method = "lm", formula = y ~ x, se = FALSE, linewidth = 0.8) +
+    facet_wrap(~period, ncol = 2) +
+    scale_colour_manual(values = c("Treated side" = "#003399", "Control side" = "#D95F02"), guide = "none") +
+    scale_size_area(max_size = 4.5, guide = "none") +
+    scale_x_continuous(breaks = c(-20, -10, 0, 10, 20), labels = c("0", "10", "20", "30", "40"),
+                       name = "2025 recognition rate (%)") +
+    scale_y_continuous(labels = scales::label_percent(accuracy = 1)) +
+    labs(y = "Accelerated procedures / all applicants",
+         title = "First stage at the cutoff: accelerated share before and after the Pact",
+         subtitle = "Application-weighted bins; triangular-kernel linear fits, 20 points per side") +
+    theme_minimal(base_size = 9.5) +
+    theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"),
+          strip.text = element_text(face = "bold"))
+  ggsave("figures/fig8_first_stage_rdd.png", p_fs_rd, width = 8.0, height = 3.8, dpi = 200, bg = "white")
+
+  list(
+    available = TRUE,
+    message = "",
+    data_vintage = accelerated_latest_month,
+    member_states = paste(first_stage_states, collapse = ", "),
+    n_member_states = length(first_stage_states),
+    pre_window = pre_label,
+    post_window = post_label,
+    n_post_months = length(post_months),
+    n_origins = nrow(fs_origin),
+    n_window_origins = sum(fs_origin$in_window),
+    share_pre_treated = pooled_share(TRUE, FALSE),
+    share_pre_control = pooled_share(FALSE, FALSE),
+    share_post_treated = pooled_share(TRUE, TRUE),
+    share_post_control = pooled_share(FALSE, TRUE),
+    did_estimate = round(did_all[["estimate"]], 3),
+    did_se = round(did_all[["se"]], 3),
+    did_window_estimate = round(did_window[["estimate"]], 3),
+    did_window_se = round(did_window[["se"]], 3),
+    rd_estimate = round(rd_estimate, 3),
+    rd_ci_low = round(rd_ci[1], 3),
+    rd_ci_high = round(rd_ci[2], 3),
+    window_origins = fs_origin %>%
+      filter(in_window) %>%
+      arrange(recognition_rate) %>%
+      transmute(country, recognition_rate = round(recognition_rate, 1),
+                share_pre = round(share_pre, 3), share_post = round(share_post, 3),
+                applications_post = applications_post)
+  )
+}, error = function(e) {
+  message("First-stage module skipped: ", conditionMessage(e))
+  list(available = FALSE, message = conditionMessage(e))
+})
+
 # === Summary numbers consumed by index.qmd ================================
 
 latest_pretrend <- quarter_event_ppml %>% filter(quarter_start < ref_quarter_start) %>%
@@ -512,7 +779,8 @@ results_summary <- list(
   latest_pretrend_quarter = latest_pretrend$quarter,
   latest_pretrend_estimate = round(latest_pretrend$estimate, 3),
   latest_pretrend_se = round(latest_pretrend$std.error, 3),
-  focus_quarters = focus_summary
+  focus_quarters = focus_summary,
+  first_stage = first_stage
 )
 write_json(results_summary, "results_summary.json", auto_unbox = TRUE, pretty = TRUE)
 
@@ -525,7 +793,8 @@ metadata <- list(
   last_successful_update = update_timestamp,
   source_urls = list(
     "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asydec1pc",
-    "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm"
+    "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm",
+    "https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyaccm"
   )
 )
 write_json(metadata, "metadata.json", auto_unbox = TRUE, pretty = TRUE)
