@@ -1,6 +1,6 @@
 {
   "data_vintage": "2026-08",
-  "last_successful_update": "2026-11-04 08:47 UTC",
+  "last_successful_update": "2026-11-06 16:19 UTC",
   "n_treated": 13,
   "n_control": 12,
   "min_pretreatment_applications": 200,
@@ -32,5 +32,207 @@
       "linear_rdd_ci_low": -0.338,
       "linear_rdd_ci_high": 0.241
     }
-  ]
+  ],
+  "first_stage": {
+    "available": true,
+    "message": "",
+    "data_vintage": "2026-08",
+    "member_states": "AT, BE, BG, CY, EL, FI, FR, HR, IE, IT, LV, MT, NL, SE, SI",
+    "n_member_states": 15,
+    "states_without_recent_data": "CZ, DE, EE, LU, PT, RO",
+    "states_without_accelerated_data": "ES, HU, LT, PL, SK",
+    "pre_window": "Jan 2025–May 2026",
+    "post_window": "Jul 2026–Aug 2026",
+    "n_post_months": 2,
+    "n_origins": 94,
+    "n_window_origins": 25,
+    "share_pre_treated": 0.351,
+    "share_pre_control": 0.185,
+    "share_post_treated": 0.382,
+    "share_post_control": 0.223,
+    "did_estimate": -0.042,
+    "did_se": 0.066,
+    "did_window_estimate": 0.042,
+    "did_window_se": 0.058,
+    "rd_estimate": 0.022,
+    "rd_ci_low": -0.182,
+    "rd_ci_high": 0.227,
+    "window_origins": [
+      {
+        "country": "Mexico",
+        "recognition_rate": 12.7,
+        "share_pre": 0.021,
+        "share_post": 0.333,
+        "applications_post": 15
+      },
+      {
+        "country": "Tajikistan",
+        "recognition_rate": 13.2,
+        "share_pre": 0.053,
+        "share_post": 0.2,
+        "applications_post": 25
+      },
+      {
+        "country": "Pakistan",
+        "recognition_rate": 13.3,
+        "share_pre": 0.124,
+        "share_post": 0.184,
+        "applications_post": 2550
+      },
+      {
+        "country": "Nigeria",
+        "recognition_rate": 14.2,
+        "share_pre": 0.175,
+        "share_post": 0.59,
+        "applications_post": 915
+      },
+      {
+        "country": "Mauritania",
+        "recognition_rate": 14.8,
+        "share_pre": 0.279,
+        "share_post": 0.463,
+        "applications_post": 335
+      },
+      {
+        "country": "Honduras",
+        "recognition_rate": 15.3,
+        "share_pre": 0.012,
+        "share_post": 0.167,
+        "applications_post": 30
+      },
+      {
+        "country": "Democratic Republic of the Congo",
+        "recognition_rate": 15.9,
+        "share_pre": 0.204,
+        "share_post": 0.374,
+        "applications_post": 1780
+      },
+      {
+        "country": "Kyrgyzstan",
+        "recognition_rate": 15.9,
+        "share_pre": 0.019,
+        "share_post": 0.167,
+        "applications_post": 60
+      },
+      {
+        "country": "Rwanda",
+        "recognition_rate": 16.2,
+        "share_pre": 0.146,
+        "share_post": 0.174,
+        "applications_post": 115
+      },
+      {
+        "country": "Tanzania",
+        "recognition_rate": 16.7,
+        "share_pre": 0.017,
+        "share_post": 0,
+        "applications_post": 50
+      },
+      {
+        "country": "Russia",
+        "recognition_rate": 18,
+        "share_pre": 0.175,
+        "share_post": 0.247,
+        "applications_post": 790
+      },
+      {
+        "country": "Congo",
+        "recognition_rate": 18.1,
+        "share_pre": 0.304,
+        "share_post": 0.412,
+        "applications_post": 255
+      },
+      {
+        "country": "Iraq",
+        "recognition_rate": 18.3,
+        "share_pre": 0.1,
+        "share_post": 0.147,
+        "applications_post": 955
+      },
+      {
+        "country": "Kuwait",
+        "recognition_rate": 20.6,
+        "share_pre": 0.136,
+        "share_post": 0.118,
+        "applications_post": 85
+      },
+      {
+        "country": "Cameroon",
+        "recognition_rate": 20.8,
+        "share_pre": 0.168,
+        "share_post": 0.25,
+        "applications_post": 500
+      },
+      {
+        "country": "Sierra Leone",
+        "recognition_rate": 21.3,
+        "share_pre": 0.159,
+        "share_post": 0.158,
+        "applications_post": 285
+      },
+      {
+        "country": "Chad",
+        "recognition_rate": 22.2,
+        "share_pre": 0.299,
+        "share_post": 0.174,
+        "applications_post": 230
+      },
+      {
+        "country": "Libya",
+        "recognition_rate": 22.7,
+        "share_pre": 0.092,
+        "share_post": 0.098,
+        "applications_post": 205
+      },
+      {
+        "country": "Comoros",
+        "recognition_rate": 22.9,
+        "share_pre": 0.865,
+        "share_post": 5.5,
+        "applications_post": 20
+      },
+      {
+        "country": "Côte d’Ivoire",
+        "recognition_rate": 23.7,
+        "share_pre": 0.39,
+        "share_post": 0.481,
+        "applications_post": 1455
+      },
+      {
+        "country": "Burundi",
+        "recognition_rate": 23.9,
+        "share_pre": 0.033,
+        "share_post": 0.066,
+        "applications_post": 305
+      },
+      {
+        "country": "El Salvador",
+        "recognition_rate": 23.9,
+        "share_pre": 0.029,
+        "share_post": 0.125,
+        "applications_post": 120
+      },
+      {
+        "country": "Djibouti",
+        "recognition_rate": 25.1,
+        "share_pre": 0.237,
+        "share_post": 0.111,
+        "applications_post": 90
+      },
+      {
+        "country": "Ethiopia",
+        "recognition_rate": 26.1,
+        "share_pre": 0.123,
+        "share_post": 0.102,
+        "applications_post": 685
+      },
+      {
+        "country": "Guinea",
+        "recognition_rate": 26.8,
+        "share_pre": 0.254,
+        "share_post": 0.433,
+        "applications_post": 1385
+      }
+    ]
+  }
 }

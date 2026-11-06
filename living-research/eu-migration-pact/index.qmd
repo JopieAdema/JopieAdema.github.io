@@ -14,18 +14,21 @@ fq <- results$focus_quarters
 fq_pre <- fq[!fq$post_policy, ]
 fq_post <- fq[fq$post_policy, ]
 f2 <- function(x) sprintf("%.2f", x)
+fs <- results$first_stage
+pct <- function(x) sprintf("%.0f%%", 100 * x)
+pp <- function(x) sprintf("%.1f", 100 * x)
 ```
 
 > **Preliminary.** Data through **`r results$data_vintage`**. Last successful update: **`r results$last_successful_update`**.
 
 ## Setting and research idea
 
-Under the EU's new Asylum Procedure Regulation (2024/1348), applicants' claims are subject to an accelerated border examination  (max 12 weeks) whenever the prior-year recognition rate of applicants from the same origin country is 20% or lower, considerably shortening the proecedure. The rule creates a sharp, numerical, and publicly announced eligibility threshold: origins just below 20% face a faster procedure than origins just above it. This note tracks whether that eligibility change shifts the number of asylum applications from affected countroes. This allows us to study the effect of EU-wide policies on asylum applications, which typically can't be done; single-EU country policy evaluations on asylum applications can only identify relative effects because of diversion.  The rule entered into force June 2026, so everything shown here is still pre-policy: the exercise validates that treated and control origins were not already trending apart before the cutoff bites. 
+Under the EU's new Asylum Procedure Regulation (2024/1348), applications must be examined in an accelerated procedure (first-instance decision within three months) whenever the EU-wide recognition rate of the applicant's nationality in the latest annual Eurostat data is 20% or lower (Art. 42(1)(j)); applicants who apply at the external border are, within each Member State's capacity, channelled into the border procedure instead (max 12 weeks, appeal included; Art. 45). Either way, the procedure is considerably shortened. The rule creates a sharp, numerical, and publicly announced eligibility threshold: origins just below 20% face a faster procedure than origins just above it. This note tracks whether that eligibility change shifts the number of asylum applications from affected countroes. This allows us to study the effect of EU-wide policies on asylum applications, which typically can't be done; single-EU country policy evaluations on asylum applications can only identify relative effects because of diversion.  The rule entered into force June 2026, so everything shown here is still pre-policy: the exercise validates that treated and control origins were not already trending apart before the cutoff bites. 
 
 
 ## Research design
 
-The note runs **two complementary designs** side by side. The first is a **difference-in-differences**: origins with a 2025 recognition rate between 12.5% and 20% (treated by the cutoff) are compared to origins between 20% and 27.5% (control), using a Poisson (PPML) event study with origin and quarter fixed effects. The second is a **dynamic difference-in-discontinuities**: at each quarterly horizon, it compares the change in EU-wide applications for origins just below the 20% cutoff against origins just above it, relative to the most recent (reference) quarter, using a fixed 20-percentage-point bandwidth with triangular-kernel local-linear and local-quadratic fits on each side. The first design is simpler and does not depend on local smoothing; the second uses a wider 0-40% support and treats the cutoff itself, rather than the 12.5-27.5% band, as the source of identification. Agreement between the two is a stronger pre-policy check than either alone. Data on applications and recognition rates originate from eurostat. 
+The note runs **two complementary designs** side by side. The first is a **difference-in-differences**: origins with a 2025 recognition rate between 12.5% and 20% (treated by the cutoff) are compared to origins between 20% and 27.5% (control), using a Poisson (PPML) event study with origin and quarter fixed effects. The second is a **dynamic difference-in-discontinuities**: at each quarterly horizon, it compares the change in EU-wide applications for origins just below the 20% cutoff against origins just above it, relative to the most recent (reference) quarter, using a fixed 20-percentage-point bandwidth with triangular-kernel local-linear and local-quadratic fits on each side. The first design is simpler and does not depend on local smoothing; the second uses a wider 0-40% support and treats the cutoff itself, rather than the 12.5-27.5% band, as the source of identification. Agreement between the two is a stronger pre-policy check than either alone. A **first-stage check** asks whether the cutoff actually changes the procedure: it compares the share of applicants processed in an accelerated procedure for origins below and above 20%, before and after June 2026. Data on applications, recognition rates and accelerated procedures originate from eurostat.
 
 <details><summary>Technical details</summary>
 
@@ -63,6 +66,81 @@ In `r fq_pre$label`, the treated-side mean is `r f2(fq_pre$mean_treated)` and th
 
 ![Linear RDD fits and side means for the last pre-policy quarter and the latest post-policy data](figures/fig6_linear_rdd_means.png){#fig-rdd-means}
 
+### First stage: does the cutoff change the procedure?
+
+The designs above estimate the effect of *eligibility* for fast-track processing. That eligibility only matters if Member States actually apply the accelerated procedure to origins below the cutoff, which the regulation makes mandatory but which depends on implementation, capacity, and the regulation's escape clauses. This check uses Eurostat's count of applicants processed under the accelerated procedure, divided by all (first-time and subsequent) applicants in the same month, pooled over the Member States that report accelerated-procedure data.
+
+```{r}
+#| label: first-stage-text
+#| echo: false
+#| results: asis
+if (isTRUE(fs$available)) {
+  rd_txt <- if (is.na(fs$rd_estimate)) "could not be estimated in this update" else
+    paste0(pp(fs$rd_estimate), " percentage points (95% CI ", pp(fs$rd_ci_low), " to ", pp(fs$rd_ci_high), ")")
+  cat(paste0(
+    "Before the Pact (", fs$pre_window, "), ", pct(fs$share_pre_treated),
+    " of applicants from origins at or below the 20% cutoff were processed in an accelerated procedure, against ",
+    pct(fs$share_pre_control), " for origins above it. Since July 2026 (", fs$post_window, ", ",
+    fs$n_post_months, " month", if (fs$n_post_months > 1) "s" else "", " of data), these shares are ",
+    pct(fs$share_post_treated), " and ", pct(fs$share_post_control), ". ",
+    "A difference-in-differences regression of the monthly accelerated share on treated × post, with origin and month fixed effects and application weights, gives a first stage of ",
+    pp(fs$did_estimate), " percentage points (SE ", pp(fs$did_se), ") across all ", fs$n_origins,
+    " origins, and ", pp(fs$did_window_estimate), " (SE ", pp(fs$did_window_se), ") within the 12.5-27.5% window used above (",
+    fs$n_window_origins, " origins). ",
+    "The local-linear RDD estimate of the jump in the pre-to-post change at the cutoff is ", rd_txt, ". ",
+    "Member States included: ", fs$member_states, "; accelerated data through ", fs$data_vintage, ". ",
+    if (nzchar(fs$states_without_accelerated_data))
+      paste0("No accelerated-procedure data reported before the Pact: ", fs$states_without_accelerated_data, ". ") else "",
+    if (nzchar(fs$states_without_recent_data))
+      paste0("Reported before the Pact but not for ", fs$data_vintage, " (excluded): ", fs$states_without_recent_data, ".") else "",
+    "\n"
+  ))
+} else {
+  cat(paste0("*The first-stage check is pending: ", fs$message, ".*\n"))
+}
+```
+
+```{r}
+#| label: first-stage-trends-plot
+#| echo: false
+#| fig-cap: "Share of applicants processed in an accelerated procedure, origins below vs above the 20% cutoff"
+if (isTRUE(fs$available) && file.exists("figures/fig7_first_stage_trends.png")) {
+  knitr::include_graphics("figures/fig7_first_stage_trends.png")
+}
+```
+
+```{r}
+#| label: first-stage-rdd-plot
+#| echo: false
+#| fig-cap: "Accelerated share against the 2025 recognition rate, before and after the Pact"
+if (isTRUE(fs$available) && file.exists("figures/fig8_first_stage_rdd.png")) {
+  knitr::include_graphics("figures/fig8_first_stage_rdd.png")
+}
+```
+
+<details><summary>Origins in the 12.5-27.5% window: accelerated share before and after</summary>
+
+```{r}
+#| label: first-stage-table
+#| echo: false
+if (isTRUE(fs$available) && length(fs$window_origins)) {
+  tab <- as.data.frame(fs$window_origins)
+  tab$share_pre <- pct(tab$share_pre)
+  tab$share_post <- pct(tab$share_post)
+  knitr::kable(tab, col.names = c("Origin", "2025 recognition rate (%)", "Accelerated share, before",
+                                  "Accelerated share, after", "Applicants, after"),
+               align = "lrrrr")
+}
+```
+
+</details>
+
+<details><summary>Caveats on the first-stage measure</summary>
+
+The numerator counts applicants whose application was processed under an accelerated procedure in a given month, the denominator all applicants lodged (from July 2026: registered) in that month, so this is a flow ratio rather than a cohort share and can exceed 100% in single months. June 2026 is dropped as a transition month: Eurostat flags June data as split between the old guidelines and the Pact's new Asylum Manual and incomplete for some Member States (e.g. Spain). From July 2026 applicants are counted at registration rather than lodging and the data reach Eurostat via the EU Asylum Agency, so the level shift at June 2026 mixes the policy with a measurement break; the treated-minus-control contrasts difference out breaks common to both groups, but not breaks that differ by origin. The 20% rule is not the only ground for acceleration (safe countries of origin, subsequent applications, misleading the authorities, etc.), so control origins' share need not be zero, and the EU safe-countries-of-origin list overlaps with low-recognition origins. Whether border-procedure cases are also counted as accelerated may differ by Member State, and Denmark (opt-out, different definition) is excluded. Note that the same June 2026 measurement break and the incomplete June data also affect the application counts used in the designs above; quarter fixed effects absorb the common part.
+
+</details>
+
 ## Conclusion
 
 With `r results$n_treated` treated and `r results$n_control` control origins, the event study design has reasonable power: the most recent complete pre-reference quarter's PPML estimate is `r results$latest_pretrend_estimate` (SE `r results$latest_pretrend_se`). Because PPML is a log-linear model, that estimate reads on the percentage scale as a `r sprintf("%.1f", (exp(results$latest_pretrend_estimate) - 1) * 100)`% pre-trend (95% CI `r sprintf("%.1f", (exp(results$latest_pretrend_estimate - 1.96 * results$latest_pretrend_se) - 1) * 100)`% to `r sprintf("%.1f", (exp(results$latest_pretrend_estimate + 1.96 * results$latest_pretrend_se) - 1) * 100)`%) -- small enough to detect a moderate-sized effect, so the PPML design should have real power to pick up a genuine fast-track deterrent once post-policy data arrive. The dynamic difference-in-discontinuities estimates are far more imprecise, so most of that power comes from the PPML side rather than the RDD one, even though the RDD is arguably better identified. However, as every year in January the recognition rates list updates, every january becomes a new natural experiment, which will allow us to gradually build evidence, as some treated countries become control and vice versa. Let the data flow in!
@@ -77,4 +155,4 @@ Once a month, a GitHub Actions workflow checks Eurostat's bulk data files for a 
 
 ---
 
-**Sources:** [Eurostat `migr_asydec1pc`](https://ec.europa.eu/eurostat/databrowser/product/view/migr_asydec1pc) (first-instance decisions) · [Eurostat `migr_asyappctzm`](https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm) (first-time applications) · **Code:** [update.R](https://github.com/JopieAdema/JopieAdema.github.io/blob/master/living-research/eu-migration-pact/update.R) · **Contact:** [j.a.h.adema94@gmail.com](mailto:j.a.h.adema94@gmail.com)
+**Sources:** [Eurostat `migr_asydec1pc`](https://ec.europa.eu/eurostat/databrowser/product/view/migr_asydec1pc) (first-instance decisions) · [Eurostat `migr_asyappctzm`](https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyappctzm) (applications) · [Eurostat `migr_asyaccm`](https://ec.europa.eu/eurostat/databrowser/product/view/migr_asyaccm) (accelerated procedures) · **Code:** [update.R](https://github.com/JopieAdema/JopieAdema.github.io/blob/master/living-research/eu-migration-pact/update.R) · **Contact:** [j.a.h.adema94@gmail.com](mailto:j.a.h.adema94@gmail.com)
