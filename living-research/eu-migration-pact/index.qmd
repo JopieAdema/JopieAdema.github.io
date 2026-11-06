@@ -88,7 +88,12 @@ if (isTRUE(fs$available)) {
     " origins, and ", pp(fs$did_window_estimate), " (SE ", pp(fs$did_window_se), ") within the 12.5-27.5% window used above (",
     fs$n_window_origins, " origins). ",
     "The local-linear RDD estimate of the jump in the pre-to-post change at the cutoff is ", rd_txt, ". ",
-    "Member States included: ", fs$member_states, "; accelerated data through ", fs$data_vintage, ".\n"
+    "Member States included: ", fs$member_states, "; accelerated data through ", fs$data_vintage, ". ",
+    if (nzchar(fs$states_without_accelerated_data))
+      paste0("No accelerated-procedure data reported before the Pact: ", fs$states_without_accelerated_data, ". ") else "",
+    if (nzchar(fs$states_without_recent_data))
+      paste0("Reported before the Pact but not for ", fs$data_vintage, " (excluded): ", fs$states_without_recent_data, ".") else "",
+    "\n"
   ))
 } else {
   cat(paste0("*The first-stage check is pending: ", fs$message, ".*\n"))

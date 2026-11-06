@@ -8,6 +8,9 @@ on:
     branches:
       - living-research/first-stage-accelerated
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -40,11 +43,12 @@ jobs:
         run: |
           Rscript -e 'x <- jsonlite::read_json("living-research/eu-migration-pact/results_summary.json"); str(x$first_stage, max.level = 1)' || true
 
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: living-research-output
-          path: |
-            assets/living-research/eu-migration-pact/index.html
-            living-research/eu-migration-pact/results_summary.json
-            living-research/eu-migration-pact/figures/
+      - name: Commit test outputs to this branch (for review only)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- assets/living-research _data living-research/eu-migration-pact/figures living-research/eu-migration-pact/results_summary.json living-research/eu-migration-pact/metadata.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Branch test outputs (living research)"
+            git push
+          fi

@@ -731,6 +731,8 @@ first_stage <- tryCatch({
     data_vintage = accelerated_latest_month,
     member_states = paste(first_stage_states, collapse = ", "),
     n_member_states = length(first_stage_states),
+    states_without_recent_data = paste(sort(setdiff(pre_accelerated_volume$geo, first_stage_states)), collapse = ", "),
+    states_without_accelerated_data = paste(sort(setdiff(EU_EX_DK, pre_accelerated_volume$geo)), collapse = ", "),
     pre_window = pre_label,
     post_window = post_label,
     n_post_months = length(post_months),
