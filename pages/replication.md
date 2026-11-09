@@ -88,6 +88,10 @@ css:
 </div>
 </summary>
 <div class="paper-body">
+<div class="paper-links">
+<a href="https://jopieadema.github.io/replication/comment_riaz.pdf"><em>Comment</em></a>
+<a href="https://jopieadema.github.io/replication/replication_riaz.zip"><em>Replication files</em></a>
+</div>
 <div class="paper-abstract">A study published in the British Journal of Political Science ("Null by design") arguing that regional immigration–crime studies lack statistical power calibrates its power simulation on residual crime volatility that comes almost entirely from immigration-law offences in a few counties on the Austrian border. Without these offences, which record the act of migration rather than offending by immigrants, the design reaches 80% power at immigrant–native crime rate ratios below those observed for asylum seekers.</div>
 </div>
 </details>
