@@ -106,6 +106,7 @@ css:
 <div class="paper-body">
 <div class="paper-links">
 <a href="https://jopieadema.github.io/replication/comment_SLF.pdf"><em>Comment</em></a>
+<a href="https://jopieadema.github.io/replication/replication_SLF.zip"><em>Replication files</em></a>
 </div>
 <div class="paper-abstract">A study published in AEJ: Economic Policy finding that successful, compared with failed, terror attacks raised the AfD vote share in German state elections by 4.5 percentage points and turnout by 14.7 points relies on a comparison group that effectively consists of two municipalities. The AfD effect disappears when municipalities are compared within the same state election, and the turnout effect stems from data errors in the two control municipalities: with official election results, it is small and insignificant.</div>
 </div>
