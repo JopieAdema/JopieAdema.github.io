@@ -149,6 +149,21 @@ css:
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">Do Cash Benefits Attract Asylum Seekers? Evidence from a German Constitutional Court Ruling (2026)</div>
+<div class="paper-authors">with <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://jopieadema.github.io/papers/Adema_Poutvaara_Cash_Benefits.pdf"><em>Paper</em></a>
+</div>
+<div class="paper-abstract">In July 2012, Germany's Constitutional Court mandated a 54-percent increase in cash benefits for asylum seekers. We exploit this unexpected policy change to estimate the causal effect of cash benefits on the size, composition, and geographic allocation of asylum flows using a gravity framework and monthly data on asylum applications across Europe. The ruling led to a sharp increase in asylum applications to Germany relative to other European destinations. After accounting for the diversion of applicants from other EU countries, we estimate an application-benefit elasticity of 1.0–1.1. The increase was driven entirely by applicants from origin countries with low asylum recognition rates. As a consequence, the number of recognized refugees in Germany rose only modestly, implying a substantially smaller refugee-benefit elasticity of approximately 0.24. Combining asylum application data with monthly Eurodac records on secondary asylum movements, we estimate that at least 56 percent of the additional applications were diverted from other EU destinations rather than newly attracted to the EU. Our findings suggest that more generous asylum benefits primarily reallocate asylum seekers across destination countries, with substantially smaller effects on refugee inflows to the European Union as a whole.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">Expected Asylum Seekers and Far-Right Voting: Effects of a Dispersal Act (2025)</div>
 <div class="paper-outlet"><em>RF Berlin Discussion Paper &nbsp;&middot;&nbsp; CESifo Working Paper</em></div>
 <div class="paper-authors">with <a href="https://milanvansteenvoort.com/">Milan van Steenvoort</a></div>
@@ -225,11 +240,6 @@ css:
 <div class="paper-item">
 <div class="paper-title">Between Compassion and Contempt: Home Country Events and Hosts' Attitudes</div>
 <div class="paper-authors">with <a href="https://www.hwwi.org/en/person/padmaja-kadambi/">Padmaja Kadambi</a></div>
-</div>
-
-<div class="paper-item">
-<div class="paper-title">The Welfare Magnet Hypothesis: Revisited</div>
-<div class="paper-authors">with <a href="https://www.ifo.de/en/poutvaara-p">Panu Poutvaara</a></div>
 </div>
 
 <p class="section-head">Other publications</p>

@@ -99,6 +99,21 @@ css:
 <details class="paper">
 <summary>
 <div>
+<div class="paper-title">Terrorism and Voting: The Rise of Right-Wing Populism in Germany: Comment</div>
+<div class="paper-outlet"><em>Comment on Sabet, Liebald and Friebel (2025), AEJ: Economic Policy</em></div>
+</div>
+</summary>
+<div class="paper-body">
+<div class="paper-links">
+<a href="https://jopieadema.github.io/replication/comment_SLF.pdf"><em>Comment</em></a>
+</div>
+<div class="paper-abstract">A study published in AEJ: Economic Policy finding that successful, compared with failed, terror attacks raised the AfD vote share in German state elections by 4.5 percentage points and turnout by 14.7 points relies on a comparison group that effectively consists of two municipalities. The AfD effect disappears when municipalities are compared within the same state election, and the turnout effect stems from data errors in the two control municipalities: with official election results, it is small and insignificant.</div>
+</div>
+</details>
+
+<details class="paper">
+<summary>
+<div>
 <div class="paper-title">Threat and Assimilation: Evidence from Refugees in Germany: Comment</div>
 <div class="paper-outlet"><em>Comment on Jaschke, Sardoschau and Tabellini (2025), Economic Journal &nbsp;&middot;&nbsp; Draft available upon request</em></div>
 </div>
